@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexfit Blog Dashboard</title>
+<style>
+:root { color-scheme: light; }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f7;color:#1a2233;min-height:100vh;}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,#1a2a4a,#2c4a7c);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.header h1{font-size:17px;font-weight:800;letter-spacing:-.3px;}
+.header p{font-size:11px;opacity:.7;margin-top:2px;}
+.header-date{font-size:11px;opacity:.8;background:rgba(255,255,255,.12);padding:5px 12px;border-radius:6px;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 24px 0;}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr);}}
+.stat{background:#fff;border-radius:10px;padding:14px 16px;border:1px solid #e8eaf0;text-align:center;}
+.stat .n{font-size:28px;font-weight:800;line-height:1;}
+.stat .l{font-size:10px;color:#8a93a8;text-transform:uppercase;letter-spacing:.5px;margin-top:3px;}
+.stat.c .n{color:#16a34a;} .stat.b .n{color:#2563eb;} .stat.o .n{color:#f59e0b;} .stat.p .n{color:#7c3aed;}
+
+/* TABS */
+.tabs{display:flex;gap:4px;padding:16px 24px 0;}
+.tab{padding:9px 20px;border-radius:8px 8px 0 0;font-size:13px;font-weight:600;cursor:pointer;border:1px solid #dde1ea;border-bottom:none;background:#e8eaf0;color:#6b7280;transition:.15s;}
+.tab.active{background:#fff;color:#1a2233;border-color:#dde1ea;}
+
+/* PANELS */
+.panel{display:none;background:#fff;border-radius:0 12px 12px 12px;border:1px solid #dde1ea;margin:0 24px 24px;padding:20px;}
+.panel.active{display:block;}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
+.filter-bar span{font-size:12px;color:#8a93a8;font-weight:600;}
+.fbtn{padding:4px 12px;border-radius:16px;border:1.5px solid #dde1ea;background:#fff;font-size:11px;font-weight:700;cursor:pointer;color:#6b7280;transition:.15s;}
+.fbtn.on{background:#1a2a4a;border-color:#1a2a4a;color:#fff;}
+.fbtn:hover:not(.on){border-color:#2563eb;color:#2563eb;}
+
+/* ARTICLES TABLE */
+.art-table{width:100%;border-collapse:collapse;}
+.art-table th{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#8a93a8;font-weight:700;padding:8px 10px;border-bottom:2px solid #eef0f4;text-align:left;white-space:nowrap;}
+.art-table td{padding:9px 10px;border-bottom:1px solid #f0f2f7;vertical-align:middle;font-size:12px;}
+.art-table tr:hover td{background:#f8f9ff;}
+.art-table tr.hidden{display:none;}
+
+.grp{font-size:10px;font-weight:800;color:#94a3b8;width:24px;text-align:center;}
+.title-cell{max-width:260px;}
+.title-cell .t{font-weight:600;color:#1a2233;font-size:12px;line-height:1.3;}
+.title-cell .k{font-size:10px;color:#8a93a8;margin-top:2px;line-height:1.3;}
+
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;white-space:nowrap;}
+.bi{background:#dbeafe;color:#1d4ed8;} .bt{background:#dcfce7;color:#15803d;} .bc{background:#fef9c3;color:#854d0e;}
+.bb2c{background:#fce7f3;color:#9d174d;} .bb2b{background:#ede9fe;color:#5b21b6;} .bb{background:#f1f5f9;color:#374151;}
+
+/* STATUS TOGGLE */
+.status-btn{padding:4px 11px;border-radius:14px;border:none;font-size:10px;font-weight:700;cursor:pointer;transition:.15s;white-space:nowrap;}
+.s-written{background:#dcfce7;color:#15803d;}
+.s-waiting{background:#fef9c3;color:#854d0e;}
+.s-posted{background:#dbeafe;color:#1d4ed8;}
+.status-btn:hover{filter:brightness(.9);}
+
+.link-input{border:1px solid #e2e8f0;border-radius:6px;padding:4px 8px;font-size:11px;color:#374151;width:140px;outline:none;transition:.15s;}
+.link-input:focus{border-color:#2563eb;}
+.link-input::placeholder{color:#cbd5e1;}
+
+/* IMAGES PANEL */
+.img-search{width:100%;padding:9px 14px;border:1.5px solid #dde1ea;border-radius:8px;font-size:13px;margin-bottom:16px;outline:none;transition:.15s;}
+.img-search:focus{border-color:#2563eb;}
+
+.img-progress{display:flex;align-items:center;gap:10px;margin-bottom:16px;background:#f8f9ff;border-radius:8px;padding:12px 16px;}
+.img-progress .bars{flex:1;}
+.prog-bar{height:6px;background:#eef0f4;border-radius:4px;overflow:hidden;margin-top:6px;}
+.prog-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#2563eb,#7c3aed);transition:width .4s;}
+.prog-labels{display:flex;gap:12px;font-size:10px;color:#8a93a8;}
+.prog-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:3px;}
+
+.article-block{border:1px solid #eef0f4;border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.article-block-header{padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;background:#fafbfd;transition:.15s;user-select:none;}
+.article-block-header:hover{background:#f0f4ff;}
+.article-block-header .ah-title{font-weight:700;font-size:13px;flex:1;}
+.article-block-header .ah-count{font-size:11px;color:#8a93a8;}
+.article-block-header .chevron{font-size:12px;color:#8a93a8;transition:transform .2s;}
+.article-block.open .chevron{transform:rotate(180deg);}
+.article-block-body{display:none;padding:0 16px 12px;}
+.article-block.open .article-block-body{display:block;}
+
+.img-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f0f2f7;}
+.img-row:last-child{border-bottom:none;}
+.img-num{font-size:10px;font-weight:800;color:#cbd5e1;min-width:20px;padding-top:1px;}
+.img-desc{flex:1;font-size:12px;color:#374151;line-height:1.5;}
+.img-status-btn{padding:3px 10px;border-radius:12px;border:none;font-size:10px;font-weight:700;cursor:pointer;transition:.15s;white-space:nowrap;flex-shrink:0;}
+.is-todo{background:#f1f5f9;color:#64748b;}
+.is-wip{background:#fef9c3;color:#854d0e;}
+.is-done{background:#dcfce7;color:#15803d;}
+.img-status-btn:hover{filter:brightness(.9);}
+
+/* SUMMARY FOOTER */
+.summary-bar{display:flex;gap:16px;flex-wrap:wrap;padding:12px 0 0;border-top:1px solid #eef0f4;margin-top:8px;}
+.sb-item{font-size:11px;color:#6b7280;display:flex;align-items:center;gap:5px;}
+
+/* SCROLL */
+::-webkit-scrollbar{width:5px;height:5px;} ::-webkit-scrollbar-track{background:#f0f2f7;} ::-webkit-scrollbar-thumb{background:#c8ccd8;border-radius:3px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div><h1>🏗️ Flexfit Blog Dashboard</h1><p>Tổng thầu Nội thất & Kiến trúc – Chiến dịch SEO 2026</p></div>
+  <div class="header-date" id="hdate"></div>
+</div>
+
+<div class="stats">
+  <div class="stat c"><div class="n">22</div><div class="l">Tổng bài viết</div></div>
+  <div class="stat b"><div class="n" id="sWritten">22</div><div class="l">Đã viết xong</div></div>
+  <div class="stat o"><div class="n" id="sPosted">0</div><div class="l">Đã đăng WordPress</div></div>
+  <div class="stat p"><div class="n" id="sImgDone">0</div><div class="l">Hình đã thiết kế</div></div>
+</div>
+
+<div class="tabs" style="padding-top:20px;">
+  <div class="tab active" onclick="switchTab('articles',this)">📋 Bài viết (22)</div>
+  <div class="tab" onclick="switchTab('images',this)">🖼️ Hình ảnh thiết kế (<span id="imgTotalCount">0</span>)</div>
+</div>
+
+<!-- ARTICLES PANEL -->
+<div class="panel active" id="panel-articles">
+  <div class="filter-bar">
+    <span>Lọc:</span>
+    <button class="fbtn on" onclick="filterArt('all',this)">Tất cả</button>
+    <button class="fbtn" onclick="filterArt('b2c',this)">B2C</button>
+    <button class="fbtn" onclick="filterArt('b2b',this)">B2B</button>
+    <button class="fbtn" onclick="filterArt('informational',this)">Informational</button>
+    <button class="fbtn" onclick="filterArt('transactional',this)">Transactional</button>
+    <button class="fbtn" onclick="filterArt('commercial',this)">Commercial</button>
+    <button class="fbtn" onclick="filterArt('s-written',this)">Đã viết</button>
+    <button class="fbtn" onclick="filterArt('s-posted',this)">Đã đăng</button>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="art-table" id="artTable">
+    <thead>
+      <tr>
+        <th>GR</th><th>Tiêu đề bài viết & Từ khóa</th><th>Intent</th><th>Đối tượng</th>
+        <th>Trạng thái</th><th>Link WordPress</th>
+      </tr>
+    </thead>
+    <tbody id="artBody"></tbody>
+  </table>
+  </div>
+  <div class="summary-bar" id="artSummary"></div>
+</div>
+
+<!-- IMAGES PANEL -->
+<div class="panel" id="panel-images">
+  <input class="img-search" id="imgSearch" placeholder="🔍  Tìm mô tả hình ảnh..." oninput="filterImgs(this.value)">
+  <div class="img-progress">
+    <div class="bars">
+      <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+        <span style="font-size:12px;font-weight:700;color:#1a2233;">Tiến độ thiết kế hình ảnh</span>
+        <span style="font-size:12px;font-weight:800;color:#2563eb;" id="imgPct">0 / <span id="imgTotal">0</span> hình</span>
+      </div>
+      <div class="prog-bar"><div class="prog-fill" id="imgProgFill" style="width:0%"></div></div>
+      <div class="prog-labels" style="margin-top:6px;">
+        <span><span class="prog-dot" style="background:#dcfce7;border:1px solid #16a34a;"></span>Hoàn thành</span>
+        <span><span class="prog-dot" style="background:#fef9c3;border:1px solid #d97706;"></span>Đang thiết kế</span>
+        <span><span class="prog-dot" style="background:#f1f5f9;border:1px solid #94a3b8;"></span>Chưa thiết kế</span>
+      </div>
+    </div>
+  </div>
+  <div id="imgBlocks"></div>
+</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const ARTICLES = [
+  {g:'A', title:'Tổng thầu nội thất là gì – Định nghĩa, Quy trình & Lợi ích', kw:'tổng thầu nội thất là gì + thế nào là tổng thầu nội thất', intent:'informational', aud:'both', imgs:[
+    'Không gian phòng khách hoàn thiện hiện đại, tông gỗ sáng kết hợp trắng kem, ánh sáng tự nhiên ban ngày. Góc chụp toàn cảnh. Caption: "Công trình nội thất trọn gói – từ bản vẽ đến không gian sống hoàn chỉnh"',
+    'Sơ đồ so sánh hai mô hình – "Tự tìm thầu" (nhiều mũi tên rối) và "Tổng thầu" (một mũi tên gọn gàng). Nền sáng, thiết kế infographic tối giản.',
+    'Danh sách hạng mục thi công được thiết kế dạng checklist, phông chữ sạch sẽ, nền trắng với điểm nhấn màu gỗ.',
+    'Bảng so sánh 2 cột – "Tổng thầu" vs "Nhà thầu phụ", thiết kế rõ ràng, màu xanh navy và trắng.',
+    'Lifestyle – gia chủ thư giãn ngồi uống cà phê trong không gian đã hoàn thiện đẹp, ánh sáng ấm áp. Caption: "Khi tổng thầu lo toàn bộ, gia chủ chỉ cần đợi ngày về nhà"',
+    'Hai cột "Nên chọn tổng thầu" và "Có thể tự làm" với icon minh họa đơn giản, tông màu xanh lá và cam nhạt.',
+    'Đội ngũ kỹ sư và kiến trúc sư đang họp trao đổi bản vẽ trong văn phòng, tông chuyên nghiệp, ánh sáng trắng.',
+  ]},
+  {g:'B', title:'Chi phí tổng thầu nội thất 2026 – Bảng giá & Cách tính', kw:'chi phí tổng thầu nội thất + bao nhiêu tiền', intent:'informational', aud:'b2c', imgs:[
+    'Không gian phòng khách hiện đại đã hoàn thiện, bên cạnh là bảng tính ngân sách trên laptop. Góc chụp lifestyle ấm áp.',
+    'Infographic 5 yếu tố ảnh hưởng chi phí, thiết kế dạng bánh xe hoặc icon grid. Tông màu trung tính, sáng sủa.',
+    'Bảng giá thiết kế rõ ràng, nền trắng, cột màu xanh navy/gỗ. Caption: "Bảng giá tham khảo – chỉ mang tính định hướng"',
+    'Biểu đồ tròn phân bổ ngân sách xây dựng (phần thô, nội thất, điện nước, dự phòng). Màu sắc phân biệt rõ ràng.',
+    'Kiến trúc sư đang tư vấn cho gia chủ, cùng nhìn vào bản vẽ thiết kế. Không khí chuyên nghiệp nhưng thân thiện.',
+    'Bàn làm việc với bản vẽ mặt bằng căn hộ, thước dây, và laptop mở phần mềm thiết kế. Tông chuyên nghiệp.',
+  ]},
+  {g:'C', title:'Quy trình thi công nội thất chuẩn từ A đến Z', kw:'quy trình thi công nội thất + các bước thi công', intent:'informational', aud:'b2c', imgs:[
+    'Dòng timeline 7 bước thi công nội thất, thiết kế ngang, icon tối giản cho từng bước, tông gỗ và xanh navy.',
+    'Kỹ sư đang đo đạc căn phòng trống với thước laser, ghi chép vào bản vẽ. Góc chụp rộng cho thấy toàn bộ không gian thô.',
+    'Màn hình máy tính hiển thị thiết kế nội thất 3D phòng khách với đầy đủ đồ nội thất, ánh sáng, màu sắc. Bên cạnh là bản vẽ mặt bằng 2D.',
+    'Gia chủ và đại diện đơn vị thi công đang ngồi ký kết hợp đồng, bản vẽ trải ra trên bàn.',
+    'Thợ đang thi công trần thạch cao, ánh sáng công trường, PPE (mũ bảo hộ, khẩu trang).',
+    'Nhà máy sản xuất nội thất hiện đại với máy CNC cắt gỗ tự động, công nhân kiểm tra chất lượng.',
+    'Thợ lắp đặt tủ bếp, kiểm tra độ phẳng bằng thước ni vô. Ánh sáng rõ, không gian bếp đang dần hình thành.',
+    'Gia chủ và đại diện thi công cùng đi kiểm tra từng phòng. Không gian đã hoàn thiện đẹp, ánh sáng ấm.',
+  ]},
+  {g:'D', title:'Nên thuê tổng thầu hay tự tìm thầu? So sánh 6 tiêu chí', kw:'nên thuê tổng thầu hay tự tìm thầu + so sánh', intent:'informational', aud:'b2c', imgs:[
+    'Hai con đường rẽ nhánh, một bên icon "tổng thầu" (một người cầm chìa khóa nhà), bên kia icon "tự tìm thầu" (nhiều người riêng lẻ). Thiết kế tối giản.',
+    'Bảng phân biệt hai mô hình, cột trái "Tổng thầu", cột phải "Tự tìm thầu phụ". Tông màu xanh navy và gỗ.',
+    'Bảng so sánh 6 tiêu chí, hai cột rõ ràng. Dấu ✅ và ⚠️ để đánh giá.',
+    'Checklist "Nên chọn tổng thầu", icon tick màu xanh lá trên nền trắng.',
+    'Icon cảnh báo với danh sách red flags cần tránh. Tông màu cam nhạt và trắng.',
+    'Hai cột so sánh "Tách rời" vs "Trọn gói". Tông màu đơn giản.',
+  ]},
+  {g:'E', title:'Tổng thầu nội thất khách sạn & Resort – Thi công trọn gói', kw:'tổng thầu nội thất khách sạn + resort + thiết kế thi công', intent:'transactional', aud:'b2b', imgs:[
+    'Sảnh đón khách khách sạn 5 sao, ánh sáng ấm, vật liệu đá cẩm thạch và gỗ tối, góc chụp toàn cảnh panoramic. Tông sang trọng – đồng – trắng kem.',
+    'Sơ đồ quy trình tổng thầu từ ý tưởng đến bàn giao – dạng timeline ngang, tông xanh navy và vàng đồng.',
+    'Infographic các khu vực khách sạn – sảnh, phòng nghỉ, nhà hàng, spa, hành lang – mỗi khu vực một icon.',
+    'Timeline dạng cột dọc hoặc chevron ngang, 6 bước với màu chuyển dần. Tông navy, trắng, vàng đồng.',
+    'Ba cột lợi ích chính – Kiểm soát tiến độ / Đồng bộ chất lượng / Một đầu mối – mỗi cột một icon.',
+    'Checklist dạng bảng với 5 tiêu chí, mỗi tiêu chí có icon riêng. Tông sạch, nghiêm túc.',
+    'Ảnh công trình thực tế – khách sạn hoặc resort đã thi công (tra cứu tại flexfit.vn/du-an). Góc chụp toàn cảnh.',
+  ]},
+  {g:'F', title:'Tổng thầu nội thất văn phòng – Thiết kế thi công trọn gói', kw:'tổng thầu nội thất văn phòng + thiết kế văn phòng trọn gói', intent:'transactional', aud:'b2b', imgs:[
+    'Văn phòng open-space hiện đại, ánh sáng tự nhiên tràn ngập, cây xanh đặt xen kẽ bàn làm việc, tông trắng – gỗ sáng – xanh lá nhạt.',
+    'Infographic dạng lưới 3×3, mỗi ô một hạng mục văn phòng với icon tương ứng. Tông xanh navy và trắng.',
+    'Hai bên so sánh – "Tự quản lý" vs "Trọn gói" – dạng bảng đơn giản, màu sắc đối lập nhẹ nhàng.',
+    'Văn phòng với nhiều cây xanh, ánh sáng tự nhiên qua cửa kính lớn. Tông thiên nhiên, xanh lá và gỗ sáng.',
+    'Timeline 5 bước theo trục ngang, icon từng bước rõ ràng, tông xanh navy và vàng đồng.',
+    'Bảng tiến độ tham khảo, 3 cột: diện tích – thời gian thiết kế – thời gian thi công.',
+  ]},
+  {g:'G', title:'Hợp đồng D&B và EPC – Sự khác nhau & Khi nào nên dùng', kw:'hợp đồng DB + EPC là gì + design and build', intent:'informational', aud:'b2b', imgs:[
+    'Bàn họp với hợp đồng, bút ký và sơ đồ dự án. Góc chụp overhead. Tông trung tính, chuyên nghiệp.',
+    'Sơ đồ đơn giản – "Chủ đầu tư" → "Tổng thầu D&B" → hai nhánh "Thiết kế" và "Thi công". Tông navy và trắng.',
+    'Sơ đồ 3 tầng – Engineering → Procurement → Construction – với mũi tên kết nối. Tông xanh đậm và vàng đồng.',
+    'Bảng so sánh 6 tiêu chí giữa D&B và EPC, dùng màu xanh và cam để phân biệt.',
+    'Icon chìa khóa với vòng tròn ký hiệu "trọn gói", tông vàng đồng.',
+    'Hai đường dẫn với cây quyết định đơn giản – điều kiện → kết quả. Tông xanh nhạt.',
+  ]},
+  {g:'H', title:'BIM, ISO & Cloud Factory trong thi công nội thất', kw:'BIM trong thi công nội thất + ISO 9001 + Cloud Factory', intent:'informational', aud:'both', imgs:[
+    'Màn hình máy tính hiển thị mô hình BIM 3D của một không gian nội thất, người thiết kế đang tương tác. Tông kỹ thuật số – xanh dương và trắng.',
+    'So sánh hai ảnh – bên trái: bản vẽ 2D kỹ thuật truyền thống; bên phải: mô hình BIM 3D màu sắc phong phú có thể xoay nhìn từ nhiều góc.',
+    'Chứng chỉ ISO 9001 khung sang trọng, đặt trên bàn gỗ cùng sổ tay quy trình. Tông trắng và vàng đồng.',
+    'Infographic mạng lưới – trung tâm là biểu tượng "đám mây + nhà máy", kết nối đến 6 địa điểm trên bản đồ Việt Nam. Tông xanh công nghệ.',
+    'Danh sách câu hỏi dạng checklist, mỗi câu có icon hỏi màu cam. Nền trắng sạch.',
+  ]},
+  {g:'I', title:'7 tiêu chí chọn tổng thầu nội thất uy tín + 5 dấu hiệu cảnh báo', kw:'kinh nghiệm chọn tổng thầu nội thất + dấu hiệu nhận biết', intent:'commercial', aud:'b2c', imgs:[
+    'Gia chủ đang xem xét bản vẽ thiết kế cùng tư vấn viên tại bàn, biểu cảm nghiêm túc và tin tưởng. Tông gỗ tự nhiên và trắng.',
+    'Hai ảnh trước-sau của cùng một không gian. Caption: "Cùng ngân sách – kết quả khác nhau do chọn đơn vị khác nhau."',
+    'Danh sách 7 điểm theo chiều dọc, mỗi điểm có số thứ tự lớn màu navy, icon và 2 dòng mô tả.',
+    'Danh sách 5 red flags với icon cảnh báo màu cam nhạt trên nền trắng.',
+    'Checklist dạng bảng có ô tick, thiết kế giống tờ in được. Tông sạch, dùng được in ra dán lên tường.',
+  ]},
+  {g:'J', title:'8 xu hướng thiết kế nội thất 2026 được ưa chuộng nhất', kw:'xu hướng thiết kế nội thất 2026 + nội thất hiện đại', intent:'informational', aud:'b2c', imgs:[
+    'Collage 4 ảnh phòng khách với phong cách khác nhau – Japandi, Wabi-Sabi, Earthy tones, Maximalism nhẹ – ghép dạng lưới 2×2.',
+    'Phòng khách Japandi – sofa thấp màu be, bàn cà phê gỗ tự nhiên, đệm linen, cây xanh nhỏ, ánh sáng vàng ấm.',
+    'Phòng ngủ với tường đất nung, chăn gối màu terracotta và olive, giường gỗ thô vân nổi. Ánh sáng vàng ấm.',
+    'Góc uống trà với chén gốm thủ công không đều, bàn gỗ cũ, ánh sáng mềm từ cửa sổ.',
+    'Bảng màu 8 ô, mỗi ô một màu với tên gọi bên dưới. Thiết kế đơn giản, phong cách moodboard.',
+    'Không gian sử dụng vật liệu tái sinh – gỗ cũ tái chế làm kệ sách, gạch men cũ lát nền.',
+    'Phòng khách có góc làm việc tích hợp – bàn gập từ tường, kệ sách tích hợp giường ngủ gấp.',
+    'Phòng khách màu sắc phong phú nhưng có hệ thống – sofa velvet xanh đậm, tranh gallery wall, thảm hoa văn.',
+    'Phòng ngủ với tường cây xanh sống, cửa sổ kính nhìn ra vườn, chậu cây lớn trong góc phòng.',
+  ]},
+  {g:'K', title:'Tổng thầu kiến trúc là gì? Khác gì tổng thầu nội thất?', kw:'tổng thầu kiến trúc là gì + thiết kế kiến trúc tổng thầu', intent:'informational', aud:'both', imgs:[
+    'Công trình kiến trúc hiện đại đang hoàn thiện – kính và bê tông tương phản, kỹ sư đứng giám sát với bản vẽ. Tông xám xi măng và xanh trời.',
+    'Sơ đồ phân tầng – "Chủ đầu tư" ở trên, bên dưới là "Tổng thầu kiến trúc", tiếp theo là các mũi tên đến "Kết cấu", "MEP", "Hoàn thiện vỏ ngoài".',
+    'Bảng so sánh 2 cột – "Tổng thầu kiến trúc" vs "Tổng thầu nội thất". Tông xanh navy bên trái, nâu gỗ bên phải.',
+    'Danh sách 5 tình huống dạng icon + text. Tông xanh navy và xám sáng.',
+    'Timeline dự án từ concept đến bàn giao – 5 giai đoạn theo trục ngang. Tông xanh navy, trắng và vàng nhạt.',
+    'Icon hai vòng tròn giao nhau – "Kiến trúc" và "Nội thất", phần giao là "Tổng thầu trọn gói".',
+  ]},
+  {g:'L', title:'Tổng thầu nội thất biệt thự & nhà phố – Thi công trọn gói', kw:'tổng thầu nội thất biệt thự + nhà phố + villa', intent:'transactional', aud:'b2c', imgs:[
+    'Phòng khách biệt thự sang trọng – trần cao, cầu thang xoắn gỗ óc chó, sofa bọc vải cao cấp, đèn chùm tinh tế. Tông gỗ tối – trắng kem – vàng đồng.',
+    'Bảng 3 cột – "Biệt thự đơn lập", "Nhà phố liền kề", "Biệt thự song lập" – mỗi cột liệt kê đặc điểm nội thất.',
+    'Infographic mặt bằng biệt thự – các khu vực được đánh dấu màu sắc: phòng khách, bếp, phòng ngủ, sân vườn.',
+    'Mood board 4 phong cách – Classic, Modern Luxury, Wabi-Sabi, Indochine – mỗi góc một màu sắc và vật liệu.',
+    'Timeline 6 bước theo trục ngang với icon từng bước. Tông vàng đồng – navy – trắng, phong cách cao cấp.',
+  ]},
+  {g:'M', title:'Thi công nội thất chung cư – Hướng dẫn A–Z cho gia chủ', kw:'thi công nội thất chung cư + thiết kế căn hộ trọn gói', intent:'transactional', aud:'b2c', imgs:[
+    'Căn hộ chung cư 65m² sau thi công hoàn chỉnh – phòng khách và bếp open-plan thông thoáng, tông Japandi ấm. Ánh sáng ban ngày.',
+    'Checklist giấy tờ đặt trên bàn – hồ sơ thi công, giấy phép, bản vẽ. Bên cạnh là chìa khóa căn hộ mới. Tông trắng và navy.',
+    'Timeline 6 bước theo trục ngang, icon từng bước, tông xanh navy và vàng nhạt. Bên dưới là thời gian ước tính.',
+    'Căn hộ 45m² sử dụng nội thất thông minh – giường Murphy gấp vào tường, bàn ăn gập, kệ tường thay tủ đứng.',
+    'Bảng chi phí theo diện tích và phân khúc, thiết kế sạch và dễ đọc. Tông trắng và navy.',
+  ]},
+  {g:'N', title:'Tổng thầu nội thất nhà hàng & Spa – Thiết kế thi công trọn gói', kw:'tổng thầu nội thất nhà hàng + spa + quán cafe', intent:'transactional', aud:'b2b', imgs:[
+    'Nhà hàng cao cấp buổi tối – ánh nến ấm, bàn ghế gỗ tối, không gian rộng thoáng, khách đang dùng bữa. Tông nâu – đồng – vàng ấm.',
+    'Bếp công nghiệp nhà hàng – inox sáng bóng, thiết bị chuyên nghiệp, nhân viên bếp đang làm việc.',
+    'Phòng massage spa cao cấp – ánh sáng mờ ấm, đèn nến, giường massage bọc da trắng, tiểu cảnh đá sỏi và cây xanh.',
+    'Infographic chia hai khu vực: nhà hàng (icon bàn ăn, bếp, bar) và spa (icon phòng massage, xông hơi, tiếp tân).',
+    'Bảng 2 cột – Nhà hàng và Spa – thời gian và mức chi phí theo diện tích. Tông navy và trắng.',
+  ]},
+  {g:'O', title:'Hợp đồng tổng thầu nội thất – Điều khoản cần biết & Tiết kiệm chi phí', kw:'hợp đồng tổng thầu nội thất + điều khoản + tiết kiệm chi phí', intent:'informational', aud:'b2c', imgs:[
+    'Hai bàn tay ký hợp đồng trên bàn, phía sau là bản vẽ thiết kế nội thất. Ánh sáng ấm tự nhiên, tông trắng – gỗ – navy.',
+    'Hợp đồng mở ra với các điều khoản được đánh dấu highlight màu vàng. Bên cạnh là bút ký và bản vẽ cuộn lại.',
+    'Danh sách cảnh báo – icon dấu chấm than màu cam bên cạnh mỗi điều khoản. Nền trắng sạch, font rõ ràng.',
+    'Bảng hai cột – "Tiết kiệm được" vs "Không nên tiết kiệm" – màu xanh lá và đỏ tương phản.',
+    'Nhân viên tư vấn Flexfit đang ngồi giải thích hợp đồng cho gia chủ tại bàn làm việc. Tông ấm, chuyên nghiệp.',
+  ]},
+  {g:'P', title:'Tổng thầu nội thất Hà Nội – Thiết kế & Thi công trọn gói', kw:'tổng thầu nội thất Hà Nội + công ty nội thất Hà Nội', intent:'transactional', aud:'both', imgs:[
+    'Căn hộ cao cấp tại Hà Nội sau thi công – view hướng hồ hoặc phố cổ, nội thất tông gỗ ấm kết hợp xanh rêu. Ánh sáng tự nhiên.',
+    'Phố cổ Hà Nội hoặc tòa nhà chung cư hiện đại – đối chiếu kiến trúc truyền thống và hiện đại. Tông trung tính, góc rộng.',
+    'Cuộc họp tư vấn dự án – bàn họp với bản vẽ, mô hình 3D trên màn hình, nhân viên tư vấn và gia chủ.',
+    'Bảng chi phí thi công nội thất theo phân khúc và loại hình công trình. Tông navy và trắng.',
+    'Công trình Flexfit tại Hà Nội – ảnh thực tế (tra cứu tại flexfit.vn/du-an). Tông chuyên nghiệp và ấm áp.',
+  ]},
+  {g:'Q', title:'Tổng thầu nội thất TP.HCM – Thiết kế & Thi công trọn gói', kw:'tổng thầu nội thất TP HCM + công ty nội thất Sài Gòn', intent:'transactional', aud:'both', imgs:[
+    'Căn hộ hiện đại tại TP.HCM sau thi công – view thoáng, nội thất tông sáng kết hợp cây xanh. Ánh sáng tự nhiên mạnh đặc trưng miền Nam.',
+    'Skyline TP.HCM ban ngày với các tòa nhà cao tầng. Tông xanh dương sáng và trắng. Cảm giác đô thị, năng động.',
+    'Showroom hoặc văn phòng đơn vị nội thất chuyên nghiệp – trưng bày mẫu vật liệu, nhân viên tư vấn. Tông trắng và gỗ.',
+    'Bảng chi phí thi công chia theo loại hình và phân khúc. Tông xanh navy và trắng.',
+    'Công trình Flexfit tại TP.HCM – ảnh thực tế (tra cứu tại flexfit.vn/du-an). Tông hiện đại, sáng thoáng.',
+  ]},
+  {g:'R', title:'Vật liệu nội thất cao cấp – Gỗ E0, ENF & Plywood là gì?', kw:'vật liệu nội thất cao cấp + gỗ E0 + ENF + Plywood', intent:'informational', aud:'b2c', imgs:[
+    'Các mẫu cốt gỗ cắt lát đặt cạnh nhau – MDF, Plywood, HDF – nhìn rõ cấu trúc bên trong. Bên cạnh là thẻ nhãn vật liệu và chứng chỉ E0/ENF.',
+    'Gia đình với trẻ nhỏ trong phòng ngủ mới thi công – ánh sáng ấm, không khí trong lành, cây xanh nhỏ trên kệ.',
+    'Infographic chia 4 loại cốt gỗ – MDF thường, MDF HMR, HDF, Plywood – mỗi loại có icon và chỉ số chính. Tông xanh navy và gỗ nhạt.',
+    'So sánh mẫu cánh tủ – Melamine, Acrylic, Laminate, sơn bóng – đặt cạnh nhau dưới ánh sáng tốt.',
+    'Cận cảnh cạnh tủ bếp với đường dán cạnh hoàn hảo – so sánh với cạnh tủ kém chất lượng. Ánh sáng studio, nền trắng.',
+    'Bảng hướng dẫn chọn vật liệu theo từng khu vực trong nhà – bếp, phòng ngủ, phòng tắm, phòng khách.',
+  ]},
+  {g:'S', title:'Phong cách Japandi là gì? Đặc điểm & Cách áp dụng cho nhà Việt', kw:'phong cách Japandi + nội thất Japandi + thiết kế Japandi', intent:'informational', aud:'b2c', imgs:[
+    'Phòng khách Japandi điển hình – sofa thấp tông đất, bàn trà gỗ sáng, cây xanh nhỏ, ánh sáng tự nhiên qua rèm linen trắng ngà.',
+    'Bảng chia đôi – bên trái nội thất Nhật Bản truyền thống, bên phải nội thất Scandinavia. Mũi tên hợp nhất ở giữa thành không gian Japandi.',
+    'Phòng ngủ Japandi – giường thấp sàn, đầu giường gỗ sáng, chăn gối tông beige, đèn treo đơn giản, nhành cây khô trong bình gốm.',
+    'Bảng màu Japandi – 8–10 ô màu từ trắng ngà, beige, greige, nâu nhạt, xanh rêu tối, indigo. Tên màu rõ ràng.',
+    'Căn hộ 55m² phong cách Japandi – phòng khách, bếp và bàn ăn nhìn chung trong một frame. Tối giản, không gian mở.',
+  ]},
+  {g:'T', title:'Thiết kế văn phòng xanh – LEED và Biophilic là gì & lợi ích', kw:'thiết kế văn phòng xanh + LEED + Biophilic design', intent:'informational', aud:'b2b', imgs:[
+    'Văn phòng open-space hiện đại với nhiều cây xanh, ánh sáng tự nhiên qua cửa kính lớn, nhân viên làm việc. Tông xanh lá và gỗ sáng.',
+    'Logo LEED Certification trên nền ảnh tòa nhà văn phòng hiện đại tại Việt Nam. Hoặc bảng chứng chỉ LEED trong sảnh.',
+    'Góc văn phòng với tường cây xanh (living wall), ánh sáng tự nhiên, bàn làm việc gỗ thô, vật liệu đá tự nhiên.',
+    'Infographic 6 ô hạng mục – ánh sáng, cây xanh, không khí, vật liệu, âm thanh, nhiệt độ. Tông xanh lá và trắng.',
+    'Biểu đồ so sánh chi phí và lợi ích giữa văn phòng thông thường và văn phòng xanh theo 5 năm.',
+    'Công trình văn phòng Flexfit đã thi công – ảnh thực tế (tra cứu tại flexfit.vn/du-an). Tông hiện đại và chuyên nghiệp.',
+  ]},
+  {g:'U', title:'Nội thất phòng ngủ master – Thiết kế đẹp & đủ tiện nghi', kw:'nội thất phòng ngủ master + thiết kế phòng ngủ master đẹp', intent:'informational', aud:'b2c', imgs:[
+    'Phòng ngủ master ~20m² – giường king size đầu giường bọc vải linen, hai đèn đầu giường đối xứng, tranh lớn phía sau, tủ âm tường. Tông beige và gỗ sáng.',
+    'Mặt bằng 2D phòng ngủ master với các khu vực đánh dấu màu sắc: khu ngủ (xanh), khu mặc (cam), khu vệ sinh (xanh lá), khu thư giãn (tím).',
+    'Ba hình phòng ngủ master cạnh nhau – 12m², 18m² và 25m² – thể hiện cách bố trí tối ưu cho từng diện tích.',
+    'Ba phòng ngủ master theo ba phong cách – Japandi, Modern Luxury, Mid-Century Modern – mỗi hình ghi tên phong cách.',
+    'Cận cảnh chi tiết phòng ngủ master – đầu giường bọc vải, đèn đầu giường gắn tường, kệ âm tường, tay nắm tủ thanh kim loại mảnh.',
+    'Bảng chi phí phân theo phân khúc (tiêu chuẩn / cao cấp) và diện tích phòng. Tông navy và trắng.',
+  ]},
+  {g:'V', title:'Tổng thầu nội thất trọn gói (Turnkey) – Bạn chỉ cần nhận chìa khóa', kw:'tổng thầu nội thất trọn gói + turnkey nội thất', intent:'transactional', aud:'both', imgs:[
+    'Tay gia chủ đang nhận chìa khóa từ đại diện đơn vị tổng thầu, phía sau là không gian nội thất hoàn chỉnh. Ánh sáng ấm, tông gỗ và trắng.',
+    'Bảng so sánh 3 cột: (1) Tự tìm thầu từng phần, (2) Thuê thiết kế + tự đấu thầu thi công, (3) Tổng thầu trọn gói Turnkey.',
+    'Timeline dọc 7 bước, mỗi bước có icon và mô tả ngắn. Tông xanh navy gradient, chữ trắng. Chuyên nghiệp và rõ ràng.',
+    'Hai nhóm người – gia đình bận rộn với con nhỏ và chủ doanh nghiệp – nhìn vào không gian nội thất hoàn chỉnh với vẻ hài lòng.',
+    'Danh sách lợi ích dạng icon + text – nền trắng thoáng, tông xanh lá và navy. Mỗi lợi ích chiếm 1 dòng.',
+    'Sơ đồ quy trình Flexfit – 5 bước: tư vấn → thiết kế BIM → sản xuất Cloud Factory → thi công → bàn giao bảo hành.',
+  ]},
+];
+
+// ─── STATE ──────────────────────────────────────────────────────────────────
+const LS_ART = 'ff_art_status';
+const LS_LNK = 'ff_art_links';
+const LS_IMG = 'ff_img_status';
+
+function loadState() {
+  try { return { art: JSON.parse(localStorage.getItem(LS_ART)||'{}'), lnk: JSON.parse(localStorage.getItem(LS_LNK)||'{}'), img: JSON.parse(localStorage.getItem(LS_IMG)||'{}') }; }
+  catch(e){ return {art:{}, lnk:{}, img:{}}; }
+}
+function saveArt(g, s) { const d = JSON.parse(localStorage.getItem(LS_ART)||'{}'); d[g]=s; localStorage.setItem(LS_ART, JSON.stringify(d)); }
+function saveLnk(g, v) { const d = JSON.parse(localStorage.getItem(LS_LNK)||'{}'); d[g]=v; localStorage.setItem(LS_LNK, JSON.stringify(d)); }
+function saveImg(key, s) { const d = JSON.parse(localStorage.getItem(LS_IMG)||'{}'); d[key]=s; localStorage.setItem(LS_IMG, JSON.stringify(d)); }
+
+// ─── TABS ────────────────────────────────────────────────────────────────────
+function switchTab(id, el) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+// ─── ARTICLES ────────────────────────────────────────────────────────────────
+const statusCycle = ['s-written','s-waiting','s-posted'];
+const statusLabel = {'s-written':'✅ Đã viết','s-waiting':'⏳ Chờ đăng','s-posted':'🟢 Đã đăng'};
+const statusClass = {'s-written':'s-written','s-waiting':'s-waiting','s-posted':'s-posted'};
+const intentLabel = {informational:'Info',transactional:'Trans',commercial:'Comm'};
+const intentCls   = {informational:'bi',transactional:'bt',commercial:'bc'};
+const audLabel    = {b2c:'B2C',b2b:'B2B',both:'B2C+B2B'};
+const audCls      = {b2c:'bb2c',b2b:'bb2b',both:'bb'};
+
+function buildArticles() {
+  const state = loadState();
+  const tbody = document.getElementById('artBody');
+  tbody.innerHTML = '';
+  ARTICLES.forEach(a => {
+    const st = state.art[a.g] || 's-written';
+    const lnk = state.lnk[a.g] || '';
+    const tr = document.createElement('tr');
+    tr.dataset.intent = a.intent;
+    tr.dataset.aud = a.aud;
+    tr.dataset.status = st;
+    tr.innerHTML = `
+      <td class="grp">${a.g}</td>
+      <td class="title-cell"><div class="t">${a.title}</div><div class="k">🔑 ${a.kw}</div></td>
+      <td><span class="badge ${intentCls[a.intent]}">${intentLabel[a.intent]}</span></td>
+      <td><span class="badge ${audCls[a.aud]}">${audLabel[a.aud]}</span></td>
+      <td><button class="status-btn ${st}" onclick="cycleStatus('${a.g}',this)">${statusLabel[st]}</button></td>
+      <td><input class="link-input" placeholder="https://flexfit.vn/…" value="${lnk}" onchange="saveLnk('${a.g}',this.value)"></td>
+    `;
+    tbody.appendChild(tr);
+  });
+  updateArtStats();
+}
+
+function cycleStatus(g, btn) {
+  const cur = btn.classList[1];
+  const idx = statusCycle.indexOf(cur);
+  const next = statusCycle[(idx+1)%statusCycle.length];
+  btn.className = 'status-btn '+next;
+  btn.textContent = statusLabel[next];
+  btn.closest('tr').dataset.status = next;
+  saveArt(g, next);
+  updateArtStats();
+  updateImgStats();
+}
+
+let artFilter = 'all';
+function filterArt(f, el) {
+  artFilter = f;
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#artBody tr').forEach(tr => {
+    const show = f==='all' || tr.dataset.intent===f ||
+      (f==='b2c' && (tr.dataset.aud==='b2c'||tr.dataset.aud==='both')) ||
+      (f==='b2b' && (tr.dataset.aud==='b2b'||tr.dataset.aud==='both')) ||
+      tr.dataset.status===f;
+    tr.classList.toggle('hidden', !show);
+  });
+}
+
+function updateArtStats() {
+  const rows = document.querySelectorAll('#artBody tr');
+  let posted = 0, written = 0;
+  rows.forEach(tr => {
+    if(tr.dataset.status==='s-posted') posted++;
+    if(tr.dataset.status!=='') written++;
+  });
+  document.getElementById('sPosted').textContent = posted;
+  document.getElementById('sWritten').textContent = written;
+}
+
+// ─── IMAGES ──────────────────────────────────────────────────────────────────
+const imgStatusCycle = ['todo','wip','done'];
+const imgStatusLabel = {todo:'Chưa thiết kế', wip:'Đang thiết kế', done:'✅ Hoàn thành'};
+const imgStatusCls   = {todo:'is-todo', wip:'is-wip', done:'is-done'};
+
+function buildImages() {
+  const state = loadState();
+  const container = document.getElementById('imgBlocks');
+  container.innerHTML = '';
+  let total = 0;
+  ARTICLES.forEach((a,ai) => {
+    total += a.imgs.length;
+    const block = document.createElement('div');
+    block.className = 'article-block';
+    block.id = 'imgblock-'+a.g;
+    const doneCnt = a.imgs.filter((_,ii)=>state.img[a.g+'_'+ii]==='done').length;
+    const wipCnt  = a.imgs.filter((_,ii)=>state.img[a.g+'_'+ii]==='wip').length;
+
+    let progressBar = '';
+    if(a.imgs.length > 0) {
+      const pct = Math.round(doneCnt/a.imgs.length*100);
+      progressBar = `<div style="width:60px;height:4px;background:#eef0f4;border-radius:2px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:8px;"><div style="width:${pct}%;height:100%;background:#16a34a;border-radius:2px;"></div></div>`;
+    }
+
+    block.innerHTML = `
+      <div class="article-block-header" onclick="toggleBlock('${a.g}')">
+        <span style="font-size:11px;font-weight:800;color:#94a3b8;min-width:18px;">${a.g}</span>
+        <span class="ah-title">${a.title}</span>
+        ${progressBar}
+        <span class="ah-count" id="cnt-${a.g}">${doneCnt}/${a.imgs.length} hình</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="article-block-body" id="body-${a.g}">
+        ${a.imgs.map((img,ii)=>{
+          const key = a.g+'_'+ii;
+          const st = state.img[key]||'todo';
+          return `<div class="img-row" id="imgrow-${key}">
+            <span class="img-num">#${ii+1}</span>
+            <span class="img-desc">${img}</span>
+            <button class="img-status-btn ${imgStatusCls[st]}" onclick="cycleImg('${a.g}',${ii},this)">${imgStatusLabel[st]}</button>
+          </div>`;
+        }).join('')}
+      </div>
+    `;
+    container.appendChild(block);
+  });
+  document.getElementById('imgTotal').textContent = total;
+  document.getElementById('imgTotalCount').textContent = total;
+  updateImgStats();
+}
+
+function toggleBlock(g) {
+  const block = document.getElementById('imgblock-'+g);
+  block.classList.toggle('open');
+}
+
+function cycleImg(g, ii, btn) {
+  const key = g+'_'+ii;
+  const cur = Object.keys(imgStatusCls).find(k=>btn.classList.contains(imgStatusCls[k])) || 'todo';
+  const idx = imgStatusCycle.indexOf(cur);
+  const next = imgStatusCycle[(idx+1)%imgStatusCycle.length];
+  btn.className = 'img-status-btn '+imgStatusCls[next];
+  btn.textContent = imgStatusLabel[next];
+  saveImg(key, next);
+  updateImgStats();
+  // update count in header
+  const article = ARTICLES.find(a=>a.g===g);
+  const state = loadState();
+  const doneCnt = article.imgs.filter((_,i)=>state.img[g+'_'+i]==='done').length;
+  document.getElementById('cnt-'+g).textContent = `${doneCnt}/${article.imgs.length} hình`;
+}
+
+function updateImgStats() {
+  const state = loadState();
+  let total=0, done=0, wip=0;
+  ARTICLES.forEach(a => {
+    a.imgs.forEach((_,ii)=>{
+      total++;
+      const s = state.img[a.g+'_'+ii]||'todo';
+      if(s==='done') done++;
+      if(s==='wip')  wip++;
+    });
+  });
+  document.getElementById('sImgDone').textContent = done;
+  document.getElementById('imgPct').innerHTML = `${done} / <span id="imgTotal">${total}</span> hình`;
+  const pct = total>0 ? Math.round(done/total*100) : 0;
+  document.getElementById('imgProgFill').style.width = pct+'%';
+}
+
+function filterImgs(q) {
+  const lq = q.toLowerCase();
+  document.querySelectorAll('.article-block').forEach(block => {
+    let anyMatch = false;
+    block.querySelectorAll('.img-row').forEach(row => {
+      const desc = row.querySelector('.img-desc').textContent.toLowerCase();
+      const match = !q || desc.includes(lq);
+      row.style.display = match ? '' : 'none';
+      if(match) anyMatch = true;
+    });
+    block.style.display = anyMatch ? '' : 'none';
+    if(q && anyMatch) block.classList.add('open');
+    if(!q) block.style.display = '';
+  });
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+document.getElementById('hdate').textContent = new Date().toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
+buildArticles();
+buildImages();
+</script>
+</body>
+</html>
