@@ -1,3 +1,7 @@
+https://raw.githubusercontent.com/trangnt2209-web/flexfit-blogs/main/index.html
+→ https://raw.githubusercontent.com/trangnt2209-web/flexfit-blogs/main/index.html
+Content-Type: text/plain; charset=utf-8
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -167,7 +171,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .img-seq{font-size:9px;font-weight:700;color:#B4B2A9;line-height:1;}
 .type-pill{font-size:8px;font-weight:700;padding:1px 4px;border-radius:3px;white-space:nowrap;line-height:1.4;}
 .tp-photo{background:#E6F1FB;color:#0C447C;} .tp-info{background:#EEEDFE;color:#3C3489;} .tp-collage{background:#FAEEDA;color:#633806;}
-.img-desc-text{font-size:11px;color:#444441;line-height:1.55;white-space:pre-line;}
+.img-desc-text{font-size:11px;color:#444441;line-height:1.6;white-space:pre-line;}
+.img-desc-text strong{color:#222;font-weight:600;}
+.vi-sep{display:inline-block;margin:5px 0 3px;padding:1px 7px;background:#EEF2FF;color:#3C3489;font-size:9px;font-weight:700;border-radius:10px;letter-spacing:.3px;}
+.en-sec{color:#5a5a5a;font-size:10.5px;}
 .img-st-btn{padding:2px 8px;border-radius:10px;border:0.5px solid #D3D1C7;font-size:10px;font-weight:500;cursor:pointer;transition:.12s;white-space:nowrap;background:#fff;color:#888780;flex-shrink:0;}
 .iis-todo{background:#F1EFE8;color:#888780;border-color:#D3D1C7;} .iis-wip{background:#FAEEDA;color:#633806;border-color:#FAC775;} .iis-done{background:#EAF3DE;color:#27500A;border-color:#C0DD97;}
 .img-st-btn:hover{filter:brightness(.94);}
@@ -298,7 +305,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <div class="panel" id="panel-images">
   <div class="img-top-bar">
-    <input class="img-search" placeholder="🔍 Tìm mô tả hình ảnh (tiếng Anh)..." oninput="filterImgs(this.value)">
+    <input class="img-search" placeholder="🔍 Tìm mô tả hình ảnh..." oninput="filterImgs(this.value)">
     <div class="prog-wrap">
       <div class="prog-meta" id="imgProgLabel">0 / 0 hình hoàn thành</div>
       <div class="prog-bar"><div class="prog-fill" id="imgProgFill" style="width:0%"></div></div>
@@ -319,347 +326,347 @@ const ARTICLES = [
   {g:'A', title:'Tổng thầu nội thất là gì – Định nghĩa, Quy trình & Lợi ích',
    kw:'tổng thầu nội thất là gì + thế nào là tổng thầu nội thất', intent:'informational', aud:'both',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Fully furnished modern living room — beige sofa, oak coffee table, monstera in corner\nAngle: Wide-angle full view | Lighting: Natural daylight, warm golden\nColor palette: Oak #C4956A + Cream white #F5F0E8 + Soft sage green\nCaption overlay: "Complete interior turnkey project by Flexfit"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Phòng khách hiện đại hoàn thiện — ghế sofa beige, bàn cà phê gỗ sồi, cây monstera góc phòng\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Ánh sáng tự nhiên ban ngày, vàng ấm\nBảng màu: Gỗ sồi #C4956A + Trắng kem #F5F0E8 + Xanh rêu nhạt\nCaption: "Dự án nội thất tổng thầu trọn gói bởi Flexfit"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nLayout: 2-column side-by-side with headers\nLeft "DIY Subcontractors": homeowner icon → 6 tangled orange #F59E0B arrows to: Electrician / Plumber / Furniture / Flooring / Ceiling / Paint\nRight "Flexfit General Contract": homeowner icon → 1 straight #2563EB arrow to completed house icon\nColors: White background, navy #1a2a4a headers, font Be Vietnam Pro'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nLayout: 2-column side-by-side with headers\nLeft "DIY Subcontractors": homeowner icon → 6 tangled orange #F59E0B arrows to: Electrician / Plumber / Furniture / Flooring / Ceiling / Paint\nRight "Flexfit General Contract": homeowner icon → 1 straight #2563EB arrow to completed house icon\nColors: White background, navy #1a2a4a headers, font Be Vietnam Pro\n\n[Tiếng Việt]\nLayout: 2 cột song song có tiêu đề\nCột trái "Tự tìm thầu": icon chủ nhà → 6 mũi tên cam rối #F59E0B đến: Thợ điện / Thợ nước / Nội thất / Sàn / Trần / Sơn\nCột phải "Tổng thầu Flexfit": icon chủ nhà → 1 mũi tên thẳng #2563EB đến icon ngôi nhà hoàn thiện\nMàu sắc: Nền trắng, tiêu đề navy #1a2a4a, font Be Vietnam Pro'`,
 
-    `🎨 INFOGRAPHIC | 900×1100px (vertical)\nLayout: Single-column checklist, 8 rows\nEach row (☑ icon in #16a34a + small icon):\n☑ Structural work (plastering, masonry)\n☑ In-wall electrical system\n☑ Plumbing supply & drainage\n☑ Plasterboard ceiling\n☑ Wood / stone flooring\n☑ Custom furniture (kitchen cabinets, wardrobes)\n☑ Lighting & air conditioning\n☑ Accessories & finishing touches\nColors: Background #FFFFFF, text #1a2233, wood accent #8B6535 | Flexfit logo bottom right'`,
+    `🎨 INFOGRAPHIC | 900×1100px (vertical)\nLayout: Single-column checklist, 8 rows\nEach row (☑ icon in #16a34a + small icon):\n☑ Structural work (plastering, masonry)\n☑ In-wall electrical system\n☑ Plumbing supply & drainage\n☑ Plasterboard ceiling\n☑ Wood / stone flooring\n☑ Custom furniture (kitchen cabinets, wardrobes)\n☑ Lighting & air conditioning\n☑ Accessories & finishing touches\nColors: Background #FFFFFF, text #1a2233, wood accent #8B6535 | Flexfit logo bottom right\n\n[Tiếng Việt]\nLayout: Danh sách 1 cột, 8 hàng\nMỗi hàng (☑ icon #16a34a + icon nhỏ):\n☑ Xây thô (trát vữa, xây gạch)\n☑ Hệ thống điện âm tường\n☑ Cấp thoát nước\n☑ Trần thạch cao\n☑ Sàn gỗ / đá\n☑ Nội thất may đo (tủ bếp, tủ quần áo)\n☑ Chiếu sáng & điều hòa\n☑ Phụ kiện & hoàn thiện\nMàu sắc: Nền #FFFFFF, chữ #1a2233, điểm nhấn gỗ #8B6535 | Logo Flexfit góc dưới phải'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nLayout: 2-column comparison table, 5 criteria rows\nHeader left "General Contractor": background #1a2a4a, white text\nHeader right "Individual Subcontractors": background #64748B, white text\n5 criteria: Single point of contact / Warranty / Schedule / Legal responsibility / Cost overruns\nUse ✅ for General Contractor, ⚠️ for Subcontractors\nWhite background, row dividers #E2E8F0'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nLayout: 2-column comparison table, 5 criteria rows\nHeader left "General Contractor": background #1a2a4a, white text\nHeader right "Individual Subcontractors": background #64748B, white text\n5 criteria: Single point of contact / Warranty / Schedule / Legal responsibility / Cost overruns\nUse ✅ for General Contractor, ⚠️ for Subcontractors\nWhite background, row dividers #E2E8F0\n\n[Tiếng Việt]\nLayout: Bảng so sánh 2 cột, 5 hàng tiêu chí\nTiêu đề trái "Tổng thầu": nền #1a2a4a, chữ trắng\nTiêu đề phải "Tự tìm thầu": nền #64748B, chữ trắng\n5 tiêu chí: Một đầu mối / Bảo hành / Tiến độ / Trách nhiệm pháp lý / Chi phí phát sinh\nDùng ✅ cho Tổng thầu, ⚠️ cho Tự tìm thầu\nNền trắng, viền hàng #E2E8F0'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Couple ~35 years old enjoying coffee in their newly completed living room\nAngle: 3/4 medium shot | Lighting: Warm golden late afternoon\nColor palette: Light wood + cream white | Mood: Content, peaceful\nCaption overlay: "When your general contractor handles everything, just wait to move in"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Cặp đôi ~35 tuổi thưởng thức cà phê trong phòng khách vừa hoàn thiện\nGóc chụp: Trung bình 3/4 | Ánh sáng: Vàng ấm buổi chiều muộn\nBảng màu: Gỗ sáng + Trắng kem | Tâm trạng: Hài lòng, bình yên\nCaption: "Khi tổng thầu lo mọi thứ, bạn chỉ việc chờ ngày dọn vào"'`,
 
-    `🎨 INFOGRAPHIC | 1200×600px\n2 panels comparison\nLeft "When to hire a general contractor" (background #DBEAFE):\n✓ Projects over 200m²  ✓ Busy schedule  ✓ Need firm deadlines  ✓ First-time builder\nRight "Can DIY manage" (background #F1F5F9):\nℹ️ Units under 60m²  ℹ️ Experienced  ℹ️ Plenty of free time\nFont: Be Vietnam Pro, minimal'`,
+    `🎨 INFOGRAPHIC | 1200×600px\n2 panels comparison\nLeft "When to hire a general contractor" (background #DBEAFE):\n✓ Projects over 200m²  ✓ Busy schedule  ✓ Need firm deadlines  ✓ First-time builder\nRight "Can DIY manage" (background #F1F5F9):\nℹ️ Units under 60m²  ℹ️ Experienced  ℹ️ Plenty of free time\nFont: Be Vietnam Pro, minimal\n\n[Tiếng Việt]\n2 ô so sánh\nTrái "Khi nào nên thuê tổng thầu" (nền #DBEAFE):\n✓ Dự án trên 200m²  ✓ Lịch bận rộn  ✓ Cần deadline cố định  ✓ Lần đầu xây dựng\nPhải "Có thể tự quản lý" (nền #F1F5F9):\nℹ️ Căn dưới 60m²  ℹ️ Có kinh nghiệm  ℹ️ Nhiều thời gian rảnh\nFont: Be Vietnam Pro, tối giản'`,
 
-    `📸 PHOTO | 1200×800px\nScene: 3–4 people (engineers + architect) meeting around a table, A1 drawings spread out, laptop open with CAD\nAngle: Medium-wide | Lighting: Neutral white office\nColor palette: Wood table + White + Navy | No text overlay'`,
+    `📸 PHOTO | 1200×800px\nCảnh: 3–4 người (kỹ sư + kiến trúc sư) họp quanh bàn, bản vẽ A1 trải rộng, laptop mở phần mềm CAD\nGóc chụp: Trung bình-rộng | Ánh sáng: Trắng trung tính văn phòng\nBảng màu: Bàn gỗ + Trắng + Navy | Không có text overlay'`,
   ]},
 
   {g:'B', title:'Chi phí tổng thầu nội thất 2026 – Bảng giá & Cách tính',
    kw:'chi phí tổng thầu nội thất + bao nhiêu tiền', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Beautifully finished living room, laptop open showing Excel budget spreadsheet on corner table\nAngle: Medium | Lighting: Warm natural | Color palette: Wood + White\nCaption: "Building your interior budget — the first step before signing the contract"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Phòng khách hoàn thiện đẹp, laptop mở bảng tính ngân sách Excel trên bàn góc\nGóc chụp: Trung bình | Ánh sáng: Ấm tự nhiên | Bảng màu: Gỗ + Trắng\nCaption: "Lên ngân sách nội thất — bước đầu tiên trước khi ký hợp đồng"'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nLayout: Grid of 5 circles (or 2×3 grid)\nTitle: "5 Key Factors Affecting Interior Contractor Costs"\nEach cell (icon + name + 1-line description):\n1. 📐 Area — larger m², lower unit price\n2. 🪵 Materials — standard vs. premium E0/ENF\n3. ✏️ Design style — minimalist vs. complex\n4. 📍 Location — Hanoi/HCMC vs. provinces\n5. ⭐ Finish level — basic vs. luxury\nColors: Navy #1a2a4a + Wood #C4956A, white background'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nLayout: Grid of 5 circles (or 2×3 grid)\nTitle: "5 Key Factors Affecting Interior Contractor Costs"\nEach cell (icon + name + 1-line description):\n1. 📐 Area — larger m², lower unit price\n2. 🪵 Materials — standard vs. premium E0/ENF\n3. ✏️ Design style — minimalist vs. complex\n4. 📍 Location — Hanoi/HCMC vs. provinces\n5. ⭐ Finish level — basic vs. luxury\nColors: Navy #1a2a4a + Wood #C4956A, white background\n\n[Tiếng Việt]\nLayout: Lưới 5 vòng tròn (hoặc 2×3)\nTiêu đề: "5 Yếu Tố Ảnh Hưởng Chi Phí Tổng Thầu Nội Thất"\nMỗi ô (icon + tên + mô tả 1 dòng):\n1. 📐 Diện tích — m² càng lớn, đơn giá càng giảm\n2. 🪵 Vật liệu — tiêu chuẩn vs. cao cấp E0/ENF\n3. ✏️ Phong cách — tối giản vs. phức tạp\n4. 📍 Vị trí — Hà Nội/TP.HCM vs. tỉnh thành\n5. ⭐ Mức độ hoàn thiện — cơ bản vs. luxury\nMàu sắc: Navy #1a2a4a + Gỗ #C4956A, nền trắng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nLayout: Pricing table 3 rows × 3 columns\nColumns: Segment | Cost/m² | Material characteristics\nRow 1 "Standard": 3–5M VND/m² | Standard MDF, Melamine\nRow 2 "Mid-premium": 5–10M VND/m² | E0/ENF MDF, Acrylic\nRow 3 "Premium": 10–20M+ VND/m² | ENF Plywood, Imported Laminate\nNavy #1a2a4a header, alternating #F8F9FF/white rows\nFootnote: "Reference only — contact for exact quote"'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nLayout: Pricing table 3 rows × 3 columns\nColumns: Segment | Cost/m² | Material characteristics\nRow 1 "Standard": 3–5M VND/m² | Standard MDF, Melamine\nRow 2 "Mid-premium": 5–10M VND/m² | E0/ENF MDF, Acrylic\nRow 3 "Premium": 10–20M+ VND/m² | ENF Plywood, Imported Laminate\nNavy #1a2a4a header, alternating #F8F9FF/white rows\nFootnote: "Reference only — contact for exact quote"\n\n[Tiếng Việt]\nLayout: Bảng giá 3 hàng × 3 cột\nCột: Phân khúc | Chi phí/m² | Đặc điểm vật liệu\nHàng 1 "Tiêu chuẩn": 3–5 triệu/m² | MDF thường, Melamine\nHàng 2 "Trung cao cấp": 5–10 triệu/m² | MDF E0/ENF, Acrylic\nHàng 3 "Cao cấp": 10–20 triệu+/m² | Plywood ENF, Laminate nhập khẩu\nHeader navy #1a2a4a, hàng xen kẽ #F8F9FF/trắng\nGhi chú: "Chỉ mang tính tham khảo — liên hệ để nhận báo giá chính xác"'`,
 
-    `🎨 INFOGRAPHIC | 900×900px (circular)\nDonut/pie chart budget breakdown:\nFurniture 45% — color #2563EB\nStructural work 30% — color #1a2a4a\nMEP (electrical-plumbing-HVAC) 15% — color #7C3AED\nContingency 10% — color #F59E0B\nLegend on right with clear color keys. Title: "Typical Interior Project Budget Breakdown"'`,
+    `🎨 INFOGRAPHIC | 900×900px (circular)\nDonut/pie chart budget breakdown:\nFurniture 45% — color #2563EB\nStructural work 30% — color #1a2a4a\nMEP (electrical-plumbing-HVAC) 15% — color #7C3AED\nContingency 10% — color #F59E0B\nLegend on right with clear color keys. Title: "Typical Interior Project Budget Breakdown"\n\n[Tiếng Việt]\nBiểu đồ donut/tròn phân bổ ngân sách:\nNội thất 45% — màu #2563EB\nXây thô 30% — màu #1a2a4a\nMEP (điện-nước-điều hòa) 15% — màu #7C3AED\nDự phòng 10% — màu #F59E0B\nChú thích bên phải với key màu rõ ràng. Tiêu đề: "Cơ Cấu Ngân Sách Dự Án Nội Thất Điển Hình"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Flexfit consultant (branded shirt) sitting with homeowner reviewing drawings\nAngle: 3/4 medium | Lighting: Warm | Mood: Professional, friendly'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Tư vấn viên Flexfit (áo thương hiệu) ngồi cùng chủ nhà xem xét bản vẽ\nGóc chụp: Trung bình 3/4 | Ánh sáng: Ấm | Tâm trạng: Chuyên nghiệp, thân thiện'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Overhead desk angle — floor plan, measuring tape, pencil, laptop open with 3D software\nAngle: 45° from above | Lighting: Neutral | Table surface: Oak wood'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Góc nhìn từ trên bàn xuống — mặt bằng, thước dây, bút chì, laptop mở phần mềm 3D\nGóc chụp: 45° từ trên | Ánh sáng: Trung tính | Mặt bàn: Gỗ sồi'`,
   ]},
 
   {g:'C', title:'Quy trình thi công nội thất chuẩn từ A đến Z',
    kw:'quy trình thi công nội thất + các bước thi công', intent:'informational', aud:'b2c',
    imgs:[
-    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\nChevron timeline 7 steps, color gradient light blue → navy\nEach step: large step number + icon + duration\n1. Survey & measure (1–2 days) → 2. BIM 3D design (2–3 weeks) → 3. Review & sign contract (1 week) → 4. Structural work (2–4 weeks) → 5. Factory furniture production (4–6 weeks) → 6. Furniture installation (2–4 weeks) → 7. Handover & quality check\nColor gradient: Light blue #DBEAFE → Navy #1a2a4a | Font: Be Vietnam Pro'`,
+    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\nChevron timeline 7 steps, color gradient light blue → navy\nEach step: large step number + icon + duration\n1. Survey & measure (1–2 days) → 2. BIM 3D design (2–3 weeks) → 3. Review & sign contract (1 week) → 4. Structural work (2–4 weeks) → 5. Factory furniture production (4–6 weeks) → 6. Furniture installation (2–4 weeks) → 7. Handover & quality check\nColor gradient: Light blue #DBEAFE → Navy #1a2a4a | Font: Be Vietnam Pro\n\n[Tiếng Việt]\nTimeline chevron 7 bước, chuyển màu xanh nhạt → navy\nMỗi bước: số thứ tự lớn + icon + thời gian\n1. Khảo sát & đo đạc (1–2 ngày) → 2. Thiết kế BIM 3D (2–3 tuần) → 3. Xem xét & ký hợp đồng (1 tuần) → 4. Thi công thô (2–4 tuần) → 5. Sản xuất nội thất tại nhà máy (4–6 tuần) → 6. Lắp đặt nội thất (2–4 tuần) → 7. Nghiệm thu & bàn giao\nMàu chuyển: Xanh nhạt #DBEAFE → Navy #1a2a4a | Font: Be Vietnam Pro'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Engineer in safety gear using laser measure in empty room, sketching floor plan\nAngle: Wide-angle showing entire bare room | Lighting: Natural from windows'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Kỹ sư mặc đồ bảo hộ dùng máy đo laser trong căn phòng trống, phác thảo mặt bằng\nGóc chụp: Góc rộng toàn bộ căn phòng trống | Ánh sáng: Tự nhiên từ cửa sổ'`,
 
-    `📸 PHOTO | 1200×800px\nScene: 27" monitor displaying full 3D living room render, A1 2D drawing beside it on paper\nAngle: Medium | Lighting: White office\nCaption: "BIM 3D — visualize your space before laying a single brick"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Màn hình 27" hiển thị bản render 3D phòng khách hoàn chỉnh, bản vẽ 2D A1 đặt bên cạnh\nGóc chụp: Trung bình | Ánh sáng: Văn phòng trắng\nCaption: "BIM 3D — hình dung không gian của bạn trước khi xây dựng"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Homeowner + contractor signing agreement on table, handshake, drawings spread out\nAngle: Medium-wide | Lighting: Warm | Mood: Formal, trust'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Chủ nhà + nhà thầu ký hợp đồng trên bàn, bắt tay, bản vẽ trải rộng\nGóc chụp: Trung bình-rộng | Ánh sáng: Ấm | Tâm trạng: Trang trọng, tin tưởng'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Workers in hard hats installing plasterboard ceiling framework, work in progress\nAngle: Medium | Lighting: On-site | Full PPE visible'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Công nhân đội mũ bảo hộ lắp khung trần thạch cao, công trình đang thi công\nGóc chụp: Trung bình | Ánh sáng: Công trình thực tế | Đầy đủ trang bị bảo hộ'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Factory floor — CNC machine cutting wood automatically, uniformed workers monitoring\nAngle: Medium-wide | Lighting: Industrial | Feeling: Scale, modern\nCaption: "Cloud Factory — furniture manufactured to European standards"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Sàn nhà máy — máy CNC tự động cắt gỗ, công nhân đồng phục giám sát\nGóc chụp: Trung bình-rộng | Ánh sáng: Công nghiệp | Cảm giác: Quy mô lớn, hiện đại\nCaption: "Cloud Factory — nội thất sản xuất theo tiêu chuẩn châu Âu"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Technician fitting kitchen cabinets, using spirit level to check flat surface\nAngle: Medium close-up of cabinet | Lighting: White, sharp'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Kỹ thuật viên lắp đặt tủ bếp, dùng thước thủy bình kiểm tra mặt phẳng\nGóc chụp: Cận trung bình tủ bếp | Ánh sáng: Trắng, sắc nét'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Homeowner + Flexfit rep inspecting each completed room, satisfied expressions\nAngle: Medium following shot | Lighting: Warm natural'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Chủ nhà + đại diện Flexfit kiểm tra từng phòng đã hoàn thiện, vẻ mặt hài lòng\nGóc chụp: Trung bình theo chân | Ánh sáng: Ấm tự nhiên'`,
   ]},
 
   {g:'D', title:'Nên thuê tổng thầu hay tự tìm thầu? So sánh 6 tiêu chí',
    kw:'nên thuê tổng thầu hay tự tìm thầu + so sánh', intent:'informational', aud:'b2c',
    imgs:[
-    `🎨 INFOGRAPHIC | 1200×700px\nFlat design 2 roads branching from central house icon\nLeft branch "Manage yourself": 5–6 individual people icons, orange #F59E0B, tangled arrows\nRight branch "General Contractor": 1 person holding key icon, #2563EB, single straight arrow\nWhite background, minimal style'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nFlat design 2 roads branching from central house icon\nLeft branch "Manage yourself": 5–6 individual people icons, orange #F59E0B, tangled arrows\nRight branch "General Contractor": 1 person holding key icon, #2563EB, single straight arrow\nWhite background, minimal style\n\n[Tiếng Việt]\nThiết kế phẳng 2 con đường rẽ từ icon ngôi nhà trung tâm\nNhánh trái "Tự quản lý": 5–6 icon người riêng lẻ, cam #F59E0B, mũi tên rối\nNhánh phải "Tổng thầu": 1 người cầm chìa khóa, #2563EB, mũi tên thẳng duy nhất\nNền trắng, phong cách tối giản'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n2-column × 6-row comparison table\nHeader "General Contractor": background #1a2a4a white | Header "DIY Subcontractors": background #8B6535 white\nCriteria: Single contact / Warranty / Schedule / Legal liability / Coordination cost / Risk\nUse ✅ and ⚠️/❌ for clear distinction'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n2-column × 6-row comparison table\nHeader "General Contractor": background #1a2a4a white | Header "DIY Subcontractors": background #8B6535 white\nCriteria: Single contact / Warranty / Schedule / Legal liability / Coordination cost / Risk\nUse ✅ and ⚠️/❌ for clear distinction\n\n[Tiếng Việt]\nBảng so sánh 2 cột × 6 hàng\nTiêu đề "Tổng thầu": nền #1a2a4a trắng | Tiêu đề "Tự tìm thầu": nền #8B6535 trắng\nTiêu chí: Một đầu mối / Bảo hành / Tiến độ / Trách nhiệm pháp lý / Chi phí điều phối / Rủi ro\nDùng ✅ và ⚠️/❌ để phân biệt rõ ràng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n6-criteria detail table with 1–5 star ratings per column\nGeneral Contractor column color: blue #2563EB | DIY column: gray #64748B\nWhite background, border #E2E8F0'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n6-criteria detail table with 1–5 star ratings per column\nGeneral Contractor column color: blue #2563EB | DIY column: gray #64748B\nWhite background, border #E2E8F0\n\n[Tiếng Việt]\nBảng chi tiết 6 tiêu chí với xếp hạng 1–5 sao mỗi cột\nCột Tổng thầu: xanh #2563EB | Cột Tự tìm thầu: xám #64748B\nNền trắng, viền #E2E8F0'`,
 
-    `🎨 INFOGRAPHIC | 900×900px\nChecklist "When Should You Choose a General Contractor" — 7 points, ✓ icon #16a34a\n1. Project over 200m²  2. Busy work schedule  3. Need clear warranty\n4. First-time build  5. Living away from the site  6. Fixed budget  7. Hard deadline\nLight blue background #DBEAFE, navy title'`,
+    `🎨 INFOGRAPHIC | 900×900px\nChecklist "When Should You Choose a General Contractor" — 7 points, ✓ icon #16a34a\n1. Project over 200m²  2. Busy work schedule  3. Need clear warranty\n4. First-time build  5. Living away from the site  6. Fixed budget  7. Hard deadline\nLight blue background #DBEAFE, navy title\n\n[Tiếng Việt]\nChecklist "Khi nào nên chọn Tổng thầu" — 7 điểm, icon ✓ #16a34a\n1. Dự án trên 200m²  2. Lịch làm việc bận rộn  3. Cần bảo hành rõ ràng\n4. Lần đầu xây dựng  5. Không ở gần công trình  6. Ngân sách cố định  7. Deadline cứng\nNền xanh nhạt #DBEAFE, tiêu đề navy'`,
 
-    `🎨 INFOGRAPHIC | 900×900px\n"5 Red Flags to Avoid" — ⚠️ orange #F59E0B icon at start of each bold line\n1. Unusually low quote (ask why before signing)\n2. Vague or missing contract\n3. Won\'t show reference projects\n4. No warranty clause\n5. Price changes after deposit\nWhite or very light orange background #FFF7ED'`,
+    `🎨 INFOGRAPHIC | 900×900px\n"5 Red Flags to Avoid" — ⚠️ orange #F59E0B icon at start of each bold line\n1. Unusually low quote (ask why before signing)\n2. Vague or missing contract\n3. Won\'t show reference projects\n4. No warranty clause\n5. Price changes after deposit\nWhite or very light orange background #FFF7ED\n\n[Tiếng Việt]\n"5 Dấu Hiệu Cảnh Báo Cần Tránh" — icon ⚠️ cam #F59E0B trước mỗi dòng in đậm\n1. Báo giá thấp bất thường (hỏi lý do trước khi ký)\n2. Hợp đồng mơ hồ hoặc thiếu nội dung\n3. Không chịu cho xem công trình tham khảo\n4. Không có điều khoản bảo hành\n5. Thay đổi giá sau khi đặt cọc\nNền trắng hoặc cam rất nhạt #FFF7ED'`,
 
-    `🎨 INFOGRAPHIC | 1200×600px\n2 process comparison panels\nLeft panel "Fragmented model": complex flowchart, tangled arrows, stress icon\nRight panel "Turnkey model": clean 3 steps, single arrow\nColors: Fragmented uses orange, Turnkey uses navy + blue'`,
+    `🎨 INFOGRAPHIC | 1200×600px\n2 process comparison panels\nLeft panel "Fragmented model": complex flowchart, tangled arrows, stress icon\nRight panel "Turnkey model": clean 3 steps, single arrow\nColors: Fragmented uses orange, Turnkey uses navy + blue\n\n[Tiếng Việt]\n2 ô so sánh quy trình\nÔ trái "Mô hình phân mảnh": flowchart phức tạp, mũi tên rối, icon căng thẳng\nÔ phải "Mô hình tổng thầu": 3 bước gọn, mũi tên đơn\nMàu: Mô hình phân mảnh dùng cam, Tổng thầu dùng navy + xanh'`,
   ]},
 
   {g:'E', title:'Tổng thầu nội thất khách sạn & Resort – Thi công trọn gói',
    kw:'tổng thầu nội thất khách sạn + resort + thiết kế thi công', intent:'transactional', aud:'b2b',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: 5-star hotel lobby — white marble floors, bronze chandelier, velvet chairs, dark wood reception\nAngle: Panoramic wide-angle | Lighting: Warm golden luxury\nColor palette: White marble + Gold #D4A843 + Dark wood #3D1C02\nCaption: "Premium hotel interior turnkey — fully executed by Flexfit"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Sảnh khách sạn 5 sao — sàn đá cẩm thạch trắng, đèn chùm đồng, ghế nhung, quầy lễ tân gỗ tối\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Vàng ấm sang trọng\nBảng màu: Đá cẩm thạch trắng + Vàng #D4A843 + Gỗ tối #3D1C02\nCaption: "Nội thất khách sạn cao cấp tổng thầu — Flexfit thực hiện trọn gói"'`,
 
-    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\n6-step timeline "Hotel Interior General Contracting Process"\n1. Brief & Feasibility → 2. Concept Design → 3. BIM 3D Design → 4. Cloud Factory Production → 5. Installation & Build-out → 6. Handover & Warranty\nEach step: icon + name + estimated time\nColors: Navy #1a2a4a + Bronze gold #D4A843 | Font: Be Vietnam Pro'`,
+    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\n6-step timeline "Hotel Interior General Contracting Process"\n1. Brief & Feasibility → 2. Concept Design → 3. BIM 3D Design → 4. Cloud Factory Production → 5. Installation & Build-out → 6. Handover & Warranty\nEach step: icon + name + estimated time\nColors: Navy #1a2a4a + Bronze gold #D4A843 | Font: Be Vietnam Pro\n\n[Tiếng Việt]\nTimeline 6 bước "Quy Trình Tổng Thầu Nội Thất Khách Sạn"\n1. Khảo sát & Khả thi → 2. Thiết kế Ý tưởng → 3. Thiết kế BIM 3D → 4. Sản xuất Cloud Factory → 5. Lắp đặt & Thi công → 6. Bàn giao & Bảo hành\nMỗi bước: icon + tên + thời gian ước tính\nMàu: Navy #1a2a4a + Vàng đồng #D4A843 | Font: Be Vietnam Pro'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n4-cell grid, each cell = 1 hotel area\nCell 1 🚪 Lobby: Natural stone, chandelier, reception desk\nCell 2 🛏️ Guest Rooms: Premium bedding, soft furnishings, minibar\nCell 3 🍴 Restaurant: Dining furniture, kitchen, bar, wine display\nCell 4 💆 Spa: Treatment rooms, steam bath, reception\nDark background #1a2a4a, white + gold icons and text'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n4-cell grid, each cell = 1 hotel area\nCell 1 🚪 Lobby: Natural stone, chandelier, reception desk\nCell 2 🛏️ Guest Rooms: Premium bedding, soft furnishings, minibar\nCell 3 🍴 Restaurant: Dining furniture, kitchen, bar, wine display\nCell 4 💆 Spa: Treatment rooms, steam bath, reception\nDark background #1a2a4a, white + gold icons and text\n\n[Tiếng Việt]\nLưới 4 ô, mỗi ô = 1 khu vực khách sạn\nÔ 1 🚪 Sảnh: Đá tự nhiên, đèn chùm, quầy lễ tân\nÔ 2 🛏️ Phòng khách: Chăn gối cao cấp, nội thất mềm, minibar\nÔ 3 🍴 Nhà hàng: Bàn ghế ăn, bếp, quầy bar, kệ rượu\nÔ 4 💆 Spa: Phòng trị liệu, phòng xông hơi, lễ tân\nNền tối #1a2a4a, icon và chữ trắng + vàng'`,
 
-    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\nTimeline 6 steps with estimated time\n1.Survey & brief (1wk) → 2.Concept design (2–3wks) → 3.Production (4–6wks) → 4.Build-out (3–6wks) → 5.Handover (1wk)\nColors: Navy + Bronze gold | Icon per step'`,
+    `🎨 INFOGRAPHIC | 1400×600px (horizontal)\nTimeline 6 steps with estimated time\n1.Survey & brief (1wk) → 2.Concept design (2–3wks) → 3.Production (4–6wks) → 4.Build-out (3–6wks) → 5.Handover (1wk)\nColors: Navy + Bronze gold | Icon per step\n\n[Tiếng Việt]\nTimeline 6 bước với thời gian ước tính\n1.Khảo sát & yêu cầu (1 tuần) → 2.Thiết kế ý tưởng (2–3 tuần) → 3.Sản xuất (4–6 tuần) → 4.Thi công lắp đặt (3–6 tuần) → 5.Bàn giao (1 tuần)\nMàu: Navy + Vàng đồng | Icon mỗi bước'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nChecklist "5 Criteria for Selecting a Hotel Interior Contractor"\nEach criterion: dedicated icon + bold name + 1-sentence description\n1. 🏗️ Hospitality project experience  2. 💻 BIM 3D capability\n3. 🏭 In-house production facility  4. 🛡️ Post-handover warranty  5. ⛑️ On-site safety management\nNavy + gold color scheme'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nChecklist "5 Criteria for Selecting a Hotel Interior Contractor"\nEach criterion: dedicated icon + bold name + 1-sentence description\n1. 🏗️ Hospitality project experience  2. 💻 BIM 3D capability\n3. 🏭 In-house production facility  4. 🛡️ Post-handover warranty  5. ⛑️ On-site safety management\nNavy + gold color scheme\n\n[Tiếng Việt]\nChecklist "5 Tiêu Chí Chọn Nhà Thầu Nội Thất Khách Sạn"\nMỗi tiêu chí: icon riêng + tên in đậm + mô tả 1 câu\n1. 🏗️ Kinh nghiệm dự án khách sạn  2. 💻 Năng lực BIM 3D\n3. 🏭 Nhà máy sản xuất riêng  4. 🛡️ Bảo hành sau bàn giao  5. ⛑️ Quản lý an toàn tại công trình\nBảng màu Navy + Vàng'`,
 
-    `📸 PHOTO | 1400×800px\nActual Flexfit hotel/resort completed project photo\n→ Look up at flexfit.vn/du-an, choose best hospitality project\nAngle: Best panoramic view (lobby or guest room)\nCaption: "[Project name] — Flexfit full turnkey execution"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Ảnh thực tế công trình khách sạn/resort đã hoàn thiện của Flexfit\n→ Tra cứu tại flexfit.vn/du-an, chọn dự án khách sạn/nghỉ dưỡng đẹp nhất\nGóc chụp: Toàn cảnh đẹp nhất (sảnh hoặc phòng khách)\nCaption: "[Tên dự án] — Flexfit thực hiện tổng thầu trọn gói"'`,
   ]},
 
   {g:'F', title:'Tổng thầu nội thất văn phòng – Thiết kế thi công trọn gói',
    kw:'tổng thầu nội thất văn phòng + thiết kế văn phòng trọn gói', intent:'transactional', aud:'b2b',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Modern open-plan office — multiple light wood workstations, plants interspersed, large glass windows\nAngle: Wide-angle panoramic | Lighting: Abundant natural light\nColor palette: White + Light wood + Soft green\nCaption: "Full-service office design & construction — Flexfit"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Văn phòng hiện đại mặt bằng mở — nhiều bàn làm việc gỗ sáng, cây xanh xen kẽ, cửa sổ kính lớn\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Ánh sáng tự nhiên dồi dào\nBảng màu: Trắng + Gỗ sáng + Xanh lá nhạt\nCaption: "Thiết kế & thi công văn phòng trọn gói — Flexfit"'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n3×3 grid = 9 office interior zones\nEach cell: icon + zone name\n1. Reception lobby  2. Open-plan workspace  3. Meeting rooms\n4. Executive office  5. Kitchen/Pantry  6. Storage\n7. Restrooms  8. Corridors/Stairways  9. Breakout/Coffee corner\nNavy background #1a2a4a, white text + icons'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n3×3 grid = 9 office interior zones\nEach cell: icon + zone name\n1. Reception lobby  2. Open-plan workspace  3. Meeting rooms\n4. Executive office  5. Kitchen/Pantry  6. Storage\n7. Restrooms  8. Corridors/Stairways  9. Breakout/Coffee corner\nNavy background #1a2a4a, white text + icons\n\n[Tiếng Việt]\nLưới 3×3 = 9 khu vực nội thất văn phòng\nMỗi ô: icon + tên khu vực\n1. Sảnh lễ tân  2. Khu làm việc mặt bằng mở  3. Phòng họp\n4. Văn phòng giám đốc  5. Bếp/Pantry  6. Kho\n7. Nhà vệ sinh  8. Hành lang/Cầu thang  9. Khu thư giãn/Góc cà phê\nNền navy #1a2a4a, chữ + icon trắng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n2-column comparison table\nLeft "Self-managed" (background #F1F5F9): ❌ 5 drawbacks (complex, time-consuming, no warranty...)\nRight "Full Turnkey" (background #DBEAFE): ✅ 5 advantages\nClear column headers'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n2-column comparison table\nLeft "Self-managed" (background #F1F5F9): ❌ 5 drawbacks (complex, time-consuming, no warranty...)\nRight "Full Turnkey" (background #DBEAFE): ✅ 5 advantages\nClear column headers\n\n[Tiếng Việt]\nBảng so sánh 2 cột\nTrái "Tự quản lý" (nền #F1F5F9): ❌ 5 nhược điểm (phức tạp, tốn thời gian, không bảo hành...)\nPhải "Tổng thầu trọn gói" (nền #DBEAFE): ✅ 5 ưu điểm\nTiêu đề cột rõ ràng'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Workspace corner with living wall, warm natural lighting, raw wood desk\nAngle: Medium from room corner | Color palette: Deep green + Brown wood\nMood: Refreshing, inspiring'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Góc làm việc có tường cây xanh, ánh sáng tự nhiên ấm áp, bàn gỗ thô\nGóc chụp: Trung bình từ góc phòng | Bảng màu: Xanh lá đậm + Gỗ nâu\nTâm trạng: Tươi mát, truyền cảm hứng'`,
 
-    `🎨 INFOGRAPHIC | 1400×500px\n5-step horizontal timeline with estimated duration\n1. Survey & brief (1 week) → 2. Concept design (2–3 weeks) → 3. Production (4–6 weeks) → 4. Build-out (3–6 weeks) → 5. Handover (1 week)\nColors: Navy + Bronze gold | Icon per step'`,
+    `🎨 INFOGRAPHIC | 1400×500px\n5-step horizontal timeline with estimated duration\n1. Survey & brief (1 week) → 2. Concept design (2–3 weeks) → 3. Production (4–6 weeks) → 4. Build-out (3–6 weeks) → 5. Handover (1 week)\nColors: Navy + Bronze gold | Icon per step\n\n[Tiếng Việt]\nTimeline ngang 5 bước với thời gian ước tính\n1. Khảo sát & yêu cầu (1 tuần) → 2. Thiết kế ý tưởng (2–3 tuần) → 3. Sản xuất (4–6 tuần) → 4. Thi công lắp đặt (3–6 tuần) → 5. Bàn giao (1 tuần)\nMàu: Navy + Vàng đồng | Icon mỗi bước'`,
 
-    `🎨 INFOGRAPHIC | 1200×600px\nSchedule reference table\n4 rows: <200m² / 200–500m² / 500–1000m² / >1000m²\n3 columns: Area | Design duration | Build duration\nNavy header, alternating white/#F8F9FF rows'`,
+    `🎨 INFOGRAPHIC | 1200×600px\nSchedule reference table\n4 rows: <200m² / 200–500m² / 500–1000m² / >1000m²\n3 columns: Area | Design duration | Build duration\nNavy header, alternating white/#F8F9FF rows\n\n[Tiếng Việt]\nBảng tham khảo tiến độ\n4 hàng: <200m² / 200–500m² / 500–1000m² / >1000m²\n3 cột: Diện tích | Thời gian thiết kế | Thời gian thi công\nHeader navy, hàng xen kẽ trắng/#F8F9FF'`,
   ]},
 
   {g:'G', title:'Hợp đồng D&B và EPC – Sự khác nhau & Khi nào nên dùng',
    kw:'hợp đồng DB + EPC là gì + design and build', intent:'informational', aud:'b2b',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Overhead meeting table — open contract, signing pen, small project diagram\nAngle: 90° overhead | Lighting: Neutral | Color palette: Wood + White paper + Navy'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Chụp từ trên nhìn xuống bàn họp — hợp đồng mở, bút ký, sơ đồ dự án nhỏ\nGóc chụp: 90° từ trên xuống | Ánh sáng: Trung tính | Bảng màu: Gỗ + Giấy trắng + Navy'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nD&B model diagram\nTop: "Owner" (person + star icon)\nArrow down → "D&B General Contractor"\nSplits into 2 branches: Left "Design" (pen icon), Right "Construction" (hammer icon)\nMerge → "Completed Project"\nNavy + white, clean minimal style'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nD&B model diagram\nTop: "Owner" (person + star icon)\nArrow down → "D&B General Contractor"\nSplits into 2 branches: Left "Design" (pen icon), Right "Construction" (hammer icon)\nMerge → "Completed Project"\nNavy + white, clean minimal style\n\n[Tiếng Việt]\nSơ đồ mô hình D&B\nTrên: "Chủ đầu tư" (icon người + ngôi sao)\nMũi tên xuống → "Tổng thầu D&B"\nPhân 2 nhánh: Trái "Thiết kế" (icon bút), Phải "Thi công" (icon búa)\nHợp lại → "Công trình hoàn thành"\nNavy + trắng, phong cách tối giản'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nEPC diagram — 3 stacked tiers\nTier 1 (E): "Engineering" (drawing icon) | Color #1a2a4a\nTier 2 (P): "Procurement" (box icon) | Color #2563EB\nTier 3 (C): "Construction" (crane icon) | Color #7C3AED\nVertical connecting arrows, bronze gold accent #D4A843'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nEPC diagram — 3 stacked tiers\nTier 1 (E): "Engineering" (drawing icon) | Color #1a2a4a\nTier 2 (P): "Procurement" (box icon) | Color #2563EB\nTier 3 (C): "Construction" (crane icon) | Color #7C3AED\nVertical connecting arrows, bronze gold accent #D4A843\n\n[Tiếng Việt]\nSơ đồ EPC — 3 tầng xếp chồng\nTầng 1 (E): "Engineering – Kỹ thuật" (icon bản vẽ) | Màu #1a2a4a\nTầng 2 (P): "Procurement – Mua sắm" (icon thùng hàng) | Màu #2563EB\nTầng 3 (C): "Construction – Thi công" (icon cần cẩu) | Màu #7C3AED\nMũi tên kết nối dọc, điểm nhấn vàng đồng #D4A843'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nComparison table D&B vs EPC — 6 criteria\nD&B column color #2563EB | EPC column color #F59E0B\n6 criteria: Scope / Who bears risk / Design flexibility / Cost / Timeline / Best project type\nEach cell: short text or rating icon'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nComparison table D&B vs EPC — 6 criteria\nD&B column color #2563EB | EPC column color #F59E0B\n6 criteria: Scope / Who bears risk / Design flexibility / Cost / Timeline / Best project type\nEach cell: short text or rating icon\n\n[Tiếng Việt]\nBảng so sánh D&B vs EPC — 6 tiêu chí\nCột D&B màu #2563EB | Cột EPC màu #F59E0B\n6 tiêu chí: Phạm vi / Ai chịu rủi ro / Linh hoạt thiết kế / Chi phí / Tiến độ / Loại dự án phù hợp nhất\nMỗi ô: văn bản ngắn hoặc icon đánh giá'`,
 
-    `🎨 INFOGRAPHIC | 800×800px\nLarge bronze key icon on navy background\nSmall circle of icons around key: pen + hammer + building\nText below: "Turnkey — one contract, receive the key and you're done"\nStyle: Bold, premium, minimal'`,
+    `🎨 INFOGRAPHIC | 800×800px\nLarge bronze key icon on navy background\nSmall circle of icons around key: pen + hammer + building\nText below: "Turnkey — one contract, receive the key and you're done"\nStyle: Bold, premium, minimal\n\n[Tiếng Việt]\nIcon chìa khóa đồng lớn trên nền navy\nVòng tròn icon nhỏ quanh chìa khóa: bút + búa + tòa nhà\nChữ bên dưới: "Turnkey — một hợp đồng, nhận chìa khóa là xong"\nPhong cách: Đậm, cao cấp, tối giản'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nDecision tree diagram\nTop question: "What does your project need?"\n3 condition branches → 3 outcomes: D&B / EPC / Pure PM\nColors: Light blue #DBEAFE, text #1a2233, minimal clean'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nDecision tree diagram\nTop question: "What does your project need?"\n3 condition branches → 3 outcomes: D&B / EPC / Pure PM\nColors: Light blue #DBEAFE, text #1a2233, minimal clean\n\n[Tiếng Việt]\nSơ đồ cây quyết định\nCâu hỏi trên: "Dự án của bạn cần gì?"\n3 nhánh điều kiện → 3 kết quả: D&B / EPC / Quản lý dự án thuần túy\nMàu: Xanh nhạt #DBEAFE, chữ #1a2233, tối giản'`,
   ]},
 
   {g:'H', title:'BIM, ISO & Cloud Factory trong thi công nội thất',
    kw:'BIM trong thi công nội thất + ISO 9001 + Cloud Factory', intent:'informational', aud:'both',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Architect interacting with large screen displaying detailed BIM 3D interior model\nScreen: Wireframe + full 3D color rendering\nAngle: Medium, showing both person and screen | Lighting: Digital blue-tinted\nCaption: "BIM 3D — see your home before construction begins"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Kiến trúc sư tương tác với màn hình lớn hiển thị mô hình nội thất BIM 3D chi tiết\nMàn hình: Wireframe + render 3D màu đầy đủ\nGóc chụp: Trung bình, thể hiện cả người và màn hình | Ánh sáng: Xanh kỹ thuật số\nCaption: "BIM 3D — nhìn thấy ngôi nhà trước khi thi công"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nSplit screen before/after\nLeft "Traditional 2D drawing": black & white technical blueprint photo\nRight "Flexfit BIM 3D": full-color 3D render of the same space with lighting\nCaption: "Same space — two completely different ways to visualize it"'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nSplit screen before/after\nLeft "Traditional 2D drawing": black & white technical blueprint photo\nRight "Flexfit BIM 3D": full-color 3D render of the same space with lighting\nCaption: "Same space — two completely different ways to visualize it"\n\n[Tiếng Việt]\nMàn hình split trước/sau\nTrái "Bản vẽ 2D truyền thống": ảnh bản vẽ kỹ thuật đen trắng\nPhải "BIM 3D Flexfit": render 3D đầy màu sắc cùng không gian với ánh sáng\nCaption: "Cùng một không gian — hai cách nhìn hoàn toàn khác nhau"'`,
 
-    `📸 PHOTO | 900×900px\nScene: ISO 9001:2015 certificate in elegant glass frame on wooden desk, navy-bound process manual beside it\nAngle: 45° medium | Lighting: Warm studio | No text overlay'`,
+    `📸 PHOTO | 900×900px\nCảnh: Chứng chỉ ISO 9001:2015 trong khung kính sang trọng trên bàn gỗ, sổ tay quy trình bìa navy đặt bên cạnh\nGóc chụp: Trung bình 45° | Ánh sáng: Studio ấm | Không có text overlay'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nSimplified flat Vietnam map outline\nMark 6 cities with Cloud Factories: Hanoi, Ho Chi Minh City, Da Nang + 3 others\nEach marker: small factory icon + city name\nCenter: "Cloud Factory" logo (cloud + factory icon)\nConnecting lines in blue\nTitle: "Cloud Factory Network — Synchronized Production Nationwide"'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nSimplified flat Vietnam map outline\nMark 6 cities with Cloud Factories: Hanoi, Ho Chi Minh City, Da Nang + 3 others\nEach marker: small factory icon + city name\nCenter: "Cloud Factory" logo (cloud + factory icon)\nConnecting lines in blue\nTitle: "Cloud Factory Network — Synchronized Production Nationwide"\n\n[Tiếng Việt]\nPhác thảo bản đồ Việt Nam đơn giản\nĐánh dấu 6 tỉnh thành có Cloud Factory: Hà Nội, TP.HCM, Đà Nẵng + 3 tỉnh khác\nMỗi điểm đánh dấu: icon nhà máy nhỏ + tên tỉnh\nTrung tâm: logo "Cloud Factory" (icon đám mây + nhà máy)\nĐường kết nối màu xanh\nTiêu đề: "Mạng lưới Cloud Factory — Sản xuất đồng bộ toàn quốc"'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n5-question checklist to ask any contractor\nEach question: ? icon in orange #F59E0B + bold text\n1. Does the firm use BIM software?\n2. Is the ISO certification still valid?\n3. Where is the production facility?\n4. What is the quality control process?\n5. What is the warranty — duration and conditions?\nClean white background'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n5-question checklist to ask any contractor\nEach question: ? icon in orange #F59E0B + bold text\n1. Does the firm use BIM software?\n2. Is the ISO certification still valid?\n3. Where is the production facility?\n4. What is the quality control process?\n5. What is the warranty — duration and conditions?\nClean white background\n\n[Tiếng Việt]\nChecklist 5 câu hỏi cần hỏi bất kỳ nhà thầu nào\nMỗi câu: icon ? cam #F59E0B + in đậm\n1. Đơn vị có sử dụng phần mềm BIM không?\n2. Chứng chỉ ISO còn hiệu lực không?\n3. Cơ sở sản xuất ở đâu?\n4. Quy trình kiểm soát chất lượng như thế nào?\n5. Bảo hành — thời hạn và điều kiện cụ thể?\nNền trắng sạch'`,
   ]},
 
   {g:'I', title:'7 tiêu chí chọn tổng thầu nội thất uy tín + 5 dấu hiệu cảnh báo',
    kw:'kinh nghiệm chọn tổng thầu nội thất + dấu hiệu nhận biết', intent:'commercial', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Homeowner ~40 years old carefully reviewing drawings with a consultant\nAngle: 3/4 medium | Lighting: Warm natural\nMood: Careful, thoughtful evaluation'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Chủ nhà ~40 tuổi đang xem xét kỹ bản vẽ cùng tư vấn viên\nGóc chụp: Trung bình 3/4 | Ánh sáng: Ấm tự nhiên\nTâm trạng: Thận trọng, cân nhắc kỹ lưỡng'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\nBefore/After of the same room\nLeft "Wrong contractor": poor finish — mismatched colors, bad workmanship, warped cabinets\nRight "Right general contractor": same room beautifully finished\nCaption: "Same budget — completely different results"'`,
+    `🎨 INFOGRAPHIC | 1400×700px\nBefore/After of the same room\nLeft "Wrong contractor": poor finish — mismatched colors, bad workmanship, warped cabinets\nRight "Right general contractor": same room beautifully finished\nCaption: "Same budget — completely different results"\n\n[Tiếng Việt]\nTrước/Sau cùng một căn phòng\nTrái "Chọn sai nhà thầu": hoàn thiện kém — màu sắc lệch, thi công xấu, tủ bị vênh\nPhải "Tổng thầu đúng chỗ": cùng căn phòng hoàn thiện đẹp\nCaption: "Cùng ngân sách — kết quả hoàn toàn khác nhau"'`,
 
-    `🎨 INFOGRAPHIC | 1000×1200px (vertical)\n7 criteria as numbered list\nEach criterion: Large #1–7 number in navy + Icon + Bold name + 1-line description\n1. Real project experience (number of completed projects)  2. Material standards (E0/ENF)\n3. Transparent contract  4. Clear warranty\n5. Quality control process  6. Separate design + execution team\n7. Past client feedback\nWhite background, navy + wood tones'`,
+    `🎨 INFOGRAPHIC | 1000×1200px (vertical)\n7 criteria as numbered list\nEach criterion: Large #1–7 number in navy + Icon + Bold name + 1-line description\n1. Real project experience (number of completed projects)  2. Material standards (E0/ENF)\n3. Transparent contract  4. Clear warranty\n5. Quality control process  6. Separate design + execution team\n7. Past client feedback\nWhite background, navy + wood tones\n\n[Tiếng Việt]\n7 tiêu chí dạng danh sách đánh số\nMỗi tiêu chí: số #1–7 lớn màu navy + Icon + Tên in đậm + mô tả 1 dòng\n1. Kinh nghiệm thực tế (số công trình đã hoàn thành)  2. Tiêu chuẩn vật liệu (E0/ENF)\n3. Hợp đồng minh bạch  4. Bảo hành rõ ràng\n5. Quy trình kiểm soát chất lượng  6. Đội thiết kế + thi công riêng biệt\n7. Phản hồi từ khách hàng cũ\nNền trắng, tông navy + gỗ'`,
 
-    `🎨 INFOGRAPHIC | 900×900px\n5 red flags — ⚠️ orange #F59E0B icon before each bold line\n1. Unusually low quote\n2. Vague contract scope\n3. Won't show completed projects\n4. No warranty terms\n5. Price increase after deposit\nWhite or very light orange background #FFF7ED'`,
+    `🎨 INFOGRAPHIC | 900×900px\n5 red flags — ⚠️ orange #F59E0B icon before each bold line\n1. Unusually low quote\n2. Vague contract scope\n3. Won't show completed projects\n4. No warranty terms\n5. Price increase after deposit\nWhite or very light orange background #FFF7ED\n\n[Tiếng Việt]\n5 dấu hiệu cảnh báo — icon ⚠️ cam #F59E0B trước mỗi dòng in đậm\n1. Báo giá thấp bất thường\n2. Phạm vi hợp đồng mơ hồ\n3. Không chịu cho xem công trình đã làm\n4. Không có điều khoản bảo hành\n5. Tăng giá sau khi đặt cọc\nNền trắng hoặc cam rất nhạt #FFF7ED'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nPrintable checklist (A4 format)\nTitle: "Checklist for Choosing Your Interior General Contractor"\n10 empty checkboxes for homeowners to fill in when meeting contractors\nFields: Company name / Founded year / Projects completed / ISO certified? / BIM capable? / Warranty period / Payment terms / Visited a reference project? / Clear contract? / Fixed-price quote?\nClean design, easy to print A4, small Flexfit logo bottom right'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nPrintable checklist (A4 format)\nTitle: "Checklist for Choosing Your Interior General Contractor"\n10 empty checkboxes for homeowners to fill in when meeting contractors\nFields: Company name / Founded year / Projects completed / ISO certified? / BIM capable? / Warranty period / Payment terms / Visited a reference project? / Clear contract? / Fixed-price quote?\nClean design, easy to print A4, small Flexfit logo bottom right\n\n[Tiếng Việt]\nChecklist có thể in (khổ A4)\nTiêu đề: "Checklist Chọn Tổng Thầu Nội Thất"\n10 ô trống để chủ nhà điền khi gặp nhà thầu\nCác mục: Tên công ty / Năm thành lập / Số công trình đã làm / Có chứng chỉ ISO? / Có năng lực BIM? / Thời hạn bảo hành / Điều khoản thanh toán / Đã thăm công trình tham khảo? / Hợp đồng rõ ràng? / Báo giá cố định?\nThiết kế sạch, dễ in A4, logo Flexfit nhỏ góc dưới phải'`,
   ]},
 
   {g:'J', title:'8 xu hướng thiết kế nội thất 2026 được ưa chuộng nhất',
    kw:'xu hướng thiết kế nội thất 2026 + nội thất hiện đại', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 COLLAGE | 1400×800px\n4 living room photos in 2×2 grid, thin neutral-toned borders\nTop left: Japandi — beige sofa, light wood, minimal\nTop right: Wabi-Sabi — terracotta, raw ceramics, organic\nBottom left: Earthy tones — terracotta, olive, warm\nBottom right: Soft Maximalism — teal velvet, gallery wall'`,
+    `📸 COLLAGE | 1400×800px\n4 ảnh phòng khách ghép lưới 2×2, viền tông trung tính mỏng\nTrên trái: Japandi — sofa beige, gỗ sáng, tối giản\nTrên phải: Wabi-Sabi — terracotta, gốm thô, hữu cơ\nDưới trái: Tông đất — terracotta, olive, ấm áp\nDưới phải: Soft Maximalism — nhung teal, tường gallery'`,
 
-    `📸 PHOTO | 1200×800px\nPure Japandi living room\nLow linen beige sofa, light oak coffee table, small monstera, white curtains\nZero unnecessary decor | Lighting: Warm golden afternoon\nCaption: "Japandi — beauty in simplicity and warmth"'`,
+    `📸 PHOTO | 1200×800px\nPhòng khách Japandi thuần khiết\nGhế sofa linen beige thấp, bàn cà phê gỗ sồi sáng, cây monstera nhỏ, rèm trắng\nKhông đồ trang trí thừa | Ánh sáng: Vàng ấm buổi chiều\nCaption: "Japandi — vẻ đẹp trong sự giản dị và ấm áp"'`,
 
-    `📸 PHOTO | 1200×800px\nEarthy tones bedroom\nTerracotta walls #C17A4A, terracotta + olive bed linen\nRaw oak bed with raised grain, handmade ceramic bedside lamp\nLighting: Warm golden, close-to-earth feeling'`,
+    `📸 PHOTO | 1200×800px\nPhòng ngủ tông đất\nTường terracotta #C17A4A, chăn gối terracotta + olive\nGiường gỗ sồi thô vân nổi, đèn đầu giường gốm thủ công\nÁnh sáng: Vàng ấm, cảm giác gần gũi thiên nhiên'`,
 
-    `📸 PHOTO | 1200×800px\nWabi-Sabi tea corner\nSmall aged wooden table, uneven-glaze ceramic cups, bamboo tray, dried branches in clay vase\nLighting: Soft early morning from window | Imperfect yet beautiful'`,
+    `📸 PHOTO | 1200×800px\nGóc trà Wabi-Sabi\nBàn gỗ cũ nhỏ, tách gốm men không đều, khay tre, cành khô trong bình đất sét\nÁnh sáng: Sáng sớm nhẹ từ cửa sổ | Không hoàn hảo nhưng đẹp'`,
 
-    `🎨 INFOGRAPHIC | 1400×500px\n2026 trend color palette — 10 color swatches in a row\nEach swatch: Color fill + English name + Hex code\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Dusty Blue #8AAFCC / Clay #C17A4A / Cognac #8B4513\nOff-black #2D2D2D / Muted Gold #D4A843\nTitle: "2026 Most Popular Interior Color Palette"'`,
+    `🎨 INFOGRAPHIC | 1400×500px\n2026 trend color palette — 10 color swatches in a row\nEach swatch: Color fill + English name + Hex code\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Dusty Blue #8AAFCC / Clay #C17A4A / Cognac #8B4513\nOff-black #2D2D2D / Muted Gold #D4A843\nTitle: "2026 Most Popular Interior Color Palette"\n\n[Tiếng Việt]\nBảng màu xu hướng 2026 — 10 mẫu màu trên 1 hàng\nMỗi mẫu: Ô màu + tên tiếng Anh + mã Hex\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Dusty Blue #8AAFCC / Clay #C17A4A / Cognac #8B4513\nOff-black #2D2D2D / Muted Gold #D4A843\nTiêu đề: "Bảng Màu Nội Thất Thịnh Hành Nhất 2026"'`,
 
-    `📸 PHOTO | 1200×800px\nSpace using reclaimed materials\nBookshelf made from reclaimed pallet wood, flower vase from glass bottles, vintage tiles in random pattern\nNatural lighting | Caption: "Reclaimed materials — sustainable and characterful"'`,
+    `📸 PHOTO | 1200×800px\nKhông gian dùng vật liệu tái chế\nKệ sách từ gỗ pallet tái chế, bình hoa từ chai thủy tinh, gạch vintage xếp ngẫu nhiên\nÁnh sáng tự nhiên | Caption: "Vật liệu tái chế — bền vững và có cá tính"'`,
 
-    `📸 PHOTO | 1200×800px\nSmart small apartment (<45m²)\nSofa-bed combo, wall-fold dining table, wall shelving replacing floor cabinets\nAngle: Wide-angle | Lighting: Natural | Feeling: Compact, clever'`,
+    `📸 PHOTO | 1200×800px\nCăn hộ nhỏ thông minh (<45m²)\nGhế sofa kiêm giường, bàn ăn gập tường, kệ tường thay tủ sàn\nGóc chụp: Góc rộng | Ánh sáng: Tự nhiên | Cảm giác: Gọn gàng, thông minh'`,
 
-    `📸 PHOTO | 1200×800px\nControlled Maximalist living room\nDeep teal velvet sofa #1B4F72, gallery wall of 6–8 mixed-size artworks, patterned rug\nMany colors but unified palette | Plenty of plants | Warm lighting'`,
+    `📸 PHOTO | 1200×800px\nPhòng khách Maximalist có kiểm soát\nGhế sofa nhung teal đậm #1B4F72, tường gallery 6–8 bức tranh kích thước hỗn hợp, thảm họa tiết\nNhiều màu nhưng bảng màu thống nhất | Nhiều cây xanh | Ánh sáng ấm'`,
 
-    `📸 PHOTO | 1200×800px\nBiophilic bedroom\nWall covered in live plants (pothos + monstera), large glass door overlooking green garden\nLarge floor plant in corner, forest-tone bedding\nLighting: Fresh bright morning'`,
+    `📸 PHOTO | 1200×800px\nPhòng ngủ Biophilic\nTường phủ cây xanh thật (trầu bà + monstera), cửa kính lớn nhìn ra vườn xanh\nCây lớn đặt sàn góc phòng, chăn gối tông rừng\nÁnh sáng: Buổi sáng tươi sáng'`,
   ]},
 
   {g:'K', title:'Tổng thầu kiến trúc là gì? Khác gì tổng thầu nội thất?',
    kw:'tổng thầu kiến trúc là gì + thiết kế kiến trúc tổng thầu', intent:'informational', aud:'both',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Architecture project under completion — glass + concrete facade, scaffolding, supervising engineer\nAngle: Wide-angle exterior shot | Color palette: Concrete gray + Sky blue'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Công trình kiến trúc sắp hoàn thiện — mặt đứng kính + bê tông, giàn giáo, kỹ sư giám sát\nGóc chụp: Ngoại thất góc rộng | Bảng màu: Xám bê tông + Xanh bầu trời'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nVertical hierarchy diagram\nTop: "Owner"\nMiddle: "Architecture General Contractor" (navy box)\nBottom 4 branches: "Structural" / "Facade" / "MEP" / "Landscaping"\nBi-directional arrows | Navy + white + gold accent'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nVertical hierarchy diagram\nTop: "Owner"\nMiddle: "Architecture General Contractor" (navy box)\nBottom 4 branches: "Structural" / "Facade" / "MEP" / "Landscaping"\nBi-directional arrows | Navy + white + gold accent\n\n[Tiếng Việt]\nSơ đồ thứ bậc dọc\nTrên: "Chủ đầu tư"\nGiữa: "Tổng thầu kiến trúc" (khung navy)\n4 nhánh dưới: "Kết cấu" / "Mặt đứng" / "MEP" / "Cảnh quan"\nMũi tên hai chiều | Navy + trắng + điểm nhấn vàng'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\n2-column × 5–6 row table\nLeft header "ARCHITECTURE General Contractor" (navy background): Structural, Facade, MEP, Rough finishing\nRight header "INTERIOR General Contractor" (wood #8B6535 background): Furniture, Décor, Interior fixtures\n5 clear differentiation criteria'`,
+    `🎨 INFOGRAPHIC | 1400×700px\n2-column × 5–6 row table\nLeft header "ARCHITECTURE General Contractor" (navy background): Structural, Facade, MEP, Rough finishing\nRight header "INTERIOR General Contractor" (wood #8B6535 background): Furniture, Décor, Interior fixtures\n5 clear differentiation criteria\n\n[Tiếng Việt]\nBảng 2 cột × 5–6 hàng\nTiêu đề trái "Tổng thầu KIẾN TRÚC" (nền navy): Kết cấu, Mặt đứng, MEP, Hoàn thiện thô\nTiêu đề phải "Tổng thầu NỘI THẤT" (nền gỗ #8B6535): Nội thất, Trang trí, Thiết bị nội thất\n5 tiêu chí phân biệt rõ ràng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n5 situations "When to Choose an Architecture General Contractor"\nEach: icon + text\n🏗️ Full new build  🔨 Major structural renovation  📍 Owner not on-site\n📐 Simultaneous design + build needed  ⏱️ Strict deadline\nNavy + gray + white tones'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n5 situations "When to Choose an Architecture General Contractor"\nEach: icon + text\n🏗️ Full new build  🔨 Major structural renovation  📍 Owner not on-site\n📐 Simultaneous design + build needed  ⏱️ Strict deadline\nNavy + gray + white tones\n\n[Tiếng Việt]\n5 tình huống "Khi nào nên chọn Tổng thầu Kiến trúc"\nMỗi mục: icon + văn bản\n🏗️ Xây mới hoàn toàn  🔨 Cải tạo kết cấu lớn  📍 Chủ đầu tư không ở tại công trình\n📐 Cần thiết kế + thi công đồng thời  ⏱️ Deadline cứng\nTông navy + xám + trắng'`,
 
-    `🎨 INFOGRAPHIC | 1400×600px\n5-phase horizontal timeline\n1.Feasibility study → 2.Schematic design → 3.Design development → 4.Construction → 5.Handover\nEach step: icon + VN name + small EN name + estimated duration\nNavy gradient colors'`,
+    `🎨 INFOGRAPHIC | 1400×600px\n5-phase horizontal timeline\n1.Feasibility study → 2.Schematic design → 3.Design development → 4.Construction → 5.Handover\nEach step: icon + VN name + small EN name + estimated duration\nNavy gradient colors\n\n[Tiếng Việt]\nTimeline ngang 5 giai đoạn\n1.Nghiên cứu khả thi → 2.Thiết kế sơ bộ → 3.Thiết kế kỹ thuật → 4.Thi công → 5.Bàn giao\nMỗi bước: icon + tên tiếng Việt + tên EN nhỏ + thời gian ước tính\nMàu gradient navy'`,
 
-    `🎨 INFOGRAPHIC | 900×900px\nVenn diagram — 2 overlapping circles\nLeft "Architecture General Contractor" (cement gray): Structure, MEP, Facade\nRight "Interior General Contractor" (warm wood): Furniture, Finishes, Décor\nOverlap "FULL TURNKEY" (navy): Design + Full build-out\nWhite background'`,
+    `🎨 INFOGRAPHIC | 900×900px\nVenn diagram — 2 overlapping circles\nLeft "Architecture General Contractor" (cement gray): Structure, MEP, Facade\nRight "Interior General Contractor" (warm wood): Furniture, Finishes, Décor\nOverlap "FULL TURNKEY" (navy): Design + Full build-out\nWhite background\n\n[Tiếng Việt]\nSơ đồ Venn — 2 vòng tròn giao nhau\nTrái "Tổng thầu kiến trúc" (xám xi măng): Kết cấu, MEP, Mặt đứng\nPhải "Tổng thầu nội thất" (gỗ ấm): Nội thất, Hoàn thiện, Trang trí\nGiao nhau "TỔNG THẦU TRỌN GÓI" (navy): Thiết kế + Thi công toàn bộ\nNền trắng'`,
   ]},
 
   {g:'L', title:'Tổng thầu nội thất biệt thự & nhà phố – Thi công trọn gói',
    kw:'tổng thầu nội thất biệt thự + nhà phố + villa', intent:'transactional', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1400×900px\nScene: Luxury villa living room — 4m-high ceiling, walnut wood staircase, gray sofa, chandelier\nAngle: Wide-angle full room\nColor palette: Dark wood #3D1C02 + Cream white + Gold #D4A843\nLighting: Multi-source, warm golden\nCaption: "Luxury villa — fully designed and built by Flexfit"'`,
+    `📸 PHOTO | 1400×900px\nCảnh: Phòng khách biệt thự sang trọng — trần cao 4m, cầu thang gỗ óc chó, sofa xám, đèn chùm\nGóc chụp: Toàn cảnh góc rộng\nBảng màu: Gỗ tối #3D1C02 + Trắng kem + Vàng #D4A843\nÁnh sáng: Đa nguồn, vàng ấm\nCaption: "Biệt thự cao cấp — thiết kế & thi công trọn gói bởi Flexfit"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n3-column comparison table by property type\nColumn 1 "Detached Villa": 300–1000m² / 3–4 floors / Garden / Cost from X billion VND\nColumn 2 "Townhouse": 60–200m² / Narrow facade / Multi-story / Cost from X billion VND\nColumn 3 "Semi-detached Villa": 200–400m² / Garden / Cost from X billion VND\nDistinct header colors per column'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n3-column comparison table by property type\nColumn 1 "Detached Villa": 300–1000m² / 3–4 floors / Garden / Cost from X billion VND\nColumn 2 "Townhouse": 60–200m² / Narrow facade / Multi-story / Cost from X billion VND\nColumn 3 "Semi-detached Villa": 200–400m² / Garden / Cost from X billion VND\nDistinct header colors per column\n\n[Tiếng Việt]\nBảng so sánh 3 cột theo loại bất động sản\nCột 1 "Biệt thự đơn lập": 300–1000m² / 3–4 tầng / Vườn / Chi phí từ X tỷ VND\nCột 2 "Nhà phố": 60–200m² / Mặt tiền hẹp / Nhiều tầng / Chi phí từ X tỷ VND\nCột 3 "Biệt thự song lập": 200–400m² / Vườn / Chi phí từ X tỷ VND\nMàu header riêng biệt mỗi cột'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nFlat floor plan of 3-story villa (simple diagram)\nFloor 1 (light blue): Living room, Kitchen, Dining, Guest WC\nFloor 2 (light yellow): Master bedroom, 2–3 kids' bedrooms\nFloor 3 (light green): Family lounge, Rooftop terrace\nColor legend with room labels'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nFlat floor plan of 3-story villa (simple diagram)\nFloor 1 (light blue): Living room, Kitchen, Dining, Guest WC\nFloor 2 (light yellow): Master bedroom, 2–3 kids' bedrooms\nFloor 3 (light green): Family lounge, Rooftop terrace\nColor legend with room labels\n\n[Tiếng Việt]\nMặt bằng phẳng biệt thự 3 tầng (sơ đồ đơn giản)\nTầng 1 (xanh nhạt): Phòng khách, Bếp, Phòng ăn, WC khách\nTầng 2 (vàng nhạt): Phòng ngủ master, 2–3 phòng ngủ con\nTầng 3 (xanh lá nhạt): Phòng sinh hoạt gia đình, Sân thượng\nChú thích màu sắc với nhãn phòng'`,
 
-    `🎨 INFOGRAPHIC | 1400×800px\nMoodboard 2×2 — 4 design styles\nCell 1 "Classic": Walnut + bronze + cream tones\nCell 2 "Modern Luxury": White + chrome + jet black\nCell 3 "Wabi-Sabi": Terracotta + linen + raw ceramics\nCell 4 "Indochine": Teak + jade + gold\nEach cell: style name + 3–4 small color chips'`,
+    `🎨 INFOGRAPHIC | 1400×800px\nMoodboard 2×2 — 4 design styles\nCell 1 "Classic": Walnut + bronze + cream tones\nCell 2 "Modern Luxury": White + chrome + jet black\nCell 3 "Wabi-Sabi": Terracotta + linen + raw ceramics\nCell 4 "Indochine": Teak + jade + gold\nEach cell: style name + 3–4 small color chips\n\n[Tiếng Việt]\nMoodboard 2×2 — 4 phong cách thiết kế\nÔ 1 "Cổ điển": Óc chó + đồng + kem\nÔ 2 "Modern Luxury": Trắng + chrome + đen tuyền\nÔ 3 "Wabi-Sabi": Terracotta + linen + gốm thô\nÔ 4 "Indochine": Gỗ teak + ngọc bích + vàng\nMỗi ô: tên phong cách + 3–4 chip màu nhỏ'`,
 
-    `🎨 INFOGRAPHIC | 1400×600px\n6-step timeline "Villa Construction Process"\n1.Survey & brief (1wk) → 2.3D Design (3–4wks) → 3.Sign contract (1wk) → 4.Cloud Factory production (6–8wks) → 5.Installation (4–8wks) → 6.Handover\nColors: Gold + Navy | Premium style'`,
+    `🎨 INFOGRAPHIC | 1400×600px\n6-step timeline "Villa Construction Process"\n1.Survey & brief (1wk) → 2.3D Design (3–4wks) → 3.Sign contract (1wk) → 4.Cloud Factory production (6–8wks) → 5.Installation (4–8wks) → 6.Handover\nColors: Gold + Navy | Premium style\n\n[Tiếng Việt]\nTimeline 6 bước "Quy Trình Thi Công Biệt Thự"\n1.Khảo sát & yêu cầu (1 tuần) → 2.Thiết kế 3D (3–4 tuần) → 3.Ký hợp đồng (1 tuần) → 4.Sản xuất Cloud Factory (6–8 tuần) → 5.Lắp đặt (4–8 tuần) → 6.Bàn giao\nMàu: Vàng + Navy | Phong cách cao cấp'`,
   ]},
 
   {g:'M', title:'Thi công nội thất chung cư – Hướng dẫn A–Z cho gia chủ',
    kw:'thi công nội thất chung cư + thiết kế căn hộ trọn gói', intent:'transactional', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: 65m² apartment after renovation — open-plan living + kitchen\nBeige sofa, light wood kitchen cabinets, small kitchen island\nJapandi tones: Light wood + White + Soft sage green\nAngle: Wide-angle from living room corner | Lighting: Natural daylight\nCaption: "65m² apartment after full interior renovation"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Căn hộ 65m² sau cải tạo — phòng khách + bếp mặt bằng mở\nGhế sofa beige, tủ bếp gỗ sáng, bàn đảo bếp nhỏ\nTông Japandi: Gỗ sáng + Trắng + Xanh rêu nhạt\nGóc chụp: Góc rộng từ góc phòng khách | Ánh sáng: Ánh sáng tự nhiên ban ngày\nCaption: "Căn hộ 65m² sau khi hoàn thiện nội thất toàn bộ"'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nFlat lay of required documents to prepare\nEach item: document icon + name + small note\n📄 Title deed / Purchase agreement\n📋 Building floor plan drawing\n🏢 Building management construction regulations\n📝 Interior construction contract\n📐 M&E technical drawings\nWhite background, navy accent, clean layout'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nFlat lay of required documents to prepare\nEach item: document icon + name + small note\n📄 Title deed / Purchase agreement\n📋 Building floor plan drawing\n🏢 Building management construction regulations\n📝 Interior construction contract\n📐 M&E technical drawings\nWhite background, navy accent, clean layout\n\n[Tiếng Việt]\nFlat lay tài liệu cần chuẩn bị\nMỗi mục: icon tài liệu + tên + ghi chú nhỏ\n📄 Sổ đỏ / Hợp đồng mua bán\n📋 Bản vẽ mặt bằng tòa nhà\n🏢 Quy định thi công của ban quản lý tòa nhà\n📝 Hợp đồng thi công nội thất\n📐 Bản vẽ kỹ thuật M&E\nNền trắng, điểm nhấn navy, bố cục gọn'`,
 
-    `🎨 INFOGRAPHIC | 1400×600px\n6-step apartment timeline with estimated durations\n1.Measure (2–3 days) → 2.3D Design (2–3 wks) → 3.Sign & deposit → 4.Production (4–6 wks) → 5.Build-out (4–8 wks) → 6.Handover & inspection\nLight blue → Navy gradient | Step icons'`,
+    `🎨 INFOGRAPHIC | 1400×600px\n6-step apartment timeline with estimated durations\n1.Measure (2–3 days) → 2.3D Design (2–3 wks) → 3.Sign & deposit → 4.Production (4–6 wks) → 5.Build-out (4–8 wks) → 6.Handover & inspection\nLight blue → Navy gradient | Step icons\n\n[Tiếng Việt]\nTimeline 6 bước căn hộ với thời gian ước tính\n1.Đo đạc (2–3 ngày) → 2.Thiết kế 3D (2–3 tuần) → 3.Ký hợp đồng & đặt cọc → 4.Sản xuất (4–6 tuần) → 5.Thi công lắp đặt (4–8 tuần) → 6.Bàn giao & nghiệm thu\nMàu chuyển xanh nhạt → Navy | Icon mỗi bước'`,
 
-    `📸 PHOTO | 1200×800px\nScene: 45m² smart apartment\nMurphy bed folding into wall, fold-out dining table, storage sofa, maximal wall shelving\nAngle: Wide-angle | Lighting: Natural white\nCaption: "Smart furniture — solutions for small spaces"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Căn hộ thông minh 45m²\nGiường Murphy gập vào tường, bàn ăn gập ra, sofa có ngăn chứa, tối đa kệ tường\nGóc chụp: Góc rộng | Ánh sáng: Trắng tự nhiên\nCaption: "Nội thất thông minh — giải pháp cho không gian nhỏ"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nInterior construction cost table for apartments\nRows: <60m² / 60–100m² / >100m²\nColumns: Standard (M VND/m²) / Mid-range / Premium\nNote: "Excluding rough structural work"\nNavy header, alternating rows, clear font'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nInterior construction cost table for apartments\nRows: <60m² / 60–100m² / >100m²\nColumns: Standard (M VND/m²) / Mid-range / Premium\nNote: "Excluding rough structural work"\nNavy header, alternating rows, clear font\n\n[Tiếng Việt]\nBảng chi phí thi công nội thất căn hộ\nHàng: <60m² / 60–100m² / >100m²\nCột: Tiêu chuẩn (triệu VND/m²) / Trung cao cấp / Cao cấp\nGhi chú: "Chưa bao gồm thi công xây thô"\nHeader navy, hàng xen kẽ, font rõ ràng'`,
   ]},
 
   {g:'N', title:'Tổng thầu nội thất nhà hàng & Spa – Thiết kế thi công trọn gói',
    kw:'tổng thầu nội thất nhà hàng + spa + quán cafe', intent:'transactional', aud:'b2b',
    imgs:[
-    `📸 PHOTO | 1400×900px\nScene: Fine-dining restaurant at night — warm candlelight, round dark wood tables, black velvet chairs, low pendant lights\nAngle: Wide-angle full view, blurred guests in background\nColor palette: Dark brown + Bronze gold + Deep red\nCaption: "High-end restaurant interior — designed and built by Flexfit"'`,
+    `📸 PHOTO | 1400×900px\nCảnh: Nhà hàng fine-dining buổi tối — ánh nến ấm, bàn tròn gỗ tối, ghế nhung đen, đèn thả thấp\nGóc chụp: Toàn cảnh góc rộng, khách hàng mờ phía sau\nBảng màu: Nâu tối + Vàng đồng + Đỏ đậm\nCaption: "Nội thất nhà hàng cao cấp — thiết kế & thi công bởi Flexfit"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Commercial restaurant kitchen — gleaming stainless steel, industrial burners, chefs in white uniforms\nAngle: Medium-wide | Lighting: Strong white | Feeling: Professional, hygienic'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Bếp nhà hàng thương mại — inox sáng bóng, bếp công nghiệp, đầu bếp đồng phục trắng\nGóc chụp: Trung bình-rộng | Ánh sáng: Trắng mạnh | Cảm giác: Chuyên nghiệp, vệ sinh'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Premium spa massage room — soft warm amber lighting, real candles, white leather massage table\nStyling: River stones + small bamboo + fresh flowers\nColor palette: Cream + Light wood + White | Mood: Relaxing, luxurious'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Phòng massage spa cao cấp — ánh đèn hổ phách ấm nhẹ, nến thật, bàn massage da trắng\nĐạo cụ: Đá sông + tre nhỏ + hoa tươi\nBảng màu: Kem + Gỗ sáng + Trắng | Tâm trạng: Thư giãn, sang trọng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n2-cell large grid\nLeft cell "Restaurant" (background #1a2a4a): icons for dining / kitchen / bar / wine cellar / restrooms\nRight cell "Spa" (light #7C3AED background): icons for treatment rooms / steam / soaking tub / reception\nEach: icon + label in white\nTitle: "Two sectors — one turnkey contracting process"'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n2-cell large grid\nLeft cell "Restaurant" (background #1a2a4a): icons for dining / kitchen / bar / wine cellar / restrooms\nRight cell "Spa" (light #7C3AED background): icons for treatment rooms / steam / soaking tub / reception\nEach: icon + label in white\nTitle: "Two sectors — one turnkey contracting process"\n\n[Tiếng Việt]\nLưới 2 ô lớn\nÔ trái "Nhà hàng" (nền #1a2a4a): icon cho phòng ăn / bếp / quầy bar / hầm rượu / nhà vệ sinh\nÔ phải "Spa" (nền nhạt #7C3AED): icon cho phòng trị liệu / phòng xông hơi / bồn ngâm / lễ tân\nMỗi ô: icon + nhãn trắng\nTiêu đề: "Hai lĩnh vực — một quy trình tổng thầu duy nhất"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nCost reference table for both types\nRestaurant: <100m² / 100–300m² / >300m² | Columns: Timeline / Est. cost per m²\nSpa: <100m² / 100–200m² / >200m² | Same columns\nSeparate footnote per type | Navy header'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nCost reference table for both types\nRestaurant: <100m² / 100–300m² / >300m² | Columns: Timeline / Est. cost per m²\nSpa: <100m² / 100–200m² / >200m² | Same columns\nSeparate footnote per type | Navy header\n\n[Tiếng Việt]\nBảng tham khảo chi phí cho cả 2 loại\nNhà hàng: <100m² / 100–300m² / >300m² | Cột: Tiến độ / Chi phí ước tính/m²\nSpa: <100m² / 100–200m² / >200m² | Cột tương tự\nGhi chú riêng mỗi loại | Header navy'`,
   ]},
 
   {g:'O', title:'Hợp đồng tổng thầu nội thất – Điều khoản cần biết & Tiết kiệm chi phí',
    kw:'hợp đồng tổng thầu nội thất + điều khoản + tiết kiệm chi phí', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1200×800px\nScene: Two hands signing a contract on a desk, design drawings behind, premium signing pen\nAngle: Side medium shot\nLighting: Warm natural | Color palette: White paper + Navy + Wood table'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Hai tay ký hợp đồng trên bàn, bản vẽ thiết kế phía sau, bút ký cao cấp\nGóc chụp: Trung bình từ bên\nÁnh sáng: Ấm tự nhiên | Bảng màu: Giấy trắng + Navy + Bàn gỗ'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Open contract with key clauses highlighted in yellow, pen and rolled drawings beside it\nAngle: Overhead 45° | Lighting: Warm office | Feeling: Careful, detailed'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Hợp đồng mở với các điều khoản quan trọng đánh dấu vàng, bút và bản vẽ cuộn bên cạnh\nGóc chụp: Trên xuống 45° | Ánh sáng: Văn phòng ấm | Cảm giác: Cẩn thận, tỉ mỉ'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n"5 Critical Clauses to Review Carefully"\nEach point: ⚠️ orange icon + bold title + 1-line explanation\n1. 📋 Scope of work — itemized list of every deliverable\n2. 💰 Payment schedule — % per milestone, disbursement conditions\n3. ⚡ Change orders — who pays, how to report\n4. 🛡️ Warranty — duration, coverage, claims process\n5. ⏱️ Delay penalties — penalty rate, exemption conditions\nClean white background, clear font'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n"5 Critical Clauses to Review Carefully"\nEach point: ⚠️ orange icon + bold title + 1-line explanation\n1. 📋 Scope of work — itemized list of every deliverable\n2. 💰 Payment schedule — % per milestone, disbursement conditions\n3. ⚡ Change orders — who pays, how to report\n4. 🛡️ Warranty — duration, coverage, claims process\n5. ⏱️ Delay penalties — penalty rate, exemption conditions\nClean white background, clear font\n\n[Tiếng Việt]\n"5 Điều Khoản Cần Đọc Kỹ Trước Khi Ký"\nMỗi điểm: icon ⚠️ cam + tiêu đề in đậm + giải thích 1 dòng\n1. 📋 Phạm vi công việc — danh sách chi tiết từng hạng mục\n2. 💰 Lịch thanh toán — % theo mốc, điều kiện giải ngân\n3. ⚡ Thay đổi khối lượng — ai trả, cách báo cáo\n4. 🛡️ Bảo hành — thời hạn, phạm vi, quy trình khiếu nại\n5. ⏱️ Phạt tiến độ — mức phạt, điều kiện miễn trừ\nNền trắng sạch, font rõ ràng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n"Where to Save vs. Where Not to Cut"\nLeft "CAN save" (background #DCFCE7 — soft green, ✅ icon):\nDecorative accessories / Secondary appliances / Plants\nRight "DO NOT cut" (background #FEE2E2 — soft red, ❌ icon):\nCore board (E0/ENF) / In-wall electrical & plumbing / Moisture-resistant paint / Sanitary ware\nClear heading, large readable font'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n"Where to Save vs. Where Not to Cut"\nLeft "CAN save" (background #DCFCE7 — soft green, ✅ icon):\nDecorative accessories / Secondary appliances / Plants\nRight "DO NOT cut" (background #FEE2E2 — soft red, ❌ icon):\nCore board (E0/ENF) / In-wall electrical & plumbing / Moisture-resistant paint / Sanitary ware\nClear heading, large readable font\n\n[Tiếng Việt]\n"Chỗ nào có thể tiết kiệm — chỗ nào không nên cắt"\nTrái "CÓ THỂ tiết kiệm" (nền #DCFCE7 — xanh nhạt, icon ✅):\nPhụ kiện trang trí / Thiết bị phụ / Cây xanh\nPhải "KHÔNG nên cắt" (nền #FEE2E2 — đỏ nhạt, icon ❌):\nTấm lõi (E0/ENF) / Điện & nước âm tường / Sơn chống ẩm / Thiết bị vệ sinh\nTiêu đề rõ ràng, font to dễ đọc'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Flexfit consultant (branded shirt) explaining contract to attentive couple\nDocuments spread on table | Lighting: Warm | Feeling: Transparent, friendly, professional'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Tư vấn viên Flexfit (áo thương hiệu) giải thích hợp đồng cho cặp đôi lắng nghe chú ý\nTài liệu trải trên bàn | Ánh sáng: Ấm | Cảm giác: Minh bạch, thân thiện, chuyên nghiệp'`,
   ]},
 
   {g:'P', title:'Tổng thầu nội thất Hà Nội – Thiết kế & Thi công trọn gói',
    kw:'tổng thầu nội thất Hà Nội + công ty nội thất Hà Nội', intent:'transactional', aud:'both',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Completed premium Hanoi apartment, preferably with lake or Old Quarter view through glass\nInterior: Warm wood tones + Sage green | Lighting: Bright natural\nAngle: Wide-angle | Caption: "Hanoi apartment interior — full turnkey by Flexfit"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Căn hộ cao cấp Hà Nội đã hoàn thiện, ưu tiên tầm nhìn hồ hoặc phố cổ qua kính\nNội thất: Tông gỗ ấm + Xanh rêu | Ánh sáng: Tự nhiên sáng\nGóc chụp: Góc rộng | Caption: "Nội thất căn hộ Hà Nội — tổng thầu trọn gói bởi Flexfit"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Hoan Kiem Old Quarter or iconic modern Hanoi apartment tower\nColor palette: Green trees + Brown rooftiles + Gray | Angle: Wide exterior shot\nNo text overlay'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Hồ Hoàn Kiếm hoặc tòa chung cư hiện đại biểu tượng Hà Nội\nBảng màu: Cây xanh + Ngói nâu + Xám | Góc chụp: Ngoại thất góc rộng\nKhông có text overlay'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Interior design project meeting in Hanoi\nLarge conference table, A1 drawings, 3D render on screen, Flexfit consultant presenting\nAngle: Medium-wide | Lighting: White office'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Cuộc họp dự án thiết kế nội thất tại Hà Nội\nBàn họp lớn, bản vẽ A1, render 3D trên màn hình, tư vấn viên Flexfit trình bày\nGóc chụp: Trung bình-rộng | Ánh sáng: Văn phòng trắng'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nInterior construction cost table for Hanoi\n4 rows: Apartment / Townhouse / Villa / Office\n3 columns: Property type | Standard cost (M VND/m²) | Premium cost (M VND/m²)\nNote: "Applicable in Hanoi — contact for exact quote"\nNavy header'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nInterior construction cost table for Hanoi\n4 rows: Apartment / Townhouse / Villa / Office\n3 columns: Property type | Standard cost (M VND/m²) | Premium cost (M VND/m²)\nNote: "Applicable in Hanoi — contact for exact quote"\nNavy header\n\n[Tiếng Việt]\nBảng chi phí thi công nội thất tại Hà Nội\n4 hàng: Căn hộ / Nhà phố / Biệt thự / Văn phòng\n3 cột: Loại bất động sản | Chi phí tiêu chuẩn (triệu/m²) | Chi phí cao cấp (triệu/m²)\nGhi chú: "Áp dụng tại Hà Nội — liên hệ để nhận báo giá chính xác"\nHeader navy'`,
 
-    `📸 PHOTO | 1400×800px\nActual Flexfit completed project in Hanoi\n→ Look up at flexfit.vn/du-an, choose best HN project\nCaption: "[Project name] — Flexfit executed in Hanoi"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Công trình thực tế Flexfit đã hoàn thiện tại Hà Nội\n→ Tra cứu tại flexfit.vn/du-an, chọn dự án Hà Nội đẹp nhất\nCaption: "[Tên dự án] — Flexfit thi công tại Hà Nội"'`,
   ]},
 
   {g:'Q', title:'Tổng thầu nội thất TP.HCM – Thiết kế & Thi công trọn gói',
    kw:'tổng thầu nội thất TP HCM + công ty nội thất Sài Gòn', intent:'transactional', aud:'both',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Modern completed HCMC apartment, strong natural southern light\nInterior: Bright, open, white + plants + light wood tones, large glass windows\nAngle: Wide-angle | Caption: "Ho Chi Minh City apartment interior — full turnkey by Flexfit"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Căn hộ TP.HCM hiện đại đã hoàn thiện, ánh sáng tự nhiên miền Nam rực rỡ\nNội thất: Sáng, thoáng, trắng + cây xanh + tông gỗ sáng, cửa kính lớn\nGóc chụp: Góc rộng | Caption: "Nội thất căn hộ TP.HCM — tổng thầu trọn gói bởi Flexfit"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: HCMC daytime skyline — Landmark 81, Bitexco, Saigon River towers\nColor palette: Bright blue + White | Angle: Wide from river or elevated point\nMood: Dynamic, modern'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Đường chân trời TP.HCM ban ngày — Landmark 81, Bitexco, các tòa nhà bên sông Sài Gòn\nBảng màu: Xanh sáng + Trắng | Góc chụp: Rộng từ sông hoặc điểm cao\nTâm trạng: Năng động, hiện đại'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Flexfit showroom in HCMC — cabinet displays, door samples, stone countertops on show\nConsultant chatting with client | Lighting: White studio | Color palette: White + Wood'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Showroom Flexfit tại TP.HCM — trưng bày tủ, mẫu cánh cửa, mặt đá countertop\nTư vấn viên trao đổi với khách | Ánh sáng: Studio trắng | Bảng màu: Trắng + Gỗ'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nCost table for Ho Chi Minh City (similar to Hanoi version)\n4 rows: Apartment / Townhouse / Villa / Office\n3 columns: Property type | Standard cost | Premium cost\nNote: "Applicable in HCMC"\nNavy header'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nCost table for Ho Chi Minh City (similar to Hanoi version)\n4 rows: Apartment / Townhouse / Villa / Office\n3 columns: Property type | Standard cost | Premium cost\nNote: "Applicable in HCMC"\nNavy header\n\n[Tiếng Việt]\nBảng chi phí thi công nội thất tại TP.HCM (tương tự bản Hà Nội)\n4 hàng: Căn hộ / Nhà phố / Biệt thự / Văn phòng\n3 cột: Loại bất động sản | Chi phí tiêu chuẩn | Chi phí cao cấp\nGhi chú: "Áp dụng tại TP.HCM"\nHeader navy'`,
 
-    `📸 PHOTO | 1400×800px\nActual Flexfit completed project in HCMC\n→ Look up at flexfit.vn/du-an, choose best HCM project\nCaption: "[Project name] — Flexfit executed in Ho Chi Minh City"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Công trình thực tế Flexfit đã hoàn thiện tại TP.HCM\n→ Tra cứu tại flexfit.vn/du-an, chọn dự án TP.HCM đẹp nhất\nCaption: "[Tên dự án] — Flexfit thi công tại TP. Hồ Chí Minh"'`,
   ]},
 
   {g:'R', title:'Vật liệu nội thất cao cấp – Gỗ E0, ENF & Plywood là gì?',
    kw:'vật liệu nội thất cao cấp + gỗ E0 + ENF + Plywood', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1200×800px — STUDIO SHOT\nScene: 4 cross-section board samples standing side by side — Standard MDF (brown) / HMR MDF (blue edged) / HDF (dark gray) / Plywood (horizontal multi-layer grain)\nEach board has adhesive label: name + technical specs + E0/ENF certification\nWhite studio background, even lighting\nCaption: "Left to right: MDF / HMR MDF / HDF / Plywood — 4 most common engineered wood core types"'`,
+    `📸 PHOTO | 1200×800px — STUDIO SHOT\nCảnh: 4 mẫu tấm gỗ cắt ngang đứng cạnh nhau — MDF thường (nâu) / MDF HMR (viền xanh) / HDF (xám đậm) / Plywood (vân nhiều lớp ngang)\nMỗi tấm có nhãn dán: tên + thông số kỹ thuật + chứng nhận E0/ENF\nNền studio trắng, ánh sáng đều\nCaption: "Từ trái sang: MDF / MDF HMR / HDF / Plywood — 4 loại lõi gỗ công nghiệp phổ biến nhất"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Family of 4 (parents + 2 kids ~3–8 years old) happily playing in newly finished children's bedroom\nLighting: Natural warm, clean air feeling | Mood: Happy, reassured\nColor palette: Soft pastels | Caption: "E0/ENF materials — safe for children and the whole family"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Gia đình 4 người (bố mẹ + 2 bé ~3–8 tuổi) vui chơi trong phòng trẻ em vừa hoàn thiện\nÁnh sáng: Ấm tự nhiên, cảm giác không khí trong lành | Tâm trạng: Vui vẻ, yên tâm\nBảng màu: Pastel nhẹ nhàng | Caption: "Vật liệu E0/ENF — an toàn cho trẻ em và cả gia đình"'`,
 
-    `🎨 INFOGRAPHIC | 1200×900px\n4-cell comparison grid for engineered wood cores\nEach cell: Name + distinct header color + Advantages ✅ + Disadvantages ⚠️ + Best application zone\nCell 1 "Standard MDF" (gray header): ✅ Affordable, easy to machine | ⚠️ Not water-resistant | Dry rooms\nCell 2 "HMR MDF" (blue header): ✅ Moisture-resistant | ⚠️ Heavier | Kitchen, bathroom\nCell 3 "HDF" (navy header): ✅ Extra dense, durable | ⚠️ More expensive | Flooring, cabinet doors\nCell 4 "Plywood" (wood header): ✅ Water-resistant, flexible | ⚠️ Grain may vary | Kitchen, heavy cabinets'`,
+    `🎨 INFOGRAPHIC | 1200×900px\n4-cell comparison grid for engineered wood cores\nEach cell: Name + distinct header color + Advantages ✅ + Disadvantages ⚠️ + Best application zone\nCell 1 "Standard MDF" (gray header): ✅ Affordable, easy to machine | ⚠️ Not water-resistant | Dry rooms\nCell 2 "HMR MDF" (blue header): ✅ Moisture-resistant | ⚠️ Heavier | Kitchen, bathroom\nCell 3 "HDF" (navy header): ✅ Extra dense, durable | ⚠️ More expensive | Flooring, cabinet doors\nCell 4 "Plywood" (wood header): ✅ Water-resistant, flexible | ⚠️ Grain may vary | Kitchen, heavy cabinets\n\n[Tiếng Việt]\nLưới so sánh 4 ô cho lõi gỗ công nghiệp\nMỗi ô: Tên + màu header riêng + Ưu điểm ✅ + Nhược điểm ⚠️ + Khu vực ứng dụng tốt nhất\nÔ 1 "MDF thường" (header xám): ✅ Giá rẻ, dễ gia công | ⚠️ Không chịu nước | Phòng khô\nÔ 2 "MDF HMR" (header xanh): ✅ Chống ẩm tốt | ⚠️ Nặng hơn | Bếp, nhà vệ sinh\nÔ 3 "HDF" (header navy): ✅ Cực kỳ chắc, bền | ⚠️ Đắt hơn | Sàn, cánh tủ\nÔ 4 "Plywood" (header gỗ): ✅ Chịu nước, linh hoạt | ⚠️ Vân có thể không đều | Bếp, tủ nặng'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\n4-door finish comparison — each cell with actual material photo\nCell 1 "Melamine": Matte texture, many colors | ✅ Affordable, variety | ⚠️ Scratches easily\nCell 2 "Acrylic": Mirror-gloss | ✅ Elegant, easy to clean | ⚠️ Shows fingerprints\nCell 3 "Laminate": Natural wood grain | ✅ Durable, fingerprint-free | ⚠️ Cannot be repaired\nCell 4 "PU Gloss Paint": Uniform color | ✅ Most beautiful | ⚠️ Most expensive\nSide by side under same lighting conditions'`,
+    `🎨 INFOGRAPHIC | 1400×700px\n4-door finish comparison — each cell with actual material photo\nCell 1 "Melamine": Matte texture, many colors | ✅ Affordable, variety | ⚠️ Scratches easily\nCell 2 "Acrylic": Mirror-gloss | ✅ Elegant, easy to clean | ⚠️ Shows fingerprints\nCell 3 "Laminate": Natural wood grain | ✅ Durable, fingerprint-free | ⚠️ Cannot be repaired\nCell 4 "PU Gloss Paint": Uniform color | ✅ Most beautiful | ⚠️ Most expensive\nSide by side under same lighting conditions\n\n[Tiếng Việt]\nSo sánh 4 loại bề mặt cánh tủ — mỗi ô có ảnh vật liệu thực tế\nÔ 1 "Melamine": Kết cấu mờ, nhiều màu | ✅ Giá rẻ, đa dạng | ⚠️ Dễ trầy\nÔ 2 "Acrylic": Bóng gương | ✅ Sang trọng, dễ lau | ⚠️ Dễ in dấu tay\nÔ 3 "Laminate": Vân gỗ tự nhiên | ✅ Bền, chống vân tay | ⚠️ Không sửa được\nÔ 4 "Sơn PU bóng": Màu đều đặn | ✅ Đẹp nhất | ⚠️ Đắt nhất\nĐặt cạnh nhau cùng điều kiện ánh sáng'`,
 
-    `📸 PHOTO | 1200×700px — MACRO SHOT\nSplit-screen close-up of cabinet edge\nLeft: Hot Air Edge Banding applied — perfect flush, glossy smooth, zero gap\nRight: Poor-quality edge — peeling, gapping, water infiltration visible\nLighting: Studio macro, white background\nCaption: "Hot Air Edge Banding — flawless edge, superior moisture resistance"'`,
+    `📸 PHOTO | 1200×700px — MACRO SHOT\nCận cảnh split-screen cạnh tủ\nTrái: Dán cạnh Hot Air đã thi công — phẳng hoàn hảo, bóng mịn, không khe hở\nPhải: Cạnh kém chất lượng — bong tróc, hở cạnh, thấm nước rõ ràng\nÁnh sáng: Studio macro, nền trắng\nCaption: "Dán cạnh Hot Air — cạnh hoàn hảo, chống ẩm vượt trội"'`,
 
-    `🎨 INFOGRAPHIC | 1200×900px\nMaterial selection guide by room\n5 rows: Kitchen / Bathroom / Bedroom / Living room / Balcony\n4 columns: Recommended core / Door finish / Countertop / Main reason\nUse ✅ green for best choice, ⚠️ for acceptable, ❌ for avoid'`,
+    `🎨 INFOGRAPHIC | 1200×900px\nMaterial selection guide by room\n5 rows: Kitchen / Bathroom / Bedroom / Living room / Balcony\n4 columns: Recommended core / Door finish / Countertop / Main reason\nUse ✅ green for best choice, ⚠️ for acceptable, ❌ for avoid\n\n[Tiếng Việt]\nHướng dẫn chọn vật liệu theo từng phòng\n5 hàng: Bếp / Nhà vệ sinh / Phòng ngủ / Phòng khách / Ban công\n4 cột: Lõi gỗ khuyến nghị / Bề mặt cánh / Mặt đá / Lý do chính\nDùng ✅ xanh cho lựa chọn tốt nhất, ⚠️ chấp nhận được, ❌ tránh'`,
   ]},
 
   {g:'S', title:'Phong cách Japandi là gì? Đặc điểm & Cách áp dụng cho nhà Việt',
    kw:'phong cách Japandi + nội thất Japandi + thiết kế Japandi', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Classic Japandi living room — low linen beige sofa, light oak round coffee table, monstera\nLinen white curtains, simple floor lamp | Absolutely zero unnecessary décor\nLighting: Warm golden daylight | Color palette: #F5F0E8 + #C4956A + #8FAF8C\nCaption: "Japandi — beauty in simplicity and warmth"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Phòng khách Japandi chuẩn mực — sofa linen beige thấp, bàn cà phê tròn gỗ sồi sáng, cây monstera\nRèm linen trắng, đèn cây đơn giản | Tuyệt đối không đồ trang trí thừa\nÁnh sáng: Ánh ngày vàng ấm | Bảng màu: #F5F0E8 + #C4956A + #8FAF8C\nCaption: "Japandi — vẻ đẹp trong sự giản dị và ấm áp"'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\nSplit screen "Origins of Japandi"\nLeft "Japanese Minimalism": tatami room photo, fusuma, muted earth tones\nRight "Scandinavian Hygge": bright white room, light wood furniture, warm candles\nMerging arrow in the center → small Japandi room photo\nCaption: "Japandi = Japanese Minimalism + Scandinavian Hygge"'`,
+    `🎨 INFOGRAPHIC | 1400×700px\nSplit screen "Origins of Japandi"\nLeft "Japanese Minimalism": tatami room photo, fusuma, muted earth tones\nRight "Scandinavian Hygge": bright white room, light wood furniture, warm candles\nMerging arrow in the center → small Japandi room photo\nCaption: "Japandi = Japanese Minimalism + Scandinavian Hygge"\n\n[Tiếng Việt]\nMàn hình split "Nguồn gốc Japandi"\nTrái "Tối giản Nhật Bản": ảnh phòng tatami, fusuma, tông đất trầm\nPhải "Hygge Scandinavia": phòng trắng sáng, nội thất gỗ sáng, nến ấm\nMũi tên hợp nhất ở giữa → ảnh nhỏ phòng Japandi\nCaption: "Japandi = Tối giản Nhật + Hygge Scandinavia"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Japandi bedroom — low platform bed in light wood, beige/greige bedding\nSimple pendant light, dried branch in small ceramic vase | No wall art\nLighting: Soft early morning | Mood: Serene, contented'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Phòng ngủ Japandi — giường bệt gỗ sáng, chăn gối beige/greige\nĐèn thả đơn giản, cành khô trong bình gốm nhỏ | Không tranh tường\nÁnh sáng: Sáng sớm nhẹ nhàng | Tâm trạng: Yên bình, thỏa mãn'`,
 
-    `🎨 INFOGRAPHIC | 1400×500px\nJapandi color palette — 10 swatches in a row\nEach swatch: Color fill + English name + Hex code\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Washed Blue #8AAFCC / Indigo Dusk #4A5568 / Clay #C17A4A\nOff-black #2D2D2D / Muted Gold #D4A843\nTitle: "The Japandi Color Palette — Ready to Apply"'`,
+    `🎨 INFOGRAPHIC | 1400×500px\nJapandi color palette — 10 swatches in a row\nEach swatch: Color fill + English name + Hex code\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Washed Blue #8AAFCC / Indigo Dusk #4A5568 / Clay #C17A4A\nOff-black #2D2D2D / Muted Gold #D4A843\nTitle: "The Japandi Color Palette — Ready to Apply"\n\n[Tiếng Việt]\nBảng màu Japandi — 10 mẫu màu trên 1 hàng\nMỗi mẫu: Ô màu + tên tiếng Anh + mã Hex\nWarm White #FAFAF7 / Linen Beige #F5F0E8 / Greige #C8B89A / Warm Oak #C4956A\nSage Green #8FAF8C / Washed Blue #8AAFCC / Indigo Dusk #4A5568 / Clay #C17A4A\nOff-black #2D2D2D / Muted Gold #D4A843\nTiêu đề: "Bảng Màu Japandi — Sẵn Sàng Áp Dụng"'`,
 
-    `📸 PHOTO | 1400×800px\nScene: 55m² Japandi apartment — living + kitchen open-plan in one frame\nSmall wood kitchen island, low sofa, no room dividers | Lighting: Abundant natural light\nColor palette: Light wood + Cream white | Feeling: Spacious despite compact footprint'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Căn hộ Japandi 55m² — phòng khách + bếp mặt bằng mở trong một khung hình\nBàn đảo bếp gỗ nhỏ, sofa thấp, không vách ngăn | Ánh sáng: Tự nhiên dồi dào\nBảng màu: Gỗ sáng + Trắng kem | Cảm giác: Rộng rãi dù diện tích nhỏ'`,
   ]},
 
   {g:'T', title:'Thiết kế văn phòng xanh – LEED và Biophilic là gì & lợi ích',
    kw:'thiết kế văn phòng xanh + LEED + Biophilic design', intent:'informational', aud:'b2b',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Green open-plan office — plants on walls and floors, floor-to-ceiling glass, employees working\nAngle: Wide-angle panoramic | Color palette: Green + Light wood + White\nCaption: "Biophilic workspace — where inspiration meets productivity"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Văn phòng mặt bằng mở xanh mát — cây trên tường và sàn, kính từ sàn đến trần, nhân viên làm việc\nGóc chụp: Toàn cảnh góc rộng | Bảng màu: Xanh lá + Gỗ sáng + Trắng\nCaption: "Không gian làm việc Biophilic — nơi cảm hứng gặp năng suất"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: LEED Certification plaque prominently displayed in lobby of a Vietnamese office building\nAlternative: LEED logo composited with modern glass tower\nCaption: "LEED Certification — the international standard for green buildings"'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Bảng chứng nhận LEED trưng bày nổi bật trong sảnh tòa nhà văn phòng Việt Nam\nPhương án thay thế: Logo LEED ghép với tòa nhà kính hiện đại\nCaption: "Chứng nhận LEED — tiêu chuẩn quốc tế cho công trình xanh"'`,
 
-    `📸 PHOTO | 1200×800px\nScene: Biophilic work corner — dense living wall, raw solid wood slab desk\nLighting: Strong natural | Color palette: Deep green + Natural brown wood\nMood: Working inside a forest'`,
+    `📸 PHOTO | 1200×800px\nCảnh: Góc làm việc Biophilic — tường cây xanh dày đặc, bàn gỗ nguyên khối thô\nÁnh sáng: Tự nhiên mạnh | Bảng màu: Xanh lá đậm + Gỗ nâu tự nhiên\nTâm trạng: Làm việc như trong rừng'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\n6-cell grid "6 Elements of a Green Office"\nCell 1 ☀️ "Natural Lighting" — 1-line description\nCell 2 🌿 "Plants & Clean Air"\nCell 3 💨 "Smart Ventilation System"\nCell 4 🪵 "Natural Materials, Low VOC"\nCell 5 🔇 "Noise Control"\nCell 6 🌡️ "Optimal Temperature & Humidity"\nLight green background #DCFCE7, navy icons, minimal style'`,
+    `🎨 INFOGRAPHIC | 1200×800px\n6-cell grid "6 Elements of a Green Office"\nCell 1 ☀️ "Natural Lighting" — 1-line description\nCell 2 🌿 "Plants & Clean Air"\nCell 3 💨 "Smart Ventilation System"\nCell 4 🪵 "Natural Materials, Low VOC"\nCell 5 🔇 "Noise Control"\nCell 6 🌡️ "Optimal Temperature & Humidity"\nLight green background #DCFCE7, navy icons, minimal style\n\n[Tiếng Việt]\nLưới 6 ô "6 Yếu Tố Tạo Nên Văn Phòng Xanh"\nÔ 1 ☀️ "Ánh sáng tự nhiên" — mô tả 1 dòng\nÔ 2 🌿 "Cây xanh & Không khí sạch"\nÔ 3 💨 "Hệ thống thông gió thông minh"\nÔ 4 🪵 "Vật liệu tự nhiên, VOC thấp"\nÔ 5 🔇 "Kiểm soát tiếng ồn"\nÔ 6 🌡️ "Nhiệt độ & Độ ẩm tối ưu"\nNền xanh nhạt #DCFCE7, icon navy, phong cách tối giản'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\n5-year comparison chart (line or bar)\nConventional office (gray): High energy costs, lower productivity\nGreen office (#16a34a): 20–30% cost reduction, higher productivity\nX-axis: Year 1–5 | Source note: "LEED/WELL Building Standard research"\nTitle: "ROI of Green Office Investment Over 5 Years"'`,
+    `🎨 INFOGRAPHIC | 1400×700px\n5-year comparison chart (line or bar)\nConventional office (gray): High energy costs, lower productivity\nGreen office (#16a34a): 20–30% cost reduction, higher productivity\nX-axis: Year 1–5 | Source note: "LEED/WELL Building Standard research"\nTitle: "ROI of Green Office Investment Over 5 Years"\n\n[Tiếng Việt]\nBiểu đồ so sánh 5 năm (đường hoặc cột)\nVăn phòng thông thường (xám): Chi phí năng lượng cao, năng suất thấp hơn\nVăn phòng xanh (#16a34a): Giảm 20–30% chi phí, năng suất cao hơn\nTrục X: Năm 1–5 | Ghi chú nguồn: "Nghiên cứu từ tiêu chuẩn LEED/WELL"\nTiêu đề: "ROI Đầu Tư Văn Phòng Xanh Trong 5 Năm"'`,
 
-    `📸 PHOTO | 1400×800px\nActual Flexfit office project (preferably featuring greenery)\n→ Look up at flexfit.vn/du-an\nCaption: "[Office project name] — designed and built by Flexfit"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Dự án văn phòng thực tế của Flexfit (ưu tiên có cây xanh)\n→ Tra cứu tại flexfit.vn/du-an\nCaption: "[Tên dự án văn phòng] — thiết kế & thi công bởi Flexfit"'`,
   ]},
 
   {g:'U', title:'Nội thất phòng ngủ master – Thiết kế đẹp & đủ tiện nghi',
    kw:'nội thất phòng ngủ master + thiết kế phòng ngủ master đẹp', intent:'informational', aud:'b2c',
    imgs:[
-    `📸 PHOTO | 1400×900px\nScene: Fully finished ~20m² master bedroom — king-size bed, light gray linen headboard\n2 symmetrical wall-mounted bedside lamps, large abstract artwork behind, full-wall flush wardrobes\nColor palette: Beige #F5F0E8 + Light wood + Soft gray | Lighting: Warm golden dim\nCaption: "Master bedroom — your perfect private sanctuary"'`,
+    `📸 PHOTO | 1400×900px\nCảnh: Phòng ngủ master ~20m² hoàn thiện — giường king-size, đầu giường linen xám nhạt\n2 đèn đầu giường gắn tường đối xứng, tranh trừu tượng lớn phía sau, tủ âm tường toàn bộ\nBảng màu: Beige #F5F0E8 + Gỗ sáng + Xám nhạt | Ánh sáng: Vàng ấm dịu\nCaption: "Phòng ngủ master — không gian riêng tư hoàn hảo của bạn"'`,
 
-    `🎨 INFOGRAPHIC | 1200×800px\nColour-coded 2D floor plan of 20m² master bedroom\nSleeping zone (light blue #DBEAFE): Bed, 2 bedside tables\nWalk-in closet (light orange #FEF3C7): Wardrobes, mirror\nEnsuite WC (light green #DCFCE7): Vanity, shower, bathtub\nRelax corner (light purple #EDE9FE): Armchair + reading lamp\nColor legend with zone labels'`,
+    `🎨 INFOGRAPHIC | 1200×800px\nColour-coded 2D floor plan of 20m² master bedroom\nSleeping zone (light blue #DBEAFE): Bed, 2 bedside tables\nWalk-in closet (light orange #FEF3C7): Wardrobes, mirror\nEnsuite WC (light green #DCFCE7): Vanity, shower, bathtub\nRelax corner (light purple #EDE9FE): Armchair + reading lamp\nColor legend with zone labels\n\n[Tiếng Việt]\nMặt bằng 2D phòng ngủ master 20m² tô màu theo khu vực\nKhu ngủ (xanh nhạt #DBEAFE): Giường, 2 tủ đầu giường\nWalk-in closet (cam nhạt #FEF3C7): Tủ quần áo, gương\nWC riêng (xanh lá nhạt #DCFCE7): Bàn trang điểm, vòi sen, bồn tắm\nGóc thư giãn (tím nhạt #EDE9FE): Ghế đọc sách + đèn\nChú thích màu sắc với nhãn khu vực'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\n3 mini floor plans side by side for 3 room sizes\n12m²: Queen bed + wall wardrobes + No walk-in\n18m²: King bed + 2 bedside tables + Small 3m² walk-in\n25m²: King bed + Walk-in + Small sofa + Ensuite\nEach plan labeled with furniture, distinct colors'`,
+    `🎨 INFOGRAPHIC | 1400×700px\n3 mini floor plans side by side for 3 room sizes\n12m²: Queen bed + wall wardrobes + No walk-in\n18m²: King bed + 2 bedside tables + Small 3m² walk-in\n25m²: King bed + Walk-in + Small sofa + Ensuite\nEach plan labeled with furniture, distinct colors\n\n[Tiếng Việt]\n3 mặt bằng mini đặt cạnh nhau cho 3 kích thước phòng\n12m²: Giường queen + tủ âm tường + Không có walk-in\n18m²: Giường king + 2 tủ đầu giường + Walk-in nhỏ 3m²\n25m²: Giường king + Walk-in + Ghế nhỏ + WC riêng\nMỗi bản vẽ ghi nhãn nội thất, màu riêng biệt'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\n3 style panels for master bedrooms\nPanel 1 "Japandi": Light wood + White + Soft sage + 3 color chips\nPanel 2 "Modern Luxury": Dark wood + Chrome + Black + White + 3 color chips\nPanel 3 "Mid-Century Modern": Walnut + Terracotta + Brass + 3 color chips\nEach panel: small photo + clear style name'`,
+    `🎨 INFOGRAPHIC | 1400×700px\n3 style panels for master bedrooms\nPanel 1 "Japandi": Light wood + White + Soft sage + 3 color chips\nPanel 2 "Modern Luxury": Dark wood + Chrome + Black + White + 3 color chips\nPanel 3 "Mid-Century Modern": Walnut + Terracotta + Brass + 3 color chips\nEach panel: small photo + clear style name\n\n[Tiếng Việt]\n3 ô phong cách cho phòng ngủ master\nÔ 1 "Japandi": Gỗ sáng + Trắng + Xanh rêu nhạt + 3 chip màu\nÔ 2 "Modern Luxury": Gỗ tối + Chrome + Đen + Trắng + 3 chip màu\nÔ 3 "Mid-Century Modern": Óc chó + Terracotta + Đồng thau + 3 chip màu\nMỗi ô: ảnh nhỏ + tên phong cách rõ ràng'`,
 
-    `📸 PHOTO | 1200×800px — DETAIL CLOSE-UP\nFocus on: Chenille gray headboard, curved brass wall-mounted lamp\nSmall floating shelf: books + mini plant, slim metal bar handle\nAngle: Medium close-up | Lighting: Soft warm golden\nSubtle, no text overlay'`,
+    `📸 PHOTO | 1200×800px — DETAIL CLOSE-UP\nFocus: Đầu giường chenille xám, đèn đồng cong gắn tường\nKệ nổi nhỏ: sách + cây mini, tay nắm thanh kim loại mỏng\nGóc chụp: Cận trung bình | Ánh sáng: Vàng ấm nhẹ\nTinh tế, không text overlay'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\nMaster bedroom cost table\n4 rows: 12–15m² / 16–20m² / 21–30m² / >30m²\n2 columns: Standard segment (M VND) / Premium (M VND)\nNote: Includes design, wardrobes, bed + headboard, lighting, clock\nNavy header, clear font'`,
+    `🎨 INFOGRAPHIC | 1200×700px\nMaster bedroom cost table\n4 rows: 12–15m² / 16–20m² / 21–30m² / >30m²\n2 columns: Standard segment (M VND) / Premium (M VND)\nNote: Includes design, wardrobes, bed + headboard, lighting, clock\nNavy header, clear font\n\n[Tiếng Việt]\nBảng chi phí phòng ngủ master\n4 hàng: 12–15m² / 16–20m² / 21–30m² / >30m²\n2 cột: Phân khúc tiêu chuẩn (triệu VND) / Cao cấp (triệu VND)\nGhi chú: Bao gồm thiết kế, tủ quần áo, giường + đầu giường, chiếu sáng, đồng hồ\nHeader navy, font rõ ràng'`,
   ]},
 
   {g:'V', title:'Tổng thầu nội thất trọn gói (Turnkey) – Bạn chỉ cần nhận chìa khóa',
    kw:'tổng thầu nội thất trọn gói + turnkey nội thất', intent:'transactional', aud:'both',
    imgs:[
-    `📸 PHOTO | 1400×800px\nScene: Female homeowner ~35 years old receiving key from Flexfit branded-shirt representative\nBackground: Beautifully finished living room | Both smiling\nAngle: 3/4 medium | Lighting: Warm\nCaption: "Key handover — a memorable moment with Flexfit Turnkey"'`,
+    `📸 PHOTO | 1400×800px\nCảnh: Chủ nhà nữ ~35 tuổi nhận chìa khóa từ đại diện Flexfit mặc áo thương hiệu\nBackground: Phòng khách hoàn thiện đẹp | Cả hai đều mỉm cười\nGóc chụp: Trung bình 3/4 | Ánh sáng: Ấm\nCaption: "Bàn giao chìa khóa — khoảnh khắc đáng nhớ cùng Flexfit Turnkey"'`,
 
-    `🎨 INFOGRAPHIC | 1400×800px\n3-column comparison table\nColumn 1 "DIY piece by piece" (gray header): ❌ Time-consuming / No warranty / Hard to manage / High risk / Many contacts / Uncontrolled cost overruns\nColumn 2 "Design separately + bid build" (yellow header): ⚠️ Moderate\nColumn 3 "Flexfit Turnkey" (navy header): ✅ Single contract / 36-month warranty / Guaranteed schedule / BIM 3D / Cloud Factory / One point of contact\nClear heading, large font, easy to read'`,
+    `🎨 INFOGRAPHIC | 1400×800px\n3-column comparison table\nColumn 1 "DIY piece by piece" (gray header): ❌ Time-consuming / No warranty / Hard to manage / High risk / Many contacts / Uncontrolled cost overruns\nColumn 2 "Design separately + bid build" (yellow header): ⚠️ Moderate\nColumn 3 "Flexfit Turnkey" (navy header): ✅ Single contract / 36-month warranty / Guaranteed schedule / BIM 3D / Cloud Factory / One point of contact\nClear heading, large font, easy to read\n\n[Tiếng Việt]\nBảng so sánh 3 cột\nCột 1 "Tự tìm từng hạng mục" (header xám): ❌ Tốn thời gian / Không bảo hành / Khó quản lý / Rủi ro cao / Nhiều đầu mối / Chi phí phát sinh không kiểm soát\nCột 2 "Thiết kế riêng + đấu thầu thi công" (header vàng): ⚠️ Trung bình\nCột 3 "Tổng thầu Flexfit" (header navy): ✅ Một hợp đồng / Bảo hành 36 tháng / Tiến độ cam kết / BIM 3D / Cloud Factory / Một đầu mối duy nhất\nTiêu đề rõ ràng, font to, dễ đọc'`,
 
-    `🎨 INFOGRAPHIC | 900×1400px (vertical)\nVertical 7-step timeline of Flexfit Turnkey process\n1 ⬇️ Free consultation & survey\n2 ⬇️ BIM 3D design\n3 ⬇️ All-inclusive fixed-price quote\n4 ⬇️ Contract signing\n5 ⬇️ Cloud Factory production\n6 ⬇️ Installation & build-out\n7 🏠 Handover + 36-month warranty\nEach step: icon + name + estimated duration\nNavy → sky blue gradient | White text | Premium style'`,
+    `🎨 INFOGRAPHIC | 900×1400px (vertical)\nVertical 7-step timeline of Flexfit Turnkey process\n1 ⬇️ Free consultation & survey\n2 ⬇️ BIM 3D design\n3 ⬇️ All-inclusive fixed-price quote\n4 ⬇️ Contract signing\n5 ⬇️ Cloud Factory production\n6 ⬇️ Installation & build-out\n7 🏠 Handover + 36-month warranty\nEach step: icon + name + estimated duration\nNavy → sky blue gradient | White text | Premium style\n\n[Tiếng Việt]\nTimeline dọc 7 bước quy trình Tổng thầu Flexfit\n1 ⬇️ Tư vấn & khảo sát miễn phí\n2 ⬇️ Thiết kế BIM 3D\n3 ⬇️ Báo giá trọn gói cố định\n4 ⬇️ Ký hợp đồng\n5 ⬇️ Sản xuất tại Cloud Factory\n6 ⬇️ Lắp đặt & thi công\n7 🏠 Bàn giao + Bảo hành 36 tháng\nMỗi bước: icon + tên + thời gian ước tính\nMàu chuyển Navy → Xanh trời | Chữ trắng | Phong cách cao cấp'`,
 
-    `📸 PHOTO | 1200×800px\nSplit 2 scenes\nScene 1: Busy family (working parents, kids) — no time to manage contractors\nScene 2: Business owner standing in front of their newly opened office\nBoth looking at completed interiors, satisfied smiles\nCaption: "Turnkey — the solution for busy people, B2C or B2B alike"'`,
+    `📸 PHOTO | 1200×800px\nGhép 2 cảnh\nCảnh 1: Gia đình bận rộn (bố mẹ đi làm, con cái) — không có thời gian quản lý thầu\nCảnh 2: Chủ doanh nghiệp đứng trước văn phòng mới khai trương\nCả hai nhìn nội thất hoàn thiện, nụ cười hài lòng\nCaption: "Tổng thầu trọn gói — giải pháp cho người bận rộn, dù B2C hay B2B"'`,
 
-    `🎨 INFOGRAPHIC | 1200×700px\n6 Turnkey benefits — each cell: icon + bold title + 1 sentence\n📄 Single contract only\n👤 One point of contact throughout\n⏱️ Schedule guaranteed in writing\n🛡️ Full 36-month warranty\n🌿 E0/ENF materials — health-safe\n💻 BIM 3D — see your home before construction\nWhite background, navy icons, green #16a34a accent'`,
+    `🎨 INFOGRAPHIC | 1200×700px\n6 Turnkey benefits — each cell: icon + bold title + 1 sentence\n📄 Single contract only\n👤 One point of contact throughout\n⏱️ Schedule guaranteed in writing\n🛡️ Full 36-month warranty\n🌿 E0/ENF materials — health-safe\n💻 BIM 3D — see your home before construction\nWhite background, navy icons, green #16a34a accent\n\n[Tiếng Việt]\n6 lợi ích Tổng thầu trọn gói — mỗi ô: icon + tiêu đề in đậm + 1 câu\n📄 Chỉ một hợp đồng duy nhất\n👤 Một đầu mối xuyên suốt dự án\n⏱️ Tiến độ cam kết bằng văn bản\n🛡️ Bảo hành đầy đủ 36 tháng\n🌿 Vật liệu E0/ENF — an toàn sức khỏe\n💻 BIM 3D — nhìn thấy nhà trước khi xây\nNền trắng, icon navy, điểm nhấn xanh #16a34a'`,
 
-    `🎨 INFOGRAPHIC | 1400×700px\nFlexfit process — 5-step horizontal chevron\n1 → Consultation (person icon) | 2 → BIM Design (monitor icon) | 3 → Cloud Factory production (factory icon) | 4 → Build-out (hammer icon) | 5 → Handover + 36-month warranty (key + shield icon)\nEach step: distinct blue shade (light to navy)\nFooter: "Flexfit — Flexible to fit your home"'`,
+    `🎨 INFOGRAPHIC | 1400×700px\nFlexfit process — 5-step horizontal chevron\n1 → Consultation (person icon) | 2 → BIM Design (monitor icon) | 3 → Cloud Factory production (factory icon) | 4 → Build-out (hammer icon) | 5 → Handover + 36-month warranty (key + shield icon)\nEach step: distinct blue shade (light to navy)\nFooter: "Flexfit — Flexible to fit your home"\n\n[Tiếng Việt]\nQuy trình Flexfit — chevron ngang 5 bước\n1 → Tư vấn (icon người) | 2 → Thiết kế BIM (icon màn hình) | 3 → Sản xuất Cloud Factory (icon nhà máy) | 4 → Thi công lắp đặt (icon búa) | 5 → Bàn giao + Bảo hành 36 tháng (icon chìa khóa + khiên)\nMỗi bước: tông xanh riêng (từ nhạt đến navy)\nFooter: "Flexfit — Flexible to fit your home"'`,
   ]},
 ];
 /* ── sendPrompt fallback ── */
@@ -924,32 +931,32 @@ function buildArticles(){
     card.dataset.status=s;card.dataset.enStatus=es;card.dataset.g=a.g;
     const esc=a.title.replace(/'/g,"\\'").replace(/"/g,'&quot;');
     const linkEl=lv
-      ?'<a class="link-live" href="'+lv+'" target="_blank" title="'+lv+'"><span>↗ '+lv.replace('https://flexfit.vn','')+'</span></a>'
-      :'<input class="link-inp" id="li-'+a.g+'" placeholder="https://flexfit.vn/…" value="" onchange="saveL(\''+a.g+'\',this.value)">';
+      ?'<a class="link-live" href="'+lv+'" target="_blank" title="'+lv+'"><span>&#8599; '+lv.replace('https://flexfit.vn','')+'</span></a>'
+      :'<input class="link-inp" id="li-'+a.g+'" placeholder="https://flexfit.vn/..." value="" onchange="saveL(\''+a.g+'\',this.value)">';
     const postLabel=s==='s-posted'?'✓ Đã đăng':'🌐 Đăng VN';
     const postDis=s==='s-posted'?'disabled':'';
     const enLinkEl=ev
-      ?'<a class="link-live" href="'+ev+'" target="_blank" title="'+ev+'" style="background:#F5F0FF;border-color:#C5C2F7;"><span>↗EN '+ev.replace('https://flexfit.vn','')+'</span></a>'
-      :'<input class="link-inp" id="eli-'+a.g+'" placeholder="https://flexfit.vn/en/…" value="" onchange="saveEN(\''+a.g+'\',this.value)">';
+      ?'<a class="link-live" href="'+ev+'" target="_blank" style="background:#F5F0FF;border-color:#C5C2F7;"><span>&#8599;EN '+ev.replace('https://flexfit.vn','')+'</span></a>'
+      :'<input class="link-inp" id="eli-'+a.g+'" placeholder="https://flexfit.vn/en/..." value="" onchange="saveEN(\''+a.g+'\',this.value)">';
     const enPostLabel=es==='en-posted'?'✓ Đã đăng EN':'🌐 Đăng EN';
     const enPostDis=es==='en-posted'?'disabled':'';
     card.innerHTML=
       '<div class="art-card-top">'+
-        '<span class="grp-badge">'+a.g+'</span>'+
-        '<span class="art-title">'+a.title+'</span>'+
-        '<button class="st-btn '+s+'" onclick="cycleArt(\''+a.g+'\',this)">'+SL[s]+'</button>'+
+      '<span class="grp-badge">'+a.g+'</span>'+
+      '<span class="art-title">'+a.title+'</span>'+
+      '<button class="st-btn '+s+'" onclick="cycleArt(\''+a.g+'\',this)">'+SL[s]+'</button>'+
       '</div>'+
       '<div class="art-card-kw">'+a.kw+'</div>'+
       '<div class="art-card-meta">'+
-        '<span class="badge '+IC[a.intent]+'">'+IL[a.intent]+'</span>'+
-        '<span class="badge '+AC[a.aud]+'">'+AL[a.aud]+'</span>'+
-        linkEl+
-        '<button class="post-btn" id="pb-'+a.g+'" onclick="doPost(\''+a.g+'\',\''+esc+'\')" '+postDis+'>'+postLabel+'</button>'+
+      '<span class="badge '+IC[a.intent]+'">'+IL[a.intent]+'</span>'+
+      '<span class="badge '+AC[a.aud]+'">'+AL[a.aud]+'</span>'+
+      linkEl+
+      '<button class="post-btn" id="pb-'+a.g+'" onclick="doPost(\''+a.g+'\',\''+esc+'\')" '+postDis+'>'+postLabel+'</button>'+
       '</div>'+
-      '<div class="art-card-meta en-row">'+
-        '<button class="en-status-btn '+es+'" onclick="cycleEN(\''+a.g+'\',this)">'+EN_LABELS[es]+'</button>'+
-        enLinkEl+
-        '<button class="post-en-btn" id="pe-'+a.g+'" onclick="doPostEN(\''+a.g+'\',\''+esc+'\')" '+enPostDis+'>'+enPostLabel+'</button>'+
+      '<div class="en-row">'+
+      '<button class="en-status-btn '+es+'" onclick="cycleEN(\''+a.g+'\',this)">'+EN_LABELS[es]+'</button>'+
+      enLinkEl+
+      '<button class="post-en-btn" id="pe-'+a.g+'" onclick="doPostEN(\''+a.g+'\',\''+esc+'\')" '+enPostDis+'>'+enPostLabel+'</button>'+
       '</div>';
     grid.appendChild(card);
   });
@@ -988,7 +995,8 @@ function applyFilter(){
       ||card.dataset.intent===f
       ||(f==='b2c'&&(card.dataset.aud==='b2c'||card.dataset.aud==='both'))
       ||(f==='b2b'&&(card.dataset.aud==='b2b'||card.dataset.aud==='both'))
-      ||card.dataset.status===f
+      ||(f==='s-waiting'&&card.dataset.status==='s-waiting')
+      ||(f==='s-posted'&&card.dataset.status==='s-posted')
       ||(f==='en-done'&&card.dataset.enStatus==='en-done')
       ||(f==='en-posted'&&card.dataset.enStatus==='en-posted');
     card.classList.toggle('hidden',!ok);
@@ -1006,12 +1014,33 @@ function updateStats(){
   document.getElementById('sWaiting').textContent=waiting;
   document.getElementById('sEnPosted').textContent=enPosted;
   const notWritten=document.querySelectorAll('.art-card:not([data-status="s-written"])').length;
-  document.getElementById('phSub3').textContent=notWritten+' / '+ARTICLES.length+' bài';
+  document.getElementById('phSub3').textContent=notWritten+' / '+ARTICLES.length+' bai';
 }
 
-/* ── IMAGES ── */
-function getType(d){if(d.includes('COLLAGE'))return['COLLAGE','tp-collage'];if(d.startsWith('📸')||d.includes('PHOTO'))return['PHOTO','tp-photo'];return['INFO','tp-info'];}
-function cleanDesc(d){return d.replace(/^[📸🎨🖼️]?\s*(PHOTO|INFOGRAPHIC|COLLAGE)?\s*[|–—]\s*/u,'').trim();}
+/* -- IMAGES -- */
+function getType(d){
+  if(d.includes('COLLAGE'))return['COLLAGE','tp-collage'];
+  if(d.startsWith('\uD83D\uDCF8')||d.includes('PHOTO'))return['PHOTO','tp-photo'];
+  return['INFO','tp-info'];
+}
+function cleanDesc(d){return d.replace(/^[^|\u2013\u2014]+[|\u2013\u2014]\s*/u,'').trim();}
+
+function fmtDesc(img){
+  var raw=cleanDesc(img);
+  var parts=raw.split('\n\n[Ti\u1EBFng Vi\u1EC7t]\n');
+  if(parts.length===2){
+    var enLines=parts[0].split('\n').map(function(l){
+      return l.replace(/^([A-Za-z][A-Za-z\s\/\-]{0,30}):/,function(m,lb){return '<b>'+lb+':</b>';});
+    }).join('\n');
+    var viLines=parts[1].split('\n').map(function(l){
+      return l.replace(/^([A-Za-z\u00C0-\u1EF9][A-Za-z\u00C0-\u1EF9\s\/\-]{0,30}):/,function(m,lb){return '<b>'+lb+':</b>';});
+    }).join('\n');
+    return '<span style="color:#777;font-size:10.5px">'+enLines+'</span>\n<span style="display:inline-block;margin:4px 0 2px;padding:1px 7px;background:#EEF2FF;color:#3C3489;font-size:9px;font-weight:700;border-radius:10px">\uD83C\uDDFB\uD83C\uDDF3 Ti\u1EBFng Vi\u1EC7t</span>\n'+viLines;
+  }
+  return raw.split('\n').map(function(l){
+    return l.replace(/^([A-Za-z\u00C0-\u1EF9][A-Za-z\u00C0-\u1EF9\s\/\-]{0,30}):/,function(m,lb){return '<b>'+lb+':</b>';});
+  }).join('\n');
+}
 
 function buildImages(){
   const state=ls();const cont=document.getElementById('imgBlocks');cont.innerHTML='';
@@ -1021,16 +1050,25 @@ function buildImages(){
     const block=document.createElement('div');block.className='art-block';block.id='ib-'+a.g;
     const rows=a.imgs.map(function(img,ii){
       const key=a.g+'_'+ii;const s=state.i[key]||'todo';
-      const tinfo=getType(img);const tag=tinfo[0],cls=tinfo[1];const desc=cleanDesc(img);
+      const tinfo=getType(img);const tag=tinfo[0],cls=tinfo[1];
+      const desc=fmtDesc(img);
       const lbls={todo:'Chưa thiết kế',wip:'Đang thiết kế',done:'Hoàn thành'};
-      return '<div class="img-item"><div class="img-item-left"><span class="img-seq">'+(ii+1)+'</span><span class="type-pill '+cls+'">'+tag+'</span></div><div class="img-desc-text">'+desc+'</div><button class="img-st-btn iis-'+s+'" onclick="cycleImg(\''+a.g+'\','+ii+',this)">'+lbls[s]+'</button></div>';
+      return '<div class="img-item">'+
+        '<div class="img-item-left">'+
+        '<span class="img-seq">'+(ii+1)+'</span>'+
+        '<span class="type-pill '+cls+'">'+tag+'</span>'+
+        '</div>'+
+        '<div class="img-desc-text">'+desc+'</div>'+
+        '<button class="img-st-btn iis-'+s+'" onclick="cycleImg(\''+a.g+'\','+ii+',this)">'+lbls[s]+'</button>'+
+        '</div>';
     }).join('');
     block.innerHTML=
       '<div class="art-block-hdr" onclick="toggleB(\''+a.g+'\')">'+
-        '<span class="abh-grp">'+a.g+'</span><span class="abh-title">'+a.title+'</span>'+
-        '<span class="abh-prog">'+done+'/'+a.imgs.length+'</span>'+
-        '<div class="abh-mini"><div class="abh-mini-fill" id="mf-'+a.g+'" style="width:'+pct+'%"></div></div>'+
-        '<i class="ti ti-chevron-down chevron"></i>'+
+      '<span class="abh-grp">'+a.g+'</span>'+
+      '<span class="abh-title">'+a.title+'</span>'+
+      '<span class="abh-prog">'+done+'/'+a.imgs.length+'</span>'+
+      '<div class="abh-mini"><div class="abh-mini-fill" id="mf-'+a.g+'" style="width:'+pct+'%"></div></div>'+
+      '<span class="chevron">&#9660;</span>'+
       '</div>'+
       '<div class="art-block-body">'+rows+'</div>';
     cont.appendChild(block);
@@ -1057,7 +1095,7 @@ function updateImgStats(){
   const state=ls();let total=0,done=0;
   ARTICLES.forEach(function(a){a.imgs.forEach(function(_,i){total++;if(state.i[a.g+'_'+i]==='done')done++;});});
   document.getElementById('sImgDone').textContent=done;
-  document.getElementById('imgProgLabel').textContent=done+' / '+total+' hình hoàn thành';
+  document.getElementById('imgProgLabel').textContent=done+' / '+total+' hinh hoan thanh';
   document.getElementById('imgProgFill').style.width=(total?Math.round(done/total*100):0)+'%';
 }
 
@@ -1075,10 +1113,9 @@ function filterImgs(q){
   });
 }
 
-/* ── INIT ── */
+/* -- INIT -- */
 document.getElementById('hdate').textContent=new Date().toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
 loadWCPState();
-applyLock();
 buildArticles();
 buildImages();
 </script>
