@@ -170,7 +170,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .img-item-left{display:flex;flex-direction:column;align-items:center;gap:4px;padding-top:1px;}
 .img-seq{font-size:9px;font-weight:700;color:#B4B2A9;line-height:1;}
 .type-pill{font-size:8px;font-weight:700;padding:1px 4px;border-radius:3px;white-space:nowrap;line-height:1.4;}
-.tp-photo{background:#E6F1FB;color:#0C447C;} .tp-info{background:#EEEDFE;color:#3C3489;} .tp-collage{background:#FAEEDA;color:#633806;}
+.tp-thumb{background:#D1FAE5;color:#065F46;font-weight:700;} .tp-photo{background:#E6F1FB;color:#0C447C;} .tp-info{background:#EEEDFE;color:#3C3489;} .tp-collage{background:#FAEEDA;color:#633806;}
 .img-desc-text{font-size:11px;color:#444441;line-height:1.6;white-space:pre-line;}
 .img-desc-text strong{color:#222;font-weight:600;}
 .vi-sep{display:inline-block;margin:5px 0 3px;padding:1px 7px;background:#EEF2FF;color:#3C3489;font-size:9px;font-weight:700;border-radius:10px;letter-spacing:.3px;}
@@ -326,6 +326,11 @@ const ARTICLES = [
   {g:'A', title:'Tổng thầu nội thất là gì – Định nghĩa, Quy trình & Lợi ích',
    kw:'tổng thầu nội thất là gì + thế nào là tổng thầu nội thất', intent:'informational', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Phòng khách hiện đại hoàn thiện, gia đình 3 người hài lòng nhìn ngắm không gian mới
+Text overlay: Logo Flexfit góc trên trái (trắng) | Tiêu đề "Tổng Thầu Nội Thất Là Gì?" in đậm trắng, canh giữa | Dải navy #1a2a4a phía dưới
+Gradient tối 40% từ dưới lên | Chữ tiêu đề ~52px`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Phòng khách hiện đại hoàn thiện — ghế sofa beige, bàn cà phê gỗ sồi, cây monstera góc phòng\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Ánh sáng tự nhiên ban ngày, vàng ấm\nBảng màu: Gỗ sồi #C4956A + Trắng kem #F5F0E8 + Xanh rêu nhạt\nCaption: "Dự án nội thất tổng thầu trọn gói bởi Flexfit"'`,
 
     `🎨 INFOGRAPHIC | 1200×700px\nLayout: 2-column side-by-side with headers\nLeft "DIY Subcontractors": homeowner icon → 6 tangled orange #F59E0B arrows to: Electrician / Plumber / Furniture / Flooring / Ceiling / Paint\nRight "Flexfit General Contract": homeowner icon → 1 straight #2563EB arrow to completed house icon\nColors: White background, navy #1a2a4a headers, font Be Vietnam Pro\n\n[Tiếng Việt]\nLayout: 2 cột song song có tiêu đề\nCột trái "Tự tìm thầu": icon chủ nhà → 6 mũi tên cam rối #F59E0B đến: Thợ điện / Thợ nước / Nội thất / Sàn / Trần / Sơn\nCột phải "Tổng thầu Flexfit": icon chủ nhà → 1 mũi tên thẳng #2563EB đến icon ngôi nhà hoàn thiện\nMàu sắc: Nền trắng, tiêu đề navy #1a2a4a, font Be Vietnam Pro'`,
@@ -344,6 +349,11 @@ const ARTICLES = [
   {g:'B', title:'Chi phí tổng thầu nội thất 2026 – Bảng giá & Cách tính',
    kw:'chi phí tổng thầu nội thất + bao nhiêu tiền', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Bàn gỗ sáng — bản vẽ nội thất, bảng tính ngân sách, tay cầm bút
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Chi Phí Tổng Thầu Nội Thất 2026" in đậm trắng | Banner navy dưới + subtitle "Bảng giá & Cách tính"
+Gradient tối 35%`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Phòng khách hoàn thiện đẹp, laptop mở bảng tính ngân sách Excel trên bàn góc\nGóc chụp: Trung bình | Ánh sáng: Ấm tự nhiên | Bảng màu: Gỗ + Trắng\nCaption: "Lên ngân sách nội thất — bước đầu tiên trước khi ký hợp đồng"'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\nLayout: Grid of 5 circles (or 2×3 grid)\nTitle: "5 Key Factors Affecting Interior Contractor Costs"\nEach cell (icon + name + 1-line description):\n1. 📐 Area — larger m², lower unit price\n2. 🪵 Materials — standard vs. premium E0/ENF\n3. ✏️ Design style — minimalist vs. complex\n4. 📍 Location — Hanoi/HCMC vs. provinces\n5. ⭐ Finish level — basic vs. luxury\nColors: Navy #1a2a4a + Wood #C4956A, white background\n\n[Tiếng Việt]\nLayout: Lưới 5 vòng tròn (hoặc 2×3)\nTiêu đề: "5 Yếu Tố Ảnh Hưởng Chi Phí Tổng Thầu Nội Thất"\nMỗi ô (icon + tên + mô tả 1 dòng):\n1. 📐 Diện tích — m² càng lớn, đơn giá càng giảm\n2. 🪵 Vật liệu — tiêu chuẩn vs. cao cấp E0/ENF\n3. ✏️ Phong cách — tối giản vs. phức tạp\n4. 📍 Vị trí — Hà Nội/TP.HCM vs. tỉnh thành\n5. ⭐ Mức độ hoàn thiện — cơ bản vs. luxury\nMàu sắc: Navy #1a2a4a + Gỗ #C4956A, nền trắng'`,
@@ -360,6 +370,11 @@ const ARTICLES = [
   {g:'C', title:'Quy trình thi công nội thất chuẩn từ A đến Z',
    kw:'quy trình thi công nội thất + các bước thi công', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Công trình nội thất đang thi công — thợ lắp tủ bếp, không gian sáng sạch
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Quy Trình Thi Công Nội Thất Chuẩn A–Z" in đậm trắng | Dải navy dưới + "7 bước từ khảo sát đến bàn giao"
+Gradient tối 45%`,
+
     `🎨 INFOGRAPHIC | 1400×600px (horizontal)\nChevron timeline 7 steps, color gradient light blue → navy\nEach step: large step number + icon + duration\n1. Survey & measure (1–2 days) → 2. BIM 3D design (2–3 weeks) → 3. Review & sign contract (1 week) → 4. Structural work (2–4 weeks) → 5. Factory furniture production (4–6 weeks) → 6. Furniture installation (2–4 weeks) → 7. Handover & quality check\nColor gradient: Light blue #DBEAFE → Navy #1a2a4a | Font: Be Vietnam Pro\n\n[Tiếng Việt]\nTimeline chevron 7 bước, chuyển màu xanh nhạt → navy\nMỗi bước: số thứ tự lớn + icon + thời gian\n1. Khảo sát & đo đạc (1–2 ngày) → 2. Thiết kế BIM 3D (2–3 tuần) → 3. Xem xét & ký hợp đồng (1 tuần) → 4. Thi công thô (2–4 tuần) → 5. Sản xuất nội thất tại nhà máy (4–6 tuần) → 6. Lắp đặt nội thất (2–4 tuần) → 7. Nghiệm thu & bàn giao\nMàu chuyển: Xanh nhạt #DBEAFE → Navy #1a2a4a | Font: Be Vietnam Pro'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Kỹ sư mặc đồ bảo hộ dùng máy đo laser trong căn phòng trống, phác thảo mặt bằng\nGóc chụp: Góc rộng toàn bộ căn phòng trống | Ánh sáng: Tự nhiên từ cửa sổ'`,
@@ -380,6 +395,11 @@ const ARTICLES = [
   {g:'D', title:'Nên thuê tổng thầu hay tự tìm thầu? So sánh 6 tiêu chí',
    kw:'nên thuê tổng thầu hay tự tìm thầu + so sánh', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Góc rộng phòng khách hoàn thiện đẹp, ngăn nắp chuyên nghiệp
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Thuê Tổng Thầu Hay Tự Tìm Thầu?" in đậm trắng | Subtitle "So sánh 6 tiêu chí" | Banner navy dưới
+Gradient tối 40%`,
+
     `🎨 INFOGRAPHIC | 1200×700px\nFlat design 2 roads branching from central house icon\nLeft branch "Manage yourself": 5–6 individual people icons, orange #F59E0B, tangled arrows\nRight branch "General Contractor": 1 person holding key icon, #2563EB, single straight arrow\nWhite background, minimal style\n\n[Tiếng Việt]\nThiết kế phẳng 2 con đường rẽ từ icon ngôi nhà trung tâm\nNhánh trái "Tự quản lý": 5–6 icon người riêng lẻ, cam #F59E0B, mũi tên rối\nNhánh phải "Tổng thầu": 1 người cầm chìa khóa, #2563EB, mũi tên thẳng duy nhất\nNền trắng, phong cách tối giản'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\n2-column × 6-row comparison table\nHeader "General Contractor": background #1a2a4a white | Header "DIY Subcontractors": background #8B6535 white\nCriteria: Single contact / Warranty / Schedule / Legal liability / Coordination cost / Risk\nUse ✅ and ⚠️/❌ for clear distinction\n\n[Tiếng Việt]\nBảng so sánh 2 cột × 6 hàng\nTiêu đề "Tổng thầu": nền #1a2a4a trắng | Tiêu đề "Tự tìm thầu": nền #8B6535 trắng\nTiêu chí: Một đầu mối / Bảo hành / Tiến độ / Trách nhiệm pháp lý / Chi phí điều phối / Rủi ro\nDùng ✅ và ⚠️/❌ để phân biệt rõ ràng'`,
@@ -396,6 +416,11 @@ const ARTICLES = [
   {g:'E', title:'Tổng thầu nội thất khách sạn & Resort – Thi công trọn gói',
    kw:'tổng thầu nội thất khách sạn + resort + thiết kế thi công', intent:'transactional', aud:'b2b',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Sảnh khách sạn sang trọng — đá marble, đèn ấm vàng, cây xanh nội thất
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất Khách Sạn & Resort" in đậm trắng | "Thi công trọn gói" | Dải navy dưới
+Gradient tối 45%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Sảnh khách sạn 5 sao — sàn đá cẩm thạch trắng, đèn chùm đồng, ghế nhung, quầy lễ tân gỗ tối\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Vàng ấm sang trọng\nBảng màu: Đá cẩm thạch trắng + Vàng #D4A843 + Gỗ tối #3D1C02\nCaption: "Nội thất khách sạn cao cấp tổng thầu — Flexfit thực hiện trọn gói"'`,
 
     `🎨 INFOGRAPHIC | 1400×600px (horizontal)\n6-step timeline "Hotel Interior General Contracting Process"\n1. Brief & Feasibility → 2. Concept Design → 3. BIM 3D Design → 4. Cloud Factory Production → 5. Installation & Build-out → 6. Handover & Warranty\nEach step: icon + name + estimated time\nColors: Navy #1a2a4a + Bronze gold #D4A843 | Font: Be Vietnam Pro\n\n[Tiếng Việt]\nTimeline 6 bước "Quy Trình Tổng Thầu Nội Thất Khách Sạn"\n1. Khảo sát & Khả thi → 2. Thiết kế Ý tưởng → 3. Thiết kế BIM 3D → 4. Sản xuất Cloud Factory → 5. Lắp đặt & Thi công → 6. Bàn giao & Bảo hành\nMỗi bước: icon + tên + thời gian ước tính\nMàu: Navy #1a2a4a + Vàng đồng #D4A843 | Font: Be Vietnam Pro'`,
@@ -412,6 +437,11 @@ const ARTICLES = [
   {g:'F', title:'Tổng thầu nội thất văn phòng – Thiết kế thi công trọn gói',
    kw:'tổng thầu nội thất văn phòng + thiết kế văn phòng trọn gói', intent:'transactional', aud:'b2b',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Văn phòng open-space hiện đại — bàn làm việc gọn, cây xanh, ánh sáng tự nhiên
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất Văn Phòng" in đậm trắng | "Thiết kế & Thi công trọn gói" | Navy banner dưới
+Gradient 40%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Văn phòng hiện đại mặt bằng mở — nhiều bàn làm việc gỗ sáng, cây xanh xen kẽ, cửa sổ kính lớn\nGóc chụp: Toàn cảnh góc rộng | Ánh sáng: Ánh sáng tự nhiên dồi dào\nBảng màu: Trắng + Gỗ sáng + Xanh lá nhạt\nCaption: "Thiết kế & thi công văn phòng trọn gói — Flexfit"'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\n3×3 grid = 9 office interior zones\nEach cell: icon + zone name\n1. Reception lobby  2. Open-plan workspace  3. Meeting rooms\n4. Executive office  5. Kitchen/Pantry  6. Storage\n7. Restrooms  8. Corridors/Stairways  9. Breakout/Coffee corner\nNavy background #1a2a4a, white text + icons\n\n[Tiếng Việt]\nLưới 3×3 = 9 khu vực nội thất văn phòng\nMỗi ô: icon + tên khu vực\n1. Sảnh lễ tân  2. Khu làm việc mặt bằng mở  3. Phòng họp\n4. Văn phòng giám đốc  5. Bếp/Pantry  6. Kho\n7. Nhà vệ sinh  8. Hành lang/Cầu thang  9. Khu thư giãn/Góc cà phê\nNền navy #1a2a4a, chữ + icon trắng'`,
@@ -428,6 +458,11 @@ const ARTICLES = [
   {g:'G', title:'Hợp đồng D&B và EPC – Sự khác nhau & Khi nào nên dùng',
    kw:'hợp đồng DB + EPC là gì + design and build', intent:'informational', aud:'b2b',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Hai người bắt tay trên bàn ký kết — bản vẽ A0 trải rộng, môi trường chuyên nghiệp
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Hợp Đồng D&B và EPC – Khác Nhau Thế Nào?" in đậm trắng | Navy banner
+Gradient tối 35%`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Chụp từ trên nhìn xuống bàn họp — hợp đồng mở, bút ký, sơ đồ dự án nhỏ\nGóc chụp: 90° từ trên xuống | Ánh sáng: Trung tính | Bảng màu: Gỗ + Giấy trắng + Navy'`,
 
     `🎨 INFOGRAPHIC | 1200×700px\nD&B model diagram\nTop: "Owner" (person + star icon)\nArrow down → "D&B General Contractor"\nSplits into 2 branches: Left "Design" (pen icon), Right "Construction" (hammer icon)\nMerge → "Completed Project"\nNavy + white, clean minimal style\n\n[Tiếng Việt]\nSơ đồ mô hình D&B\nTrên: "Chủ đầu tư" (icon người + ngôi sao)\nMũi tên xuống → "Tổng thầu D&B"\nPhân 2 nhánh: Trái "Thiết kế" (icon bút), Phải "Thi công" (icon búa)\nHợp lại → "Công trình hoàn thành"\nNavy + trắng, phong cách tối giản'`,
@@ -444,6 +479,11 @@ const ARTICLES = [
   {g:'H', title:'BIM, ISO & Cloud Factory trong thi công nội thất',
    kw:'BIM trong thi công nội thất + ISO 9001 + Cloud Factory', intent:'informational', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Màn hình lớn hiển thị mô hình BIM 3D công trình — chi tiết cấu trúc màu sắc rõ ràng
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "BIM, ISO & Cloud Factory Trong Thi Công" in đậm trắng | "Công nghệ dẫn đầu" | Navy banner
+Gradient 45%`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Kiến trúc sư tương tác với màn hình lớn hiển thị mô hình nội thất BIM 3D chi tiết\nMàn hình: Wireframe + render 3D màu đầy đủ\nGóc chụp: Trung bình, thể hiện cả người và màn hình | Ánh sáng: Xanh kỹ thuật số\nCaption: "BIM 3D — nhìn thấy ngôi nhà trước khi thi công"'`,
 
     `🎨 INFOGRAPHIC | 1200×700px\nSplit screen before/after\nLeft "Traditional 2D drawing": black & white technical blueprint photo\nRight "Flexfit BIM 3D": full-color 3D render of the same space with lighting\nCaption: "Same space — two completely different ways to visualize it"\n\n[Tiếng Việt]\nMàn hình split trước/sau\nTrái "Bản vẽ 2D truyền thống": ảnh bản vẽ kỹ thuật đen trắng\nPhải "BIM 3D Flexfit": render 3D đầy màu sắc cùng không gian với ánh sáng\nCaption: "Cùng một không gian — hai cách nhìn hoàn toàn khác nhau"'`,
@@ -458,6 +498,11 @@ const ARTICLES = [
   {g:'I', title:'7 tiêu chí chọn tổng thầu nội thất uy tín + 5 dấu hiệu cảnh báo',
    kw:'kinh nghiệm chọn tổng thầu nội thất + dấu hiệu nhận biết', intent:'commercial', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Tư vấn viên chuyên nghiệp cầm clipboard checklist, phông nền công trình
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "7 Tiêu Chí Chọn Tổng Thầu Nội Thất Uy Tín" in đậm trắng | "5 dấu hiệu cảnh báo" subtitle | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Chủ nhà ~40 tuổi đang xem xét kỹ bản vẽ cùng tư vấn viên\nGóc chụp: Trung bình 3/4 | Ánh sáng: Ấm tự nhiên\nTâm trạng: Thận trọng, cân nhắc kỹ lưỡng'`,
 
     `🎨 INFOGRAPHIC | 1400×700px\nBefore/After of the same room\nLeft "Wrong contractor": poor finish — mismatched colors, bad workmanship, warped cabinets\nRight "Right general contractor": same room beautifully finished\nCaption: "Same budget — completely different results"\n\n[Tiếng Việt]\nTrước/Sau cùng một căn phòng\nTrái "Chọn sai nhà thầu": hoàn thiện kém — màu sắc lệch, thi công xấu, tủ bị vênh\nPhải "Tổng thầu đúng chỗ": cùng căn phòng hoàn thiện đẹp\nCaption: "Cùng ngân sách — kết quả hoàn toàn khác nhau"'`,
@@ -472,6 +517,11 @@ const ARTICLES = [
   {g:'J', title:'8 xu hướng thiết kế nội thất 2026 được ưa chuộng nhất',
    kw:'xu hướng thiết kế nội thất 2026 + nội thất hiện đại', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Phòng khách Japandi tối giản đẹp — gỗ tự nhiên, vải linen, cây xanh, ánh sáng vàng ấm
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "8 Xu Hướng Thiết Kế Nội Thất 2026" in đậm trắng | "Được ưa chuộng nhất" | Navy banner
+Gradient 40%`,
+
     `📸 COLLAGE | 1400×800px\n4 ảnh phòng khách ghép lưới 2×2, viền tông trung tính mỏng\nTrên trái: Japandi — sofa beige, gỗ sáng, tối giản\nTrên phải: Wabi-Sabi — terracotta, gốm thô, hữu cơ\nDưới trái: Tông đất — terracotta, olive, ấm áp\nDưới phải: Soft Maximalism — nhung teal, tường gallery'`,
 
     `📸 PHOTO | 1200×800px\nPhòng khách Japandi thuần khiết\nGhế sofa linen beige thấp, bàn cà phê gỗ sồi sáng, cây monstera nhỏ, rèm trắng\nKhông đồ trang trí thừa | Ánh sáng: Vàng ấm buổi chiều\nCaption: "Japandi — vẻ đẹp trong sự giản dị và ấm áp"'`,
@@ -494,6 +544,11 @@ const ARTICLES = [
   {g:'K', title:'Tổng thầu kiến trúc là gì? Khác gì tổng thầu nội thất?',
    kw:'tổng thầu kiến trúc là gì + thiết kế kiến trúc tổng thầu', intent:'informational', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Công trình kiến trúc hiện đại đang xây, kỹ sư cầm bản vẽ đứng trước
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Kiến Trúc Là Gì?" in đậm trắng | "Khác gì Tổng thầu Nội thất?" | Navy banner
+Gradient 45%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Công trình kiến trúc sắp hoàn thiện — mặt đứng kính + bê tông, giàn giáo, kỹ sư giám sát\nGóc chụp: Ngoại thất góc rộng | Bảng màu: Xám bê tông + Xanh bầu trời'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\nVertical hierarchy diagram\nTop: "Owner"\nMiddle: "Architecture General Contractor" (navy box)\nBottom 4 branches: "Structural" / "Facade" / "MEP" / "Landscaping"\nBi-directional arrows | Navy + white + gold accent\n\n[Tiếng Việt]\nSơ đồ thứ bậc dọc\nTrên: "Chủ đầu tư"\nGiữa: "Tổng thầu kiến trúc" (khung navy)\n4 nhánh dưới: "Kết cấu" / "Mặt đứng" / "MEP" / "Cảnh quan"\nMũi tên hai chiều | Navy + trắng + điểm nhấn vàng'`,
@@ -510,6 +565,11 @@ const ARTICLES = [
   {g:'L', title:'Tổng thầu nội thất biệt thự & nhà phố – Thi công trọn gói',
    kw:'tổng thầu nội thất biệt thự + nhà phố + villa', intent:'transactional', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Biệt thự 3 tầng hoàn thiện — cổng sắt, sân vườn, ánh nắng vàng chiều
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất Biệt Thự & Nhà Phố" in đậm trắng | "Thi công trọn gói" | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1400×900px\nCảnh: Phòng khách biệt thự sang trọng — trần cao 4m, cầu thang gỗ óc chó, sofa xám, đèn chùm\nGóc chụp: Toàn cảnh góc rộng\nBảng màu: Gỗ tối #3D1C02 + Trắng kem + Vàng #D4A843\nÁnh sáng: Đa nguồn, vàng ấm\nCaption: "Biệt thự cao cấp — thiết kế & thi công trọn gói bởi Flexfit"'`,
 
     `🎨 INFOGRAPHIC | 1200×700px\n3-column comparison table by property type\nColumn 1 "Detached Villa": 300–1000m² / 3–4 floors / Garden / Cost from X billion VND\nColumn 2 "Townhouse": 60–200m² / Narrow facade / Multi-story / Cost from X billion VND\nColumn 3 "Semi-detached Villa": 200–400m² / Garden / Cost from X billion VND\nDistinct header colors per column\n\n[Tiếng Việt]\nBảng so sánh 3 cột theo loại bất động sản\nCột 1 "Biệt thự đơn lập": 300–1000m² / 3–4 tầng / Vườn / Chi phí từ X tỷ VND\nCột 2 "Nhà phố": 60–200m² / Mặt tiền hẹp / Nhiều tầng / Chi phí từ X tỷ VND\nCột 3 "Biệt thự song lập": 200–400m² / Vườn / Chi phí từ X tỷ VND\nMàu header riêng biệt mỗi cột'`,
@@ -524,6 +584,11 @@ const ARTICLES = [
   {g:'M', title:'Thi công nội thất chung cư – Hướng dẫn A–Z cho gia chủ',
    kw:'thi công nội thất chung cư + thiết kế căn hộ trọn gói', intent:'transactional', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Căn hộ chung cư sau hoàn thiện — phòng khách sáng thoáng, view nhìn ra thành phố
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Thi Công Nội Thất Chung Cư – Hướng Dẫn A–Z" in đậm trắng | "Cho gia chủ" | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Căn hộ 65m² sau cải tạo — phòng khách + bếp mặt bằng mở\nGhế sofa beige, tủ bếp gỗ sáng, bàn đảo bếp nhỏ\nTông Japandi: Gỗ sáng + Trắng + Xanh rêu nhạt\nGóc chụp: Góc rộng từ góc phòng khách | Ánh sáng: Ánh sáng tự nhiên ban ngày\nCaption: "Căn hộ 65m² sau khi hoàn thiện nội thất toàn bộ"'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\nFlat lay of required documents to prepare\nEach item: document icon + name + small note\n📄 Title deed / Purchase agreement\n📋 Building floor plan drawing\n🏢 Building management construction regulations\n📝 Interior construction contract\n📐 M&E technical drawings\nWhite background, navy accent, clean layout\n\n[Tiếng Việt]\nFlat lay tài liệu cần chuẩn bị\nMỗi mục: icon tài liệu + tên + ghi chú nhỏ\n📄 Sổ đỏ / Hợp đồng mua bán\n📋 Bản vẽ mặt bằng tòa nhà\n🏢 Quy định thi công của ban quản lý tòa nhà\n📝 Hợp đồng thi công nội thất\n📐 Bản vẽ kỹ thuật M&E\nNền trắng, điểm nhấn navy, bố cục gọn'`,
@@ -538,6 +603,11 @@ const ARTICLES = [
   {g:'N', title:'Tổng thầu nội thất nhà hàng & Spa – Thiết kế thi công trọn gói',
    kw:'tổng thầu nội thất nhà hàng + spa + quán cafe', intent:'transactional', aud:'b2b',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Nhà hàng sang trọng buổi tối — đèn vàng ấm, bàn ghế gỗ tối, hoa cắm bình
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất Nhà Hàng & Spa" in đậm trắng | "Thiết kế thi công trọn gói" | Navy banner
+Gradient 50%`,
+
     `📸 PHOTO | 1400×900px\nCảnh: Nhà hàng fine-dining buổi tối — ánh nến ấm, bàn tròn gỗ tối, ghế nhung đen, đèn thả thấp\nGóc chụp: Toàn cảnh góc rộng, khách hàng mờ phía sau\nBảng màu: Nâu tối + Vàng đồng + Đỏ đậm\nCaption: "Nội thất nhà hàng cao cấp — thiết kế & thi công bởi Flexfit"'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Bếp nhà hàng thương mại — inox sáng bóng, bếp công nghiệp, đầu bếp đồng phục trắng\nGóc chụp: Trung bình-rộng | Ánh sáng: Trắng mạnh | Cảm giác: Chuyên nghiệp, vệ sinh'`,
@@ -552,6 +622,11 @@ const ARTICLES = [
   {g:'O', title:'Hợp đồng tổng thầu nội thất – Điều khoản cần biết & Tiết kiệm chi phí',
    kw:'hợp đồng tổng thầu nội thất + điều khoản + tiết kiệm chi phí', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Cận cảnh tay ký bút lên hợp đồng in — bàn gỗ sồi
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Hợp Đồng Tổng Thầu Nội Thất" in đậm trắng | "Điều khoản cần biết & Tiết kiệm chi phí" | Navy banner
+Gradient 35%`,
+
     `📸 PHOTO | 1200×800px\nCảnh: Hai tay ký hợp đồng trên bàn, bản vẽ thiết kế phía sau, bút ký cao cấp\nGóc chụp: Trung bình từ bên\nÁnh sáng: Ấm tự nhiên | Bảng màu: Giấy trắng + Navy + Bàn gỗ'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Hợp đồng mở với các điều khoản quan trọng đánh dấu vàng, bút và bản vẽ cuộn bên cạnh\nGóc chụp: Trên xuống 45° | Ánh sáng: Văn phòng ấm | Cảm giác: Cẩn thận, tỉ mỉ'`,
@@ -566,6 +641,11 @@ const ARTICLES = [
   {g:'P', title:'Tổng thầu nội thất Hà Nội – Thiết kế & Thi công trọn gói',
    kw:'tổng thầu nội thất Hà Nội + công ty nội thất Hà Nội', intent:'transactional', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Skyline Hà Nội mờ phía sau — phòng khách nội thất đẹp cận cảnh
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất Hà Nội" in đậm trắng | "Thiết kế & Thi công trọn gói" | Navy banner
+Gradient 45%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Căn hộ cao cấp Hà Nội đã hoàn thiện, ưu tiên tầm nhìn hồ hoặc phố cổ qua kính\nNội thất: Tông gỗ ấm + Xanh rêu | Ánh sáng: Tự nhiên sáng\nGóc chụp: Góc rộng | Caption: "Nội thất căn hộ Hà Nội — tổng thầu trọn gói bởi Flexfit"'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Hồ Hoàn Kiếm hoặc tòa chung cư hiện đại biểu tượng Hà Nội\nBảng màu: Cây xanh + Ngói nâu + Xám | Góc chụp: Ngoại thất góc rộng\nKhông có text overlay'`,
@@ -580,6 +660,11 @@ const ARTICLES = [
   {g:'Q', title:'Tổng thầu nội thất TP.HCM – Thiết kế & Thi công trọn gói',
    kw:'tổng thầu nội thất TP HCM + công ty nội thất Sài Gòn', intent:'transactional', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Skyline TP.HCM mờ phía sau — phòng khách hiện đại sang trọng cận cảnh
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Nội Thất TP.HCM" in đậm trắng | "Thiết kế & Thi công trọn gói" | Navy banner
+Gradient 45%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Căn hộ TP.HCM hiện đại đã hoàn thiện, ánh sáng tự nhiên miền Nam rực rỡ\nNội thất: Sáng, thoáng, trắng + cây xanh + tông gỗ sáng, cửa kính lớn\nGóc chụp: Góc rộng | Caption: "Nội thất căn hộ TP.HCM — tổng thầu trọn gói bởi Flexfit"'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Đường chân trời TP.HCM ban ngày — Landmark 81, Bitexco, các tòa nhà bên sông Sài Gòn\nBảng màu: Xanh sáng + Trắng | Góc chụp: Rộng từ sông hoặc điểm cao\nTâm trạng: Năng động, hiện đại'`,
@@ -594,6 +679,11 @@ const ARTICLES = [
   {g:'R', title:'Vật liệu nội thất cao cấp – Gỗ E0, ENF & Plywood là gì?',
    kw:'vật liệu nội thất cao cấp + gỗ E0 + ENF + Plywood', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Bộ mẫu vật liệu gỗ cao cấp — tấm E0/ENF, plywood, acrylic xếp nghiêng đẹp mắt
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Vật Liệu Nội Thất Cao Cấp" in đậm trắng | "Gỗ E0, ENF & Plywood là gì?" | Navy banner
+Gradient 35%`,
+
     `📸 PHOTO | 1200×800px — STUDIO SHOT\nCảnh: 4 mẫu tấm gỗ cắt ngang đứng cạnh nhau — MDF thường (nâu) / MDF HMR (viền xanh) / HDF (xám đậm) / Plywood (vân nhiều lớp ngang)\nMỗi tấm có nhãn dán: tên + thông số kỹ thuật + chứng nhận E0/ENF\nNền studio trắng, ánh sáng đều\nCaption: "Từ trái sang: MDF / MDF HMR / HDF / Plywood — 4 loại lõi gỗ công nghiệp phổ biến nhất"'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Gia đình 4 người (bố mẹ + 2 bé ~3–8 tuổi) vui chơi trong phòng trẻ em vừa hoàn thiện\nÁnh sáng: Ấm tự nhiên, cảm giác không khí trong lành | Tâm trạng: Vui vẻ, yên tâm\nBảng màu: Pastel nhẹ nhàng | Caption: "Vật liệu E0/ENF — an toàn cho trẻ em và cả gia đình"'`,
@@ -610,6 +700,11 @@ const ARTICLES = [
   {g:'S', title:'Phong cách Japandi là gì? Đặc điểm & Cách áp dụng cho nhà Việt',
    kw:'phong cách Japandi + nội thất Japandi + thiết kế Japandi', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Phòng khách Japandi — gỗ tự nhiên sáng, vải linen be, cây xanh nhỏ, ánh sáng ban mai
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Phong Cách Japandi Là Gì?" in đậm trắng | "Đặc điểm & Cách áp dụng cho nhà Việt" | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Phòng khách Japandi chuẩn mực — sofa linen beige thấp, bàn cà phê tròn gỗ sồi sáng, cây monstera\nRèm linen trắng, đèn cây đơn giản | Tuyệt đối không đồ trang trí thừa\nÁnh sáng: Ánh ngày vàng ấm | Bảng màu: #F5F0E8 + #C4956A + #8FAF8C\nCaption: "Japandi — vẻ đẹp trong sự giản dị và ấm áp"'`,
 
     `🎨 INFOGRAPHIC | 1400×700px\nSplit screen "Origins of Japandi"\nLeft "Japanese Minimalism": tatami room photo, fusuma, muted earth tones\nRight "Scandinavian Hygge": bright white room, light wood furniture, warm candles\nMerging arrow in the center → small Japandi room photo\nCaption: "Japandi = Japanese Minimalism + Scandinavian Hygge"\n\n[Tiếng Việt]\nMàn hình split "Nguồn gốc Japandi"\nTrái "Tối giản Nhật Bản": ảnh phòng tatami, fusuma, tông đất trầm\nPhải "Hygge Scandinavia": phòng trắng sáng, nội thất gỗ sáng, nến ấm\nMũi tên hợp nhất ở giữa → ảnh nhỏ phòng Japandi\nCaption: "Japandi = Tối giản Nhật + Hygge Scandinavia"'`,
@@ -624,6 +719,11 @@ const ARTICLES = [
   {g:'T', title:'Thiết kế văn phòng xanh – LEED và Biophilic là gì & lợi ích',
    kw:'thiết kế văn phòng xanh + LEED + Biophilic design', intent:'informational', aud:'b2b',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Văn phòng xanh tràn ngập cây — mảng tường cây sống, bàn gỗ, ánh sáng tự nhiên
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Thiết Kế Văn Phòng Xanh" in đậm trắng | "LEED & Biophilic là gì & lợi ích" | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Văn phòng mặt bằng mở xanh mát — cây trên tường và sàn, kính từ sàn đến trần, nhân viên làm việc\nGóc chụp: Toàn cảnh góc rộng | Bảng màu: Xanh lá + Gỗ sáng + Trắng\nCaption: "Không gian làm việc Biophilic — nơi cảm hứng gặp năng suất"'`,
 
     `📸 PHOTO | 1200×800px\nCảnh: Bảng chứng nhận LEED trưng bày nổi bật trong sảnh tòa nhà văn phòng Việt Nam\nPhương án thay thế: Logo LEED ghép với tòa nhà kính hiện đại\nCaption: "Chứng nhận LEED — tiêu chuẩn quốc tế cho công trình xanh"'`,
@@ -640,6 +740,11 @@ const ARTICLES = [
   {g:'U', title:'Nội thất phòng ngủ master – Thiết kế đẹp & đủ tiện nghi',
    kw:'nội thất phòng ngủ master + thiết kế phòng ngủ master đẹp', intent:'informational', aud:'b2c',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Phòng ngủ master sang trọng — giường king-size bọc vải, đầu giường gỗ walnut, đèn ngủ ấm
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Nội Thất Phòng Ngủ Master" in đậm trắng | "Thiết kế đẹp & đủ tiện nghi" | Navy banner
+Gradient 40%`,
+
     `📸 PHOTO | 1400×900px\nCảnh: Phòng ngủ master ~20m² hoàn thiện — giường king-size, đầu giường linen xám nhạt\n2 đèn đầu giường gắn tường đối xứng, tranh trừu tượng lớn phía sau, tủ âm tường toàn bộ\nBảng màu: Beige #F5F0E8 + Gỗ sáng + Xám nhạt | Ánh sáng: Vàng ấm dịu\nCaption: "Phòng ngủ master — không gian riêng tư hoàn hảo của bạn"'`,
 
     `🎨 INFOGRAPHIC | 1200×800px\nColour-coded 2D floor plan of 20m² master bedroom\nSleeping zone (light blue #DBEAFE): Bed, 2 bedside tables\nWalk-in closet (light orange #FEF3C7): Wardrobes, mirror\nEnsuite WC (light green #DCFCE7): Vanity, shower, bathtub\nRelax corner (light purple #EDE9FE): Armchair + reading lamp\nColor legend with zone labels\n\n[Tiếng Việt]\nMặt bằng 2D phòng ngủ master 20m² tô màu theo khu vực\nKhu ngủ (xanh nhạt #DBEAFE): Giường, 2 tủ đầu giường\nWalk-in closet (cam nhạt #FEF3C7): Tủ quần áo, gương\nWC riêng (xanh lá nhạt #DCFCE7): Bàn trang điểm, vòi sen, bồn tắm\nGóc thư giãn (tím nhạt #EDE9FE): Ghế đọc sách + đèn\nChú thích màu sắc với nhãn khu vực'`,
@@ -656,6 +761,11 @@ const ARTICLES = [
   {g:'V', title:'Tổng thầu nội thất trọn gói (Turnkey) – Bạn chỉ cần nhận chìa khóa',
    kw:'tổng thầu nội thất trọn gói + turnkey nội thất', intent:'transactional', aud:'both',
    imgs:[
+    `🖼️ THUMB | 1200×628px
+Ảnh nền: Tay trao chìa khóa — cận cảnh hai bàn tay, phía sau là căn nhà hoàn thiện đẹp
+Text overlay: Logo Flexfit góc trên trái | Tiêu đề "Tổng Thầu Trọn Gói (Turnkey)" in đậm trắng | "Bạn chỉ cần nhận chìa khóa" | Navy banner
+Gradient 45%`,
+
     `📸 PHOTO | 1400×800px\nCảnh: Chủ nhà nữ ~35 tuổi nhận chìa khóa từ đại diện Flexfit mặc áo thương hiệu\nBackground: Phòng khách hoàn thiện đẹp | Cả hai đều mỉm cười\nGóc chụp: Trung bình 3/4 | Ánh sáng: Ấm\nCaption: "Bàn giao chìa khóa — khoảnh khắc đáng nhớ cùng Flexfit Turnkey"'`,
 
     `🎨 INFOGRAPHIC | 1400×800px\n3-column comparison table\nColumn 1 "DIY piece by piece" (gray header): ❌ Time-consuming / No warranty / Hard to manage / High risk / Many contacts / Uncontrolled cost overruns\nColumn 2 "Design separately + bid build" (yellow header): ⚠️ Moderate\nColumn 3 "Flexfit Turnkey" (navy header): ✅ Single contract / 36-month warranty / Guaranteed schedule / BIM 3D / Cloud Factory / One point of contact\nClear heading, large font, easy to read\n\n[Tiếng Việt]\nBảng so sánh 3 cột\nCột 1 "Tự tìm từng hạng mục" (header xám): ❌ Tốn thời gian / Không bảo hành / Khó quản lý / Rủi ro cao / Nhiều đầu mối / Chi phí phát sinh không kiểm soát\nCột 2 "Thiết kế riêng + đấu thầu thi công" (header vàng): ⚠️ Trung bình\nCột 3 "Tổng thầu Flexfit" (header navy): ✅ Một hợp đồng / Bảo hành 36 tháng / Tiến độ cam kết / BIM 3D / Cloud Factory / Một đầu mối duy nhất\nTiêu đề rõ ràng, font to, dễ đọc'`,
@@ -1019,6 +1129,7 @@ function updateStats(){
 
 /* -- IMAGES -- */
 function getType(d){
+  if(d.startsWith('\uD83D\uDDBC')||d.includes('THUMB'))return['THUMB','tp-thumb'];
   if(d.includes('COLLAGE'))return['COLLAGE','tp-collage'];
   if(d.startsWith('\uD83D\uDCF8')||d.includes('PHOTO'))return['PHOTO','tp-photo'];
   return['INFO','tp-info'];
